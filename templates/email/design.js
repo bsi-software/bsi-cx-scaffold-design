@@ -3,7 +3,7 @@ require('./styles/styles.scss');
 const {cx, Locale} = require('@bsi-cx/design-build');
 
 module.exports = cx.design
-  .withTitle('Website Scaffold')
+  .withTitle('E-Mail Scaffold')
   .withAuthor('BSI Business Systems Integration AG')
   .withDate('20.05.2022')
   .withPreviewImage(require('./thumbnail.png'))
@@ -29,17 +29,4 @@ module.exports = cx.design
       .withAllowedElements(
         require('./content-elements/content/title'),
         require('./content-elements/content/text'),
-        require('./content-elements/layout/columns')))
-  .withWebsite(
-    cx.website
-      .withMaxNavigationLevel(2)
-      .withIncludes(
-        cx.pageInclude
-          .withName('Template for Content')
-          .withEditable(true)
-          .withFile(require('./includes/page.twig')),
-        cx.include
-          .withIdentifier('navigation')
-          .withName('Navigation')
-          .withEditable(false)
-          .withFile(require('./includes/navigation.hbs'))));
+        require('./content-elements/layout/columns')));
