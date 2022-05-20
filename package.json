@@ -1,0 +1,22 @@
+{
+  "name": "@bsi-cx/scaffold-design",
+  "version": "1.0.0",
+  "description": "A simple scaffold design for BSI CX templates.",
+  "scripts": {
+    "build": "webpack --config webpack.config.js --mode production --progress",
+    "watch": "webpack --config webpack.config.js --mode development --watch --progress"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bsi-software/bsi-cx-scaffold-design.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bsi-software/bsi-cx-scaffold-design/issues"
+  },
+  "homepage": "https://github.com/bsi-software/bsi-cx-scaffold-design#readme",
+  "devDependencies": {
+    "@bsi-cx/design-build": "github:bsi-software/bsi-cx-design-build#semver:^1.8.0"
+  }
+}
