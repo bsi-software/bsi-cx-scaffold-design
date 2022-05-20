@@ -1,13 +1,12 @@
 [![node >= 14.16.0](https://img.shields.io/badge/node-%3E%3D14.16.0-brightgreen)](https://nodejs.org/)
 [![BSI Studio >= 1.0.0](https://img.shields.io/badge/BSI%20Studio-%3E%3D1.0.0-brightgreen)](https://www.bsi-software.com/cx)
 [![BSI CX >= 1.3.0](https://img.shields.io/badge/BSI%20CX-%3E%3D1.3.0-brightgreen)](https://www.bsi-software.com/cx)
-[![Install size](https://img.shields.io/github/repo-size/bsi-software/bsi-cx-scaffold-design?label=install%20size)](https://github.com/bsi-software/bsi-cx-design-build/releases)
-[![Latest available version](https://img.shields.io/github/v/tag/bsi-software/bsi-cx-scaffold-design?label=npm)](https://github.com/bsi-software/bsi-cx-design-build/releases)
+[![Latest available version](https://img.shields.io/github/v/tag/bsi-software/bsi-cx-scaffold-design?label=npm)](https://github.com/bsi-software/bsi-cx-scaffold-design/releases)
 
-[![Open GitHub issues](https://img.shields.io/github/issues/bsi-software/bsi-cx-scaffold-design)](https://github.com/bsi-software/bsi-cx-design-build/issues)
-[![GitHub commit activity](https://img.shields.io/github/commit-activity/w/bsi-software/bsi-cx-scaffold-design)](https://github.com/bsi-software/bsi-cx-design-build/commits)
-[![GitHub last commit](https://img.shields.io/github/last-commit/bsi-software/bsi-cx-scaffold-design)](https://github.com/bsi-software/bsi-cx-design-build/commits)
-[![GitHub contributors](https://img.shields.io/github/contributors/bsi-software/bsi-cx-scaffold-design)](https://github.com/bsi-software/bsi-cx-design-build/graphs/contributors)
+[![Open GitHub issues](https://img.shields.io/github/issues/bsi-software/bsi-cx-scaffold-design)](https://github.com/bsi-software/bsi-cx-scaffold-design/issues)
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/w/bsi-software/bsi-cx-scaffold-design)](https://github.com/bsi-software/bsi-cx-scaffold-design/commits)
+[![GitHub last commit](https://img.shields.io/github/last-commit/bsi-software/bsi-cx-scaffold-design)](https://github.com/bsi-software/bsi-cx-scaffold-design/commits)
+[![GitHub contributors](https://img.shields.io/github/contributors/bsi-software/bsi-cx-scaffold-design)](https://github.com/bsi-software/bsi-cx-scaffold-design/graphs/contributors)
 
 # @bsi-cx/scaffold-design
 
