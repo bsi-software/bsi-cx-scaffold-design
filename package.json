@@ -15,14 +15,13 @@
     "url": "git+https://github.com/bsi-software/bsi-cx-scaffold-design.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/bsi-software/bsi-cx-scaffold-design/issues"
   },
   "contributors": [
     {
       "name": "Oliver Fabel",
-      "email": "oliver.fabel@bsi-software.com",
       "url": "https://www.bsi-software.com/"
     }
   ],
