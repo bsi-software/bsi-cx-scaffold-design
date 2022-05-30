@@ -18,6 +18,13 @@ the [BSI CX design build](https://github.com/bsi-software/bsi-cx-design-build) b
 the [Wiki](https://github.com/bsi-software/bsi-cx-design-build/wiki) to get more information on the design build. To get
 more information on BSI CX designs, checkout our [online documentation](https://bsi-software.github.io/bsi-cx-docs/).
 
+## Usage
+
+Use this template, if you have to start from scratch and adjusting
+the [master template](https://github.com/bsi-software/bsi-cx-design-master-template-web) would be too much work. Be
+aware, that this template really is not more than a scaffold. This is exactly the scope of this template:
+providing a structure. The template only contains a minimal working examples and no complete design.
+
 ## Requirements
 
 To use this package you have to fulfill the following requirements:
@@ -43,4 +50,5 @@ please [create a new issue](https://github.com/bsi-software/bsi-cx-scaffold-desi
 
 ## Contributing
 
-If you like to contribute to this project, feel free to fork it and create a pull request.
+If you like to contribute to this project, feel free to fork it
+and [create a pull request](https://github.com/bsi-software/bsi-cx-scaffold-design/pulls).

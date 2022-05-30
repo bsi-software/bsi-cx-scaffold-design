@@ -8,7 +8,8 @@
   },
   "scripts": {
     "build": "webpack --config webpack.config.js --mode production --progress",
-    "watch": "webpack --config webpack.config.js --mode development --watch --progress"
+    "watch": "webpack --config webpack.config.js --mode development --watch --progress",
+    "serve": "webpack serve --config webpack.config.js --mode development --progress"
   },
   "repository": {
     "type": "git",
