@@ -23,6 +23,6 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 [Unreleased]: https://github.com/bsi-software/bsi-cx-scaffold-design/compare/1.1.0...HEAD
 
-[1.0.1]: https://github.com/bsi-software/bsi-cx-scaffold-design/compare/1.0.0...1.1.0
+[1.1.0]: https://github.com/bsi-software/bsi-cx-scaffold-design/compare/1.0.0...1.1.0
 
 [1.0.0]: https://github.com/bsi-software/bsi-cx-scaffold-design/releases/tag/1.0.0
