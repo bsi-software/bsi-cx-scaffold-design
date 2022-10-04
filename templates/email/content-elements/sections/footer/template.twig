@@ -1,0 +1,32 @@
+{# {% macro render(elementId = null, dropzoneId = null, color = null, width = null, padding = null) %}{% apply spaceless %}
+    {% deprecated 'The usage of "element.render(...)" is deprecated, use "include ... with {...}" instead. For detailed information, visit: https://github.com/bsi-software/bsi-cx-design-master-template-email/blob/main/MIGRATION_GUIDE.md"' %}
+    {% include './template.twig' %}
+{% endapply %}{% endmacro %} #}
+
+{% apply spaceless %}
+{% set colOneFooterElementId = elementId ? : 'col-one-footer-68T94f' %}
+{% set colOneFooterDropzoneId = dropzoneId ? : 'col-one-footer-dropzone-jaZSq2' %}
+{% set colOneFooterColor = color ? : properties.footerTextColor ? : '#ffffff' %}
+{% set colOneFooterWidth = width ? : properties.colOneFooterWidth ? : 660 %}
+{% set colOneFooterPadding = padding ? : properties.columnFooterPadding ? : 10 %}
+
+<div data-bsi-element="footer">
+  <!--  [if mso]>
+        <table role="presentation" width="100%">
+        <tr>
+        <td style="width: {{ colOneFooterWidth }}px; padding: {{ colOneFooterPadding }}px; text-align: center; color: {{ colOneFooterColor }}; text-decoration: none;" valign="middle">
+        <![endif]  -->
+  <div class="bsi-column" style="width: 100%; max-width: {{ colOneFooterWidth }}px; display: inline-block; vertical-align: middle;">
+    <div style="padding: {{ colOneFooterPadding }}px;" data-bsi-dropzone="{{ colOneFooterDropzoneId }}">
+      {% block col_one_footer_dropzone %}
+        {% include '../../../base/social-media-follow/template.twig' only %}
+      {% endblock %}
+    </div>
+  </div>
+  <!--  [if mso]>
+        </td>
+        </tr>
+        </table>
+        <![endif]  -->
+</div>
+{% endapply %}

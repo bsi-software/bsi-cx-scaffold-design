@@ -1,9 +1,0 @@
-{% extends './_layout.twig' %}
-
-{% block navigation %}
-  <bsi:include reference="navigation"></bsi:include>
-{% endblock %}
-
-{% block content %}
-  <bsi:include reference="{navigation.activePage.contentId}"></bsi:include>
-{% endblock %}
