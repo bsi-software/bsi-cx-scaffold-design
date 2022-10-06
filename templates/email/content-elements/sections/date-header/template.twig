@@ -1,4 +1,4 @@
-<div data-bsi-element="date-header">
+<div data-bsi-element="date-header" style="height: 100%; display: flex;" class="hello">
   <table border="0" cellpadding="0" cellspacing="0" width="100%">
     <tbody>
       <tr>
@@ -6,39 +6,34 @@
           <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="border:0;">
             <tbody>
               <tr>
-                <td style="padding: 15px;">
-                  <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" style="width: {{ _contentWidth ? : '100%' }};">
+                <td style="padding-bottom: 10px;">
+                  <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" style="width:600px">
                     <tbody>
                       <tr>
-                        <td valign="top" align="left" style="padding-top: 0px;height:100%;">
-                          <table align="left" border="0" width="49%" cellpadding="0" cellspacing="0" valign="top" style="width: {{ _columnWidth ? : '27%' }};height:100%;">
+                        <td bgcolor="#ffffff" valign="top" align="left" style="padding-top: 0px;height:100%;">
+                          <table align="left" width="20%" border="0" cellpadding="0" cellspacing="0" valign="top" style="width:110px';height:100%;">
                             <tbody>
                               <tr align="center">
                                 <td style="height:100%;">
-                                  <div class="column" style="border-width: 0px !important;margin-top: 0px!important;margin-bottom: 0px !important;height:100%;">
-                                    <div style="flex: 1 1 0px; height: 100%; font-size: 52px; font-weight:700;">
-                                      <div style="padding-top: 24px;">
-                                        <div id="b9b0fac8-449e-11ed-b878-0242ac120002" data-bsi-element-part="plain-text">23</div>
-                                      </div>
-                                      <div style="font-weight: bold;font-size: 18px; display: flex; flex-direction: row; justify-content: center;">
-                                        <div id="b9b0f6b8-449e-11ed-b878-0242ac120002" data-bsi-element-part="plain-text">Dec</div>
-                                        <div id="b9b0f140-449e-11ed-b878-0242ac120002" data-bsi-element-part="plain-text">´22</div>
-                                      </div>
+                                  <div style="padding:24px 24px 80px 24px;background:linear-gradient(90deg, #023991 10.94%, #00FF55 88.02%);border-width: 0px !important;margin-top: 0px!important;margin-bottom: 0px !important;height:100%;">
+                                    <div style="padding-top: 14px;">
+                                      <div id="b9b0fac8-449e-11ed-b878-0242ac120002" data-bsi-element-part="plain-text" style="font-family: 'TT Norms';font-style: normal;font-weight: 700;font-size: 52px;line-height: 100%;">23</div>
+                                    </div>
+                                    <div style="display: flex; flex-direction: row; justify-content: center;">
+                                      <div id="b9b0f6b8-449e-11ed-b878-0242ac120002" data-bsi-element-part="plain-text" style="font-family: 'TT Norms';font-style: normal;font-weight: 700;font-size: 18px;line-height: 100%;">Dec</div>
+                                      <div id="b9b0f140-449e-11ed-b878-0242ac120002" data-bsi-element-part="plain-text" style="font-family: 'TT Norms';font-style: normal;font-weight: 400;font-size: 18px;line-height: 100%;">´22</div>
                                     </div>
                                   </div>
                                 </td>
                               </tr>
                             </tbody>
                           </table>
-                          <table align="right" border="0" cellpadding="0" width="49%" cellspacing="0" valign="top" style="width: {{ _columnWidth ? : '73%' }};">
+                          <table align="left" width="80%" border="0" cellpadding="0" cellspacing="0" valign="top">
                             <tbody>
-                              <tr align="center">
+                              <tr align="left">
                                 <td>
-                                  <div class="column" style="border-width: 0px !important;margin-top: 0px!important;margin-bottom: 0px !important;">
-                                    <div align="left" style="border-left: 2px solid black; flex: 1 1 0px; font-weight: 700;font-size: 24px;
-        line-height: 120%; padding:0px 20px 15px 32px">
-                                      {% include '../../elements/h3/template.twig' with { text: 'Large Event ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium ' } %}
-                                    </div>
+                                  <div align="left" style="flex: 1 1 0px;padding:14px 24px;display:flex;align-items: center;font-weight: 700; font-size: 18px; line-height: 24px;">
+                                    <a href="#" style="text-decoration:none"><p id="3a32bee2-457c-11ed-b878-0242ac120002" data-bsi-element-part="formatted-text" style="font-family: 'TT Norms';font-style: normal;font-weight: 700;font-size: 48px;line-height: 120%;color: #000000;margin:0">Main Event ipsum dolor sit ahmet</p></a>
                                   </div>
                                 </td>
                               </tr>
@@ -57,25 +52,3 @@
     </tbody>
   </table>
 </div>
-
-{# <div data-bsi-element="date-header" style="height: 100%; display: flex;" class="hello" id="date-header">
-  {% embed '../../layouts/two-columns-gradient/template.twig' %}
-    {% block columnLeft %}
-      <div style="flex: 1 1 0px; height: 100%; font-size: 52px; font-weight:700;">
-        <div style="padding-top: 24px;">
-          {% include '../../elements/text/template.twig' with { text: '23' } %}
-        </div>
-        <div style="font-weight: bold;font-size: 18px; display: flex; flex-direction: row; justify-content: center;">
-          {% include '../../elements/text/template.twig' with { text: 'Dec' } %}
-          {% include '../../elements/text/template.twig' with { text: '´22' } %}
-        </div>
-      </div>
-    {% endblock %}
-    {% block columnRight %}
-      <div align="left" style="border-left: 2px solid black; flex: 1 1 0px; font-weight: 700;font-size: 24px;
-        line-height: 120%; padding:0px 20px 15px 32px">
-        {% include '../../elements/h3/template.twig' with { text: 'Large Event ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium ' } %}
-      </div>
-    {% endblock %}
-  {% endembed %}
-</div> #}
