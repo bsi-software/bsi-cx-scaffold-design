@@ -1,3 +1,11 @@
-<div class="button">
-  <a data-bsi-element-part="link" id="6d0679e6-3fc6-11ed-b878-0242ac120002" class="btn btn--active" href="{{ url }}">{{ text }}</a>
-</div>
+<table role="presentation" border="0" cellspacing="0" cellpadding="0">
+  <tbody>
+    <tr>
+      <td align="center" valign="middle" height="{{ button_height }}" bgcolor="#023991" style="padding-left: 15px;padding-right: 15px;border-radius: 1px; background-color: #023991; border-width: 1px; border-style: 'solid'; border-color: #023991;">
+        <a data-bsi-element-part="link" href="{{ button_href }}" target="_blank" style="font-size: 16px; line-height: 1px; font-family: TT Norms; color: #ffffff;
+                 font-weight:700; font-style:normal;text-decoration:none;
+                    vertical-align:middle;text-align:center;border-radius: 1px; padding: 15px 0;">{{ button_text ? : 'ANMELDEN' }}</a>
+      </td>
+    </tr>
+  </tbody>
+</table>

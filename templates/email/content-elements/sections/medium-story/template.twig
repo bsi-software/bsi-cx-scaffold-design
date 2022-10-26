@@ -10,7 +10,7 @@
                   <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" style="width:600px">
                     <tbody>
                       <tr>
-                        <td valign="top" align="left" style="padding-top: 0px;">
+                        <td valign="top" align="left" style="padding-top: 0px;display: flex;flex-direction: row;align-items: center;">
                           <table align="left" border="0" width="49%" cellpadding="0" cellspacing="0" valign="top" style="width:27%">
                             <tbody>
                               <tr align="center">
@@ -30,12 +30,14 @@
                                     <div align="left" style="font-weight: 700;font-size: 21;line-height: 135%; padding:0px 20px 15px 32px">
                                       <h3 data-bsi-element-part="plain-text">Medium Story ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</h3>
                                     </div>
-                                    <div align="left" style="padding-left: 32px;">
-                                      <a data-bsi-element-part="link" href="[LINK2]" bgcolor="transparent" style="background-color: transparent;border: transparent; color: #023991; font-size:18px;font-weight:normal;font-style:normal;text-decoration:none; mso-line-height-rule: exactly; display: flex; box-shadow: 0px; padding-right: 15px; padding-top:10px;padding-bottom: 10px;">
-                                        read more
-                                        <img src="{{ url ? : bsi_cx_asset('../../../../images/arrow.png') }}" alt="arrow" width="24px" height="24px" style="margin-left: 10px;" />
-                                      </a>
-                                    </div>
+                                    <tr>
+                                      <td>
+                                        <div align="left" style="padding-left: 32px;display: flex;align-items: center;">
+                                          <a data-bsi-element-part="link" href="[LINK2]" bgcolor="transparent" style="background-color: transparent;border: transparent; color: #023991; font-size:18px;font-weight:normal;font-style:normal;text-decoration:none; mso-line-height-rule: exactly; display: flex; box-shadow: 0px;padding-top:10px;padding-bottom: 10px;">read more</a>
+                                          <img src="{{ url ? : bsi_cx_asset('../../../../images/arrow.png') }}" alt="arrow" width="24px" height="24px" style="margin-left: 10px;" />
+                                        </div>
+                                      </td>
+                                    </tr>
                                   </div>
                                 </td>
                               </tr>

@@ -27,4 +27,9 @@ module.exports = cx.contentElement
     cx.part.link
       .withId("91170bb4-4649-11ed-b878-0242ac120002")
       .withLabel("Large Event Button")
+  )
+  .withDropzones(
+    cx.dropzone
+      .withDropzone("d025b9b6-5514-11ed-bdc3-0242ac120002")
+      .withAllowedElements(require("../../elements/image-full-width"))
   );

@@ -34,4 +34,9 @@ module.exports = cx.contentElement
     cx.part.link
       .withId("1a846a5c-463d-11ed-b878-0242ac120002")
       .withLabel("Main Story Button")
+  )
+  .withDropzones(
+    cx.dropzone
+      .withDropzone("d025b542-5514-11ed-bdc3-0242ac120002")
+      .withAllowedElements(require("../../elements/image-full-width"))
   );

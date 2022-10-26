@@ -19,7 +19,6 @@ module.exports = cx.design
         require("./content-elements/sections/date-header"),
         require("./content-elements/sections/footer"),
         require("./content-elements/sections/gradient-block-header"),
-        // require("./content-elements/sections/gradient-header"),
         require("./content-elements/sections/header"),
         require("./content-elements/sections/large-event-full-width"),
         require("./content-elements/sections/large-story-full-width"),
@@ -29,17 +28,21 @@ module.exports = cx.design
         require("./content-elements/sections/medium-story"),
         require("./content-elements/sections/small-event"),
         require("./content-elements/sections/small-story"),
-        require("./content-elements/sections/teaser-full-width")
+        require("./content-elements/sections/teaser-full-width"),
+        require("./content-elements/sections/title-with-line")
       ),
-    // cx.contentElementGroup
-    //   .withGroupId("elements")
-    //   .withLabel("Elements")
-    //   .withContentElements(
-    //     // require("./content-elements/elements/h1"),
-    //     // require("./content-elements/elements/h3"),
-    //     require("./content-elements/elements/plain-text")
-    //     // require("./content-elements/elements/formatted-text")
-    //   ),
+    cx.contentElementGroup
+      .withGroupId("elements")
+      .withLabel("Elements")
+      .withContentElements(
+        require("./content-elements/elements/h1"),
+        require("./content-elements/elements/h3"),
+        require("./content-elements/elements/plain-text"),
+        require("./content-elements/elements/formatted-text"),
+        require("./content-elements/elements/spacer"),
+        require("./content-elements/elements/image-full-width"),
+        require("./content-elements/elements/divider")
+      ),
     cx.contentElementGroup
       .withGroupId("content")
       .withLabel("Content")
@@ -63,7 +66,15 @@ module.exports = cx.design
         require("./content-elements/sections/small-event"),
         require("./content-elements/sections/small-story"),
         require("./content-elements/sections/date-header"),
-        require("./content-elements/sections/teaser-full-width")
+        require("./content-elements/sections/teaser-full-width"),
+        require("./content-elements/sections/title-with-line"),
+        require("./content-elements/elements/divider"),
+        require("./content-elements/elements/formatted-text"),
+        require("./content-elements/elements/spacer"),
+        require("./content-elements/elements/h1"),
+        require("./content-elements/elements/h3"),
+        require("./content-elements/elements/plain-text"),
+        require("./content-elements/elements/image-full-width")
       ),
     cx.dropzone
       .withDropzone("header")
@@ -71,8 +82,6 @@ module.exports = cx.design
         require("./content-elements/sections/gradient-block-header"),
         require("./content-elements/sections/header")
       ),
-    // require("./content-elements/sections/gradient-header"),
-
     cx.dropzone
       .withDropzone("footer")
       .withAllowedElements(

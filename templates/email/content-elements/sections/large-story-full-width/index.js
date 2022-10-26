@@ -18,4 +18,9 @@ module.exports = cx.contentElement
     cx.part.link
       .withId("d10e59f8-4643-11ed-b878-0242ac120002")
       .withLabel("Large Story Button")
+  )
+  .withDropzones(
+    cx.dropzone
+      .withDropzone("93a899b6-4435-4399-b352-61e347f79038")
+      .withAllowedElements(require("../../elements/image-full-width"))
   );
