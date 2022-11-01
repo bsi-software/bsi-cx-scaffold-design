@@ -1,12 +1,12 @@
 
     <a
-      className={
+      class={
         props.dark ? styles.buttonDark : props.downloadIcon ? styles.downloadBtn : styles.button
       }
       href={props.buttonLink ? props.buttonLink : "[buttonlink]"}
       data-bsi-element-part="link"
     >
-      <p data-bsi-link-text-part="" className={styles.buttonText}>
+      <p data-bsi-link-text-part="" class={styles.buttonText}>
         {props.text ? props.text : "Read"}
       </p>
       {/* {props.LinkIcon && props.dark ? <img src="icons/download-icon-white.svg" /> : props.linkIcon ? <img src="icons/download-icon.svg" /> :  " " } */}
@@ -34,7 +34,7 @@
         </svg>
       ) : props.downloadIcon ? (
         <svg
-          className={styles.download}
+          class={styles.download}
           width="18"
           height="18"
           viewBox="0 0 24 24"

@@ -2,7 +2,7 @@
       data-bsi-element="card"
       id={props.cardID}
       data-bsi-hide-remove-button=""
-      className={styles.card}
+      class={styles.card}
       data-bsi-element-part="background-image"
       style={{
         backgroundImage: props.backgroundImage
@@ -12,17 +12,17 @@
     >
       <a
         data-bsi-element-part="link"
-        className={styles.cardLink}
+        class={styles.cardLink}
         href={props.link ? props.link : "[cardlink|url=https://example.com]"}
         target={props.newTab ? "_blank" : "_self"}
         data-bsi-link-fixed-inner-html=""
       >
         <Chapter chapter={props.chapter} />
-        <div className={styles.contentWrapper}>
+        <div class={styles.contentWrapper}>
           <TeaserTitle subtitle={props.subtitle ?? "Subtitle"} />
           <TeaserText text={props.text ?? "Example text"} />
-          <div className={styles.button}>
-            <p className={styles.buttonText} data-bsi-element-part="plain-text">
+          <div class={styles.button}>
+            <p class={styles.buttonText} data-bsi-element-part="plain-text">
               {props.buttonText ? props.buttonText : "Start Reading"}
             </p>
           </div>
