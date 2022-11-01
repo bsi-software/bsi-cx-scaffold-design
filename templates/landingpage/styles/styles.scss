@@ -1,4 +1,13 @@
+
+/* Sections */
+@import '../../../components/sections/DetailPageHero/styles.css';
 @import '../content-elements/content/horizontalscroll/styles.css';
+
+
+/* Elements */
+@import '../../../components/elements/Chapter/styles.css';
+@import '../../../components/elements/Title/styles.css';
+@import '../../../components/elements/Text/styles.css';
 
 
 body {
@@ -9,4 +18,44 @@ body {
 main {
   display: flex;
   flex-direction: column;
+}
+
+:root {
+  --royalblue: #141e55;
+  --reflexblue: #001489;
+  --lightblue: #b8c0e8;
+  --grey: #f1f2f2;
+  --accordionBGC: rgba(20, 30, 85, 0.1);
+  --wide: 80%;
+  --contentWidth: 590px;
+  --contentWidthTablet: calc(100% - 110px);
+  --textWidthTablet: calc(100% - 320px);
+  --textWidthDesktop: calc(100% - 430px);
+  --contentWidthMobile: calc(100% - 32px);
+  --normalWidthText: 768px;
+}
+
+@font-face {
+  font-family: "VerlagSSm";
+  src: url("../assets/fonts/VerlagSSm-Book.woff2") format("woff2");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "VerlagSSm";
+  src: url("../assets/fonts/VerlagSSm-Light.woff2") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "VerlagSSm";
+  src: url("../assets/fonts/VerlagSSm-ExtraLight.woff2") format("woff2");
+  font-weight: 200;
+}
+
+
+body {
+  font-family: "VerlagSSm", "Arial", sans-serif;
+  margin: 0 auto;
+  scroll-behavior: smooth;
 }
