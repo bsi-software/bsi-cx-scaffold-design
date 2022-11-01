@@ -1,19 +1,27 @@
  <section class="detailpagehero_section" id="top" data-bsi-element="detailhero">
       <div class="detailpagehero_blueCanvas">
         <div class="detailpagehero_content">
-          <DetailHeroSubtitle text="How to Invest" />
+          <div class="detailpagehero_text" data-bsi-element-part="formatted-text">
+            <p>How to invest</p>
+          </div>
           <div class="detailpagehero_chapter">
-            <Chapter chapter={props.chapter} />
+            {% include '../../elements/chapter/template.twig' with {
+                chapter: "Chapter 1"
+              } %}
           </div>
           <div class="detailpagehero_subtitle">
-            <Subtitle subtitle={props.subtitle} />
+            {% include '../../elements/subtitle/template.twig' with {
+                subtitle: "Considerations"
+              } %}
           </div>
           <div class="detailpagehero_textBox">
-            <Text text={props.text} />
+              {% include '../../elements/text/template.twig' with {
+                text: "What are common questions that investors ask?"
+              } %}
           </div>
         </div>
       </div>
       <div class="detailpagehero_image">
-        <img data-bsi-element-part="image" src="./detailpage_hero.jpg" />
+        <img data-bsi-element-part="image" src="{{ bsi_cx_asset('./detailpage_hero.jpg') }}" />
       </div>
     </section>

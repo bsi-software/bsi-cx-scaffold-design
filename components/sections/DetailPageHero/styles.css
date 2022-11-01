@@ -1,18 +1,18 @@
-.section {
+.detailpagehero_section {
     margin: 0 40px;
     color: white;
     position: relative;
     margin-bottom: 120px;
   }
   
-  .imageOverlay {
+  .detailpagehero_imageOverlay {
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
   }
   
-  .blueCanvas {
+  .detailpagehero_blueCanvas {
     background-color: var(--royalblue);
     width: 75%;
     height: 560px;
@@ -24,11 +24,11 @@
     margin-bottom: 330px;
   }
   
-  .content {
+  .detailpagehero_content {
     max-width: calc(100vw - 800px - 10vw);
   }
   
-  .image {
+  .detailpagehero_image {
     max-width: 700px;
     height: auto;
     position: absolute;
@@ -36,7 +36,7 @@
     right: 0px;
   }
   
-  .image img {
+  .detailpagehero_image img {
     width: 100%;
     height: auto;
     background-repeat: no-repeat;
@@ -44,7 +44,7 @@
     aspect-ratio: 1 / 1;
   }
   
-  .linkBack {
+  .detailpagehero_linkBack {
     font-weight: 400;
     font-size: 11px;
     line-height: 13px;
@@ -53,42 +53,42 @@
     text-decoration: none;
   }
   
-  .linkBack:hover p {
+  .detailpagehero_linkBack:hover p {
     color: var(--reflexblue);
   }
   
-  .textBox {
+  .detailpagehero_textBox {
     width: 392px;
   }
   
-  .button {
+  .detailpagehero_button {
     font-style: normal;
     font-weight: 400;
     font-size: 11px;
     line-height: 13px;
   }
   
-  .chapter p {
+  .detailpagehero_chapter p {
     font-weight: 600;
     line-height: 140%;
     margin-top: 6px;
     margin-bottom: 40px;
   }
   
-  .subtitle > div {
+  .detailpagehero_subtitle > div {
     width: max-content;
   }
   
   /* Responsiveness */
   
   @media only screen and (max-width: 767px) {
-    .section {
+    .detailpagehero_section {
       margin: 0;
       width: 100%;
       max-width: 100vw;
     }
   
-    .blueCanvas {
+    .detailpagehero_blueCanvas {
       max-width: 100vw;
       width: 100%;
       padding-left: unset;
@@ -98,11 +98,11 @@
       justify-content: flex-start;
     }
   
-    .chapter {
+    .detailpagehero_chapter {
       margin-bottom: 30px;
     }
   
-    .content {
+    .detailpagehero_content {
       max-width: unset;
       width: var(--contentWidthMobile);
       margin: 0 auto;
@@ -110,11 +110,11 @@
       margin-bottom: 182px;
     }
   
-    .textBox {
+    .detailpagehero_textBox {
       width: unset;
     }
   
-    .image {
+    .detailpagehero_image {
       width: var(--contentWidthMobile);
       position: relative;
       margin: auto;
@@ -124,21 +124,21 @@
       margin-top: 30px;
     }
   
-    .image img {
+    .detailpagehero_image img {
       max-width: 100%;
       width: 100%;
-      aspect-ratio: 1 / 0.65;
+      aspect-ratio: 1 / 0.detailpagehero_65;
     }
   }
   
   @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    .section {
+    .detailpagehero_section {
       margin: 0 40px;
       color: white;
       position: relative;
     }
   
-    .blueCanvas {
+    .detailpagehero_blueCanvas {
       max-width: 100vw;
       width: 100%;
       padding-left: unset;
@@ -148,11 +148,11 @@
       justify-content: flex-start;
     }
   
-    .chapter {
+    .detailpagehero_chapter {
       margin-bottom: 30px;
     }
   
-    .content {
+    .detailpagehero_content {
       max-width: unset;
       width: var(--contentWidthTablet);
       margin: 0 auto;
@@ -160,7 +160,7 @@
       margin-bottom: 182px;
     }
   
-    .image {
+    .detailpagehero_image {
       width: var(--contentWidthTablet);
       max-width: fit-content;
       position: relative;
@@ -171,34 +171,34 @@
       margin-top: 30px;
     }
   
-    .image img {
+    .detailpagehero_image img {
       width: 100%;
       margin: auto;
-      aspect-ratio: 1 / 0.65;
+      aspect-ratio: 1 / 0.detailpagehero_65;
     }
   }
   
   @media only screen and (min-width: 1024px) and (max-width: 1439px) {
-    .blueCanvas {
+    .detailpagehero_blueCanvas {
       width: var(--textWidthTablet);
       height: 380px;
       margin-bottom: 180px;
     }
   
-    .chapter {
+    .detailpagehero_chapter {
       margin-bottom: 30px;
     }
   
-    .image img {
+    .detailpagehero_image img {
       max-width: 400px;
       width: 100%;
     }
   
-    .card a {
+    .detailpagehero_card a {
       display: none;
     }
   
-    .textBox div {
+    .detailpagehero_textBox div {
       font-size: 18px;
     }
   }
@@ -208,11 +208,11 @@
   @keyframes reveal {
     from {
       opacity: 0;
-      transform: scale3d(0.3, 0.3, 0.3);
+      transform: scale3d(0.detailpagehero_3, 0.detailpagehero_3, 0.detailpagehero_3);
     }
   
     50% {
-      opacity: 0.5;
+      opacity: 0.detailpagehero_5;
     }
   
     100% {
@@ -220,14 +220,14 @@
     }
   }
   
-  .blueCanvas {
+  .detailpagehero_blueCanvas {
     animation-name: reveal;
-    animation-duration: 0.7s;
+    animation-duration: 0.detailpagehero_7s;
   }
   
-  .image {
+  .detailpagehero_image {
     animation-name: reveal;
-    animation-duration: 0.7s;
+    animation-duration: 0.detailpagehero_7s;
   }
   
   @keyframes textreveal {
@@ -246,43 +246,65 @@
     }
   }
   
-  .content > div > p {
+  .detailpagehero_content > div > p {
     animation-name: textreveal;
-    transition-timing-function: cubic-bezier(0.44, 0, 0.32, 1);
+    transition-timing-function: cubic-bezier(0.detailpagehero_44, 0, 0.detailpagehero_32, 1);
     transform: translate(0px, 50px);
-    animation-duration: 0.4s;
-    animation-delay: 0.2s;
+    animation-duration: 0.detailpagehero_4s;
+    animation-delay: 0.detailpagehero_2s;
     opacity: 0;
     animation-fill-mode: forwards;
   }
   
-  .content > div > div > p {
+  .detailpagehero_content > div > div > p {
     animation-name: textreveal;
-    transition-timing-function: cubic-bezier(0.44, 0, 0.32, 1);
+    transition-timing-function: cubic-bezier(0.detailpagehero_44, 0, 0.detailpagehero_32, 1);
     transform: translate(0px, 50px);
-    animation-duration: 0.4s;
-    animation-delay: 0.3s;
+    animation-duration: 0.detailpagehero_4s;
+    animation-delay: 0.detailpagehero_3s;
     opacity: 0;
     animation-fill-mode: forwards;
   }
   
-  .subtitle h2 {
+  .detailpagehero_subtitle h2 {
     animation-name: textreveal;
-    transition-timing-function: cubic-bezier(0.44, 0, 0.32, 1);
+    transition-timing-function: cubic-bezier(0.detailpagehero_44, 0, 0.detailpagehero_32, 1);
     transform: translate(0px, 50px);
-    animation-duration: 0.4s;
-    animation-delay: 0.5s;
+    animation-duration: 0.detailpagehero_4s;
+    animation-delay: 0.detailpagehero_5s;
     opacity: 0;
     animation-fill-mode: forwards;
   }
   
-  .textBox div {
+  .detailpagehero_textBox div {
     animation-name: textreveal;
-    transition-timing-function: cubic-bezier(0.44, 0, 0.32, 1);
+    transition-timing-function: cubic-bezier(0.detailpagehero_44, 0, 0.detailpagehero_32, 1);
     transform: translate(0px, 50px);
-    animation-duration: 0.4s;
-    animation-delay: 0.6s;
+    animation-duration: 0.detailpagehero_4s;
+    animation-delay: 0.detailpagehero_6s;
     opacity: 0;
     animation-fill-mode: forwards;
   }
   
+  .detailpagehero_text,
+  .detailpagehero_text * {
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+  }
+  
+  .detailpagehero_text,
+  .detailpagehero_text p {
+    font-weight: 400;
+    opacity: 0.5;
+  }
+  
+  @media only screen and (max-width: 1023px) {
+    .detailpagehero_text,
+    .detailpagehero_text p {
+      font-size: 11px;
+      line-height: 13px;
+    }
+  }
