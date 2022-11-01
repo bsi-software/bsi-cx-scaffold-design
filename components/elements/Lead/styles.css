@@ -1,0 +1,38 @@
+.lead {
+  line-height: 130%;
+  margin: auto;
+  max-width: 900px;
+}
+
+.lead p {
+  font-size: 26px;
+  line-height: 34px;
+}
+
+@media only screen and (max-width: 767px) {
+  .lead {
+    margin: auto;
+    max-width: var(--contentWidthMobile);
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .lead {
+    margin: auto;
+    max-width: calc(100% - 185px);
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .lead p {
+    font-size: 23px;
+    line-height: 30px;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+  .lead {
+    margin: auto;
+    max-width: calc(100% - 350px);
+  }
+}

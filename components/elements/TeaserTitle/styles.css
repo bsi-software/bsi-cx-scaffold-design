@@ -1,0 +1,32 @@
+.teaserTitle {
+  margin: 8px 0;
+}
+
+.teaserTitle h3 {
+  font-size: 32px;
+  line-height: 38px;
+  font-weight: 400;
+  margin: 0;
+  color: white;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 1023px) {
+  .teaserTitle {
+    margin: 0;
+  }
+
+  .teaserTitle h3 {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1349px) {
+  .teaserTitle h3 {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 36px;
+  }
+}

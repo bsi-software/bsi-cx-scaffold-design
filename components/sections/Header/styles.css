@@ -1,0 +1,157 @@
+.section {
+  max-width: 100vw;
+  padding: 28px 0;
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 4;
+  background-color: white;
+  justify-content: space-between;
+}
+
+.backArrow {
+  margin-left: 40px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  width: 260px;
+}
+
+.backArrow p {
+  text-decoration: none;
+  color: var(--royalblue);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  line-height: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0;
+  margin-left: 10px;
+}
+
+.backArrow .linkBack:hover {
+  color: var(--reflexblue);
+}
+
+.logo {
+  margin: auto auto auto calc(50vw - 350px);
+  width: 200px;
+  display: flex;
+  /* justify-content: center; */
+}
+
+@media only screen and (min-width: 1930px) {
+  .logo {
+    margin-left: calc(50% - 420px);
+  }
+}
+
+.menu {
+  margin-right: 40px;
+  opacity: 0;
+}
+
+.scrollBarWrapper {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: 3px;
+}
+
+.button {
+  margin-right: 40px;
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+  .linkBack {
+    display: none;
+  }
+
+  .button {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .backArrow {
+    margin-left: 40px;
+    width: unset;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .logo {
+    margin: unset;
+    justify-content: center;
+  }
+
+  .button a {
+    max-width: unset;
+    min-width: unset;
+    background-color: unset;
+    padding: unset;
+  }
+
+  .logo {
+    margin: unset;
+  }
+
+  .section {
+    padding: 22px 0;
+  }
+
+  .menu {
+    margin-right: 16px;
+  }
+
+  .button p,
+  .button svg {
+    display: none;
+  }
+
+  .button,
+  .buttonDark {
+    margin-right: 64px;
+    opacity: 0;
+  }
+
+  .backArrow p {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .backArrow {
+    margin-left: 16px;
+    width: unset;
+  }
+
+  .backArrow p {
+    display: none;
+  }
+
+  .button,
+  .buttonDark {
+    margin-right: 40px;
+    opacity: 0;
+  }
+}
+
+/* animation Header */
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.section {
+  animation-name: fadeInDown;
+  animation-duration: 1s;
+}

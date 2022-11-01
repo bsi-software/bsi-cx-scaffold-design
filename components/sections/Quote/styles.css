@@ -1,0 +1,46 @@
+.quote {
+  background-color: var(--royalblue);
+  color: white;
+  text-align: center;
+  padding: 120px 0;
+}
+
+.quoteText {
+  font-size: 32px;
+  line-height: 42px;
+  max-width: 786px;
+  margin: auto;
+}
+
+.quoteText p {
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 42px;
+}
+
+.quoteAuthor {
+  font-size: 16px;
+  line-height: 130%;
+  margin-top: 32px;
+}
+
+@media only screen and (max-width: 1023px) {
+  .quote {
+    padding: 80px 0;
+  }
+
+  .quoteText {
+    margin: 0 32px;
+  }
+
+  .quoteText p {
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 130%;
+  }
+
+  .quoteAuthor {
+    font-size: 14px;
+    margin-top: 24px;
+  }
+}

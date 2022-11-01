@@ -1,0 +1,25 @@
+.teaserText {
+  margin-bottom: 32px;
+}
+
+.teaserText p {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 150%;
+  margin: 0;
+  color: white;
+}
+
+@media only screen and (max-width: 1023px) {
+  .teaserText p {
+    font-size: 18px;
+    line-height: 146%;
+    font-weight: 300;
+  }
+}
+
+@media only screen and (max-width: 1439px) {
+  .teaserText {
+    margin-bottom: 0;
+  }
+}

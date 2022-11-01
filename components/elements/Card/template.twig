@@ -1,0 +1,31 @@
+<div
+      data-bsi-element="card"
+      id={props.cardID}
+      data-bsi-hide-remove-button=""
+      className={styles.card}
+      data-bsi-element-part="background-image"
+      style={{
+        backgroundImage: props.backgroundImage
+          ? props.backgroundImage
+          : 'url("img/articleteasers/fade/image_teaser_theory.jpg")',
+      }}
+    >
+      <a
+        data-bsi-element-part="link"
+        className={styles.cardLink}
+        href={props.link ? props.link : "[cardlink|url=https://example.com]"}
+        target={props.newTab ? "_blank" : "_self"}
+        data-bsi-link-fixed-inner-html=""
+      >
+        <Chapter chapter={props.chapter} />
+        <div className={styles.contentWrapper}>
+          <TeaserTitle subtitle={props.subtitle ?? "Subtitle"} />
+          <TeaserText text={props.text ?? "Example text"} />
+          <div className={styles.button}>
+            <p className={styles.buttonText} data-bsi-element-part="plain-text">
+              {props.buttonText ? props.buttonText : "Start Reading"}
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>

@@ -1,0 +1,19 @@
+ <div className={detailPageHero.section} id="top" data-bsi-element="detailhero">
+      <div className={detailPageHero.blueCanvas}>
+        <div className={detailPageHero.content}>
+          <DetailHeroSubtitle text="How to Invest" />
+          <div className={detailPageHero.chapter}>
+            <Chapter chapter={props.chapter} />
+          </div>
+          <div className={detailPageHero.subtitle}>
+            <Subtitle subtitle={props.subtitle} />
+          </div>
+          <div className={detailPageHero.textBox}>
+            <Text text={props.text} />
+          </div>
+        </div>
+      </div>
+      <div className={detailPageHero.image}>
+        <img data-bsi-element-part="image" src={props.backgroundImage} />
+      </div>
+    </div>

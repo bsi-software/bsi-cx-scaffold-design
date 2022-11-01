@@ -1,0 +1,64 @@
+.teaser {
+  display: flex;
+  flex-direction: column;
+  width: 295px;
+}
+
+.teaser:hover .articleImage {
+  transform: scale(1.1);
+}
+
+.articleImageWrapper {
+  overflow: hidden;
+  height: 295px;
+  width: 295px;
+  margin-bottom: 40px;
+}
+
+.articleImage {
+  height: 295px;
+  width: 295px;
+  transition: transform 500ms ease-out;
+}
+
+.teaser b {
+  opacity: 0.4;
+}
+
+.teaser q {
+  font-size: 23px;
+  line-height: 140%;
+  margin: 24px 0;
+}
+
+.quote {
+  margin: 24px 0;
+}
+
+.teaser .author {
+  font-size: 14px;
+  line-height: 130%;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 1023px) {
+  .teaser {
+    width: 100%;
+    margin-bottom: 80px;
+  }
+
+  .articleImage {
+    width: 100%;
+    height: auto;
+  }
+
+  .teaser q {
+    font-size: 18px;
+    line-height: 130%;
+  }
+
+  .teaser .author {
+    font-size: 12px;
+  }
+}

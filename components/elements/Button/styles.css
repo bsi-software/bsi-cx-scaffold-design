@@ -1,0 +1,220 @@
+/* Default Button (white) */
+
+.button {
+  background-color: white;
+  border: 1px solid white;
+  padding: 17px 32px;
+  max-width: fit-content;
+  text-decoration: none;
+  color: var(--royalblue);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 120px;
+  height: 48px;
+  box-sizing: border-box;
+  transition: background-color 0.5s, border 0.5s, color 0.5s;
+  transition-timing-function: ease-out;
+}
+
+.button:hover {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  transition: background-color 0.5s, border 0.5s, color 0.5s;
+  transition-timing-function: ease-out;
+}
+
+.button:hover p {
+  color: white;
+}
+
+/* Download Button (outline) */
+
+.downloadBtn {
+  border: 1px solid var(--royalblue);
+  background-color: transparent;
+  padding: 17px 40px;
+  max-width: fit-content;
+  text-decoration: none;
+  color: var(--royalblue);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 120px;
+  margin-left: 15px;
+  transition: background-color 0.5s, border 0.5s, color 0.5s;
+  transition-timing-function: ease-out;
+  height: 48px;
+  box-sizing: border-box;
+}
+
+.downloadBtn svg path:first-child,
+.downloadBtn svg path:nth-child(2),
+.downloadBtn svg path:last-child {
+  stroke: var(--royalblue);
+  transition: stroke 0.2s;
+  transition-timing-function: ease-in;
+}
+
+.downloadBtn:hover {
+  background-color: transparent;
+  border: 2px solid var(--royalblue);
+  color: var(--royalblue);
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+  transition-timing-function: ease-in;
+}
+
+.downloadBtn p {
+  color: var(--royalblue);
+  transition: color 0.5s;
+  transition-timing-function: ease-out;
+}
+
+.downloadBtn:hover p {
+  color: var(--royalblue);
+  transition: color 0.2s;
+  transition-timing-function: ease-out;
+}
+
+.downloadBtn:hover svg path:first-child,
+.downloadBtn:hover svg path:nth-child(2),
+.downloadBtn:hover svg path:last-child {
+  stroke: var(--royalblue);
+  transition: stroke 0.2s;
+  transition-timing-function: ease-in;
+}
+
+.download {
+  margin-left: 5px;
+}
+
+.button .buttonText {
+  color: var(--royalblue);
+}
+
+.button .buttonText p {
+  color: var(--royalblue);
+}
+
+/* Dark Button (blue) */
+
+.buttonDark {
+  background-color: var(--royalblue);
+  padding: 17px 32px;
+  max-width: fit-content;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 120px;
+  border: 1px solid var(--royalblue);
+  transition: background-color 0.5s, border 0.5s, color 0.5s;
+  transition-timing-function: ease-out;
+}
+
+.buttonDark:hover {
+  background-color: transparent;
+  border: 1px solid var(--royalblue);
+  color: var(--royalblue);
+  transition: background-color 0.5s, border 0.5s, color 0.5s;
+  transition-timing-function: ease-out;
+}
+
+.buttonDark:hover .buttonText {
+  color: var(--royalblue);
+}
+
+.buttonDark .buttonText {
+  color: white;
+}
+
+.buttonDark .buttonText p {
+  color: white;
+}
+
+.buttonText {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 13px;
+  text-align: center;
+  letter-spacing: 0.09em;
+  margin: 0px;
+  min-width: 120px;
+  width: max-content;
+}
+
+.buttonText p {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 600;
+}
+
+.button svg,
+.buttonDark svg,
+.downloadBtn {
+  margin-left: 10px;
+}
+
+.button svg path:first-child,
+.button svg path:nth-child(2) {
+  stroke: var(--royalblue);
+}
+.button svg path:last-child {
+  fill: var(--royalblue);
+}
+
+.buttonDark svg path:first-child,
+.buttonDark svg path:nth-child(2),
+.buttonDark svg path:last-child {
+  stroke: white;
+}
+
+.buttonDark:hover svg path:first-child,
+.buttonDark:hover svg path:nth-child(2),
+.buttonDark:hover svg path:last-child {
+  stroke: var(--royalblue);
+}
+
+@media only screen and (max-width: 1023px) {
+  /* .button {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: unset;
+    min-width: unset;
+    background-color: unset;
+    padding: unset;
+    display: block;
+    width: 100%;
+  } */
+
+  .button .buttonText {
+    width: 100%;
+  }
+
+  .button svg path:first-child,
+  .button svg path:nth-child(2) {
+    stroke: white;
+  }
+
+  .button svg path:last-child {
+    fill: white;
+  }
+
+  .buttonDark svg path:first-child,
+  .buttonDark svg path:nth-child(2) {
+    stroke: var(--royalblue);
+  }
+
+  .buttonDark svg path:last-child {
+    stroke: var(--royalblue);
+  }
+
+  .downloadBtn {
+    margin-top: 12px;
+    margin-left: 0;
+  }
+}

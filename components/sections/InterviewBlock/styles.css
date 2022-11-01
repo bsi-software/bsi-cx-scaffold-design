@@ -1,0 +1,22 @@
+.section {
+  max-width: var(--contentWidth);
+  margin: 120px auto;
+}
+
+.section h4 {
+  margin-bottom: 40px;
+}
+
+.name {
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 1023px) {
+  .section {
+    margin: 80px auto;
+    max-width: var(--contentWidthMobile);
+  }
+}

@@ -1,0 +1,151 @@
+.section {
+  background-color: var(--grey);
+  display: flex;
+  box-sizing: border-box;
+}
+
+div:global(.home) .section {
+  scroll-snap-align: start;
+}
+
+.section > div {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+.title {
+  text-align: center;
+  padding: 120px 0;
+}
+
+.title h2 {
+  color: var(--royalblue);
+}
+
+.content {
+  padding: 120px;
+  padding-left: 0;
+}
+
+.content .text {
+  color: var(--royalblue);
+  font-size: 20px;
+  line-height: 150%;
+  width: 80%;
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+
+.btnWrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+div:global(.home) .hidden {
+  display: block;
+}
+
+.hidden {
+  display: none;
+  min-width: 250px;
+}
+
+.hidden a {
+  padding: 17px 30px;
+}
+
+@media only screen and (max-width: 767px) {
+  .section {
+    max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    padding: 80px 0;
+  }
+
+  .btnWrapper {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .content .button_dark {
+    margin-bottom: 12px;
+  }
+
+  .section .title,
+  .section .content {
+    width: var(--contentWidthMobile);
+    margin: auto;
+    padding: unset;
+  }
+
+  .title {
+    text-align: start;
+  }
+
+  .title h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .content .text {
+    width: 100%;
+  }
+
+  .hidden {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .section {
+    display: flex;
+    box-sizing: border-box;
+    padding: 60px 50px;
+  }
+
+  .btnWrapper {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .content .button_dark {
+    margin-bottom: 12px;
+  }
+
+  .section .title,
+  .section .content {
+    width: var(--contentWidthTablet);
+    margin: 0 auto;
+    padding: unset;
+  }
+
+  .title {
+    text-align: start;
+  }
+
+  .content .text {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .hidden {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+  .hidden {
+    display: block;
+  }
+  .content .text {
+    width: 100%;
+  }
+
+  .title {
+    padding-left: 90px;
+    padding-top: 140px;
+    text-align: start;
+  }
+}

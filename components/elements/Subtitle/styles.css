@@ -1,0 +1,34 @@
+.subtitle {
+  font-size: 56px;
+  line-height: 110%;
+}
+
+.subtitle h2 {
+  font-weight: 275;
+  font-size: 56px;
+  line-height: 130%;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+@media only screen and (max-width: 1023px) {
+  .subtitle {
+    font-size: 32px;
+  }
+  .subtitle h2 {
+    font-size: 32px;
+    margin-bottom: 6px;
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 1439px) {
+  .subtitle {
+    font-size: 32px;
+  }
+  .subtitle h2 {
+    font-size: 32px;
+    margin-bottom: 6px;
+    margin-top: 0;
+  }
+}
