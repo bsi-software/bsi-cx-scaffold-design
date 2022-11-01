@@ -1,4 +1,4 @@
-.section {
+.header_section {
   max-width: 100vw;
   padding: 28px 0;
   display: flex;
@@ -9,7 +9,7 @@
   justify-content: space-between;
 }
 
-.backArrow {
+.header_backArrow {
   margin-left: 40px;
   display: flex;
   align-items: center;
@@ -17,11 +17,11 @@
   width: 260px;
 }
 
-.backArrow p {
+.header_backArrow p {
   text-decoration: none;
   color: var(--royalblue);
   font-size: 11px;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.header_15em;
   line-height: 13px;
   font-weight: 600;
   text-transform: uppercase;
@@ -29,11 +29,11 @@
   margin-left: 10px;
 }
 
-.backArrow .linkBack:hover {
+.header_backArrow .header_linkBack:hover {
   color: var(--reflexblue);
 }
 
-.logo {
+.header_logo {
   margin: auto auto auto calc(50vw - 350px);
   width: 200px;
   display: flex;
@@ -41,97 +41,97 @@
 }
 
 @media only screen and (min-width: 1930px) {
-  .logo {
+  .header_logo {
     margin-left: calc(50% - 420px);
   }
 }
 
-.menu {
+.header_menu {
   margin-right: 40px;
   opacity: 0;
 }
 
-.scrollBarWrapper {
+.header_scrollBarWrapper {
   position: absolute;
   width: 100%;
   top: 0;
   height: 3px;
 }
 
-.button {
+.header_button {
   margin-right: 40px;
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1439px) {
-  .linkBack {
+  .header_linkBack {
     display: none;
   }
 
-  .button {
+  .header_button {
     display: none;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .backArrow {
+  .header_backArrow {
     margin-left: 40px;
     width: unset;
   }
 }
 
 @media only screen and (max-width: 1023px) {
-  .logo {
+  .header_logo {
     margin: unset;
     justify-content: center;
   }
 
-  .button a {
+  .header_button a {
     max-width: unset;
     min-width: unset;
     background-color: unset;
     padding: unset;
   }
 
-  .logo {
+  .header_logo {
     margin: unset;
   }
 
-  .section {
+  .header_section {
     padding: 22px 0;
   }
 
-  .menu {
+  .header_menu {
     margin-right: 16px;
   }
 
-  .button p,
-  .button svg {
+  .header_button p,
+  .header_button svg {
     display: none;
   }
 
-  .button,
-  .buttonDark {
+  .header_button,
+  .header_buttonDark {
     margin-right: 64px;
     opacity: 0;
   }
 
-  .backArrow p {
+  .header_backArrow p {
     display: none;
   }
 }
 
 @media only screen and (max-width: 767px) {
-  .backArrow {
+  .header_backArrow {
     margin-left: 16px;
     width: unset;
   }
 
-  .backArrow p {
+  .header_backArrow p {
     display: none;
   }
 
-  .button,
-  .buttonDark {
+  .header_button,
+  .header_buttonDark {
     margin-right: 40px;
     opacity: 0;
   }
@@ -151,7 +151,7 @@
   }
 }
 
-.section {
+.header_section {
   animation-name: fadeInDown;
   animation-duration: 1s;
 }
