@@ -13,20 +13,24 @@ module.exports = cx.design
     Locale.DE)
   .withContentElementGroups(
     cx.contentElementGroup
-      .withGroupId('content')
-      .withLabel('Content')
+      .withGroupId('sections')
+      .withLabel('Sections')
       .withContentElements(
-        require('./content-elements/content/title'),
-        require('./content-elements/content/text')),
+        require('../../components/sections/Header'),
+        require('../../components/sections/DetailPageHero'),
+        require('../../components/sections/TextBlock'),
+        require('../../components/sections/Subheading'),
+        require('../../components/sections/Box'),
+        require('../../components/sections/CaseBlock'),
+        require('../../components/sections/Figure'),
+        require('../../components/sections/Quote'),
+        require('../../components/sections/InterviewBlock'),
+        require('../../components/sections/ArticleTeaser'),
+        require('../../components/sections/BackToTop'),
+        require('../../components/sections/Contact'),
+        require('../../components/sections/Footer')),
     cx.contentElementGroup
-      .withGroupId('layout')
-      .withLabel('Layout')
+      .withGroupId('elements')
+      .withLabel('Elements')
       .withContentElements(
-        require('./content-elements/layout/columns')))
-  .withDropzones(
-    cx.dropzone
-      .withDropzone('a1683342-d4a7-4c26-924e-bce162c4399f')
-      .withAllowedElements(
-        require('./content-elements/content/title'),
-        require('./content-elements/content/text'),
-        require('./content-elements/layout/columns')));
+        require('../../components/elements/Lead')));
