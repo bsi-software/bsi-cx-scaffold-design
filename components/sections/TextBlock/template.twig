@@ -1,8 +1,9 @@
-<div class={TextBlockStyles.section} data-bsi-element="textblock">
-      <Subheading subheading={props.subheading} />
-      <Text>
-        {props.children}
-        {/* <p>
+<div class="textblock_section" data-bsi-element="textblock">
+        {% include '../../elements/Subheading/template.twig' with {
+          subheading: "Subheading"
+        } %}
+        <div class="textblock_text" data-bsi-element-part="formatted-text">
+        <p>
           We firmly believe that there is more to blockchain technology than its use merely for
           digital transactions. We understand the technology as an enabler of the next technical
           revolution, affecting not only the financial world, but economies and societies as a
@@ -15,6 +16,6 @@
               can enable anonymous patient data analysis on a scale previously unknown.
             </li>
           </ul>
-        </p> */}
-      </Text>
+        </p>
+      </div>
     </div>

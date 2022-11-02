@@ -1,11 +1,15 @@
 <div class="grey-bg" data-bsi-element="caseblock">
-      <div class={CaseBlockStyles.section}>
-        <div class={CaseBlockStyles.heading}>
-          <p class={CaseBlockStyles.headingNumber} data-bsi-element-part="plain-text">
+      <div class="caseblock_section">
+        <div class="caseblock_heading">
+          <p class="caseblock_headingNumber" data-bsi-element-part="plain-text">
             1
           </p>
-          <Subheading subheading="Blockchain and sustainability can go hand in hand?" />
+          {% include '../../elements/Subheading/template.twig' with {
+          subheading: "Blockchain and sustainability can go hand in hand?"
+        } %}
         </div>
-        <Text text="In time, blockchain technology holds the potential to provide a positive sustainable impact. Today, however, the blockchain industry has a negative ecological footprint. Bitcoin mining consumes around 90 terawatt-hours of electricity annually. This is more than the annual electricity consumption of Finland, or almost 0.5% of all electricity consumption worldwide*. " />
+        {% include '../../elements/Text/template.twig' with {
+        text: "In time, blockchain technology holds the potential to provide a positive sustainable impact. Today, however, the blockchain industry has a negative ecological footprint. Bitcoin mining consumes around 90 terawatt-hours of electricity annually. This is more than the annual electricity consumption of Finland, or almost 0.5% of all electricity consumption worldwide."
+      } %}
       </div>
     </div>

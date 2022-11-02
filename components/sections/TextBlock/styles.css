@@ -1,45 +1,65 @@
-.section {
+.textblock_section {
   max-width: var(--normalWidthText);
   margin: 96px auto 120px;
 }
 
-.section h4 {
+.textblock_section h4 {
   margin-bottom: 40px;
 }
 
-.section li::marker {
+.textblock_section li::marker {
   content: "—   ";
 }
 
 @media only screen and (max-width: 767px) {
-  .section {
+  .textblock_section {
     margin: 60px auto;
     max-width: var(--contentWidthMobile);
   }
 
-  .section h4 {
+  .textblock_section h4 {
     margin-bottom: 16px;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .section {
+  .textblock_section {
     margin: 60px auto;
     max-width: var(--textWidthTablet);
   }
 
-  .section h4 {
+  .textblock_section h4 {
     margin-bottom: 16px;
   }
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1439px) {
-  .section {
+  .textblock_section {
     margin: 80px auto;
     max-width: var(--textWidthDesktop);
   }
 
-  .section h4 {
+  .textblock_section h4 {
     margin-bottom: 16px;
+  }
+}
+
+
+.textblock_text,
+.textblock_text * {
+  font-size: 20px;
+  line-height: 150%;
+}
+
+.textblock_text,
+.textblock_text p {
+  font-weight: 300;
+}
+
+@media only screen and (max-width: 1023px) {
+  .textblock_text,
+  .textblock_text p {
+    font-size: 18px;
+    line-height: 150%;
   }
 }

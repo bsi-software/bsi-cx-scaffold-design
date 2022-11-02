@@ -1,19 +1,29 @@
-<div class={"two-buttons " + contact.section} data-bsi-element="contact" id="contact">
-      <div class={contact.title}>
-        <Subtitle subtitle="Contact" />
+<section class="two-buttons contact_section" data-bsi-element="contact" id="contact">
+      <div class="contact_title">
+        {% include '../../../components/elements/Subtitle/template.twig' with {
+          subtitle: "Contact"
+        } %}
       </div>
-      <div class={contact.content}>
+      <div class="contact_content">
         <div data-bsi-element-part="formatted-text">
-          <p class={contact.text}>
+          <p class="contact_text">
             Discover new opportunities for your portfolio. Our experts would be happy to discuss all
             of the options available to you.
           </p>
         </div>
-        <div class={contact.btnWrapper}>
-          <Button dark text="Contact us" buttonLink="[contactUs]" />
-          <div class={contact.hidden}>
-            <Button text="Order Publication" downloadIcon buttonLink="[orderPublication]" />
+        <div class="contact_btnWrapper">
+          {% include '../../../components/elements/Button/template.twig' with {
+              text: "Contact us",
+              dark: true,
+              buttonLink: "[contactUs]"
+            } %}
+          <div class="contact_hidden">
+            {% include '../../../components/elements/Button/template.twig' with {
+              text: "Order Publication",
+              downloadIcon: true,
+              buttonLink: "[orderPublication]"
+            } %}
           </div>
         </div>
       </div>
-    </div>
+    </section>

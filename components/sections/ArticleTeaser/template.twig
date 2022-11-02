@@ -1,0 +1,30 @@
+<div class="articleteaser_section" data-bsi-element="articleteaser">
+  {% include '../../elements/Subheading/template.twig' with {
+          subheading: "Topic"
+        } %}
+  <div class="articleteaser_teaser">
+    <div class="articleteaser_content">
+      <div>
+        {% include '../../elements/Chapter/template.twig' with {
+          chapter: "Chapter 2"
+        } %}
+      </div>
+      <div >
+      {% include '../../elements/TeaserTitle/template.twig' with {
+          title: "Teaser Title"
+        } %}
+      </div>
+      <div class="articleteaser_textBox">
+      {% include '../../elements/Text/template.twig' with {
+        text: "A teaser to the next article"
+      } %}
+      </div>
+      <span >
+        {% include '../../elements/Button/template.twig' with {
+          buttonLink: "[nextChapter]"
+        } %}
+      </span>
+    </div>
+    <img class="articleteaser_image" data-bsi-element-part="image" src="{{ bsi_cx_asset('./image_stage_mechanics.jpg') }}" />
+  </div>
+</div>

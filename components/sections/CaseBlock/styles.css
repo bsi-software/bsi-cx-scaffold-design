@@ -1,24 +1,24 @@
-.section {
+.caseblock_section {
   max-width: var(--contentWidth);
   margin: auto;
   padding: 120px 0;
 }
 
-.section li::marker {
+.caseblock_section li::marker {
   content: "—   ";
 }
 
-.heading {
+.caseblock_heading {
   display: flex;
   align-items: flex-end;
   margin-bottom: 48px;
 }
 
-.heading h4 {
+.caseblock_heading h4 {
   margin: 0;
 }
 
-.headingNumber {
+.caseblock_headingNumber {
   font-size: 116px;
   line-height: 100%;
   font-weight: 200;
@@ -27,19 +27,19 @@
 }
 
 @media only screen and (max-width: 1023px) {
-  .section {
+  .caseblock_section {
     margin: 0 auto;
     max-width: var(--contentWidthMobile);
     padding: 40px 0 80px 0;
   }
 
-  .heading {
+  .caseblock_heading {
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 32px;
   }
 
-  .headingNumber {
+  .caseblock_headingNumber {
     font-size: 100px;
     line-height: 110%;
   }

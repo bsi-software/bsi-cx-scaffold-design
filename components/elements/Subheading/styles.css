@@ -1,76 +1,18 @@
-.box {
-  margin-bottom: 23px;
-  width: 196px;
-}
-
-.definition {
-  color: white;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 50px;
-}
-
-.definition img {
-  display: inline-block;
-  margin-bottom: 18px;
-}
-
-.definition .title {
-  font-size: 20px;
-  line-height: 150%;
-  font-weight: 300;
-  width: 180px;
-}
-
-.definition .content p {
-  color: white;
-  margin-bottom: 3px;
-  font-size: 14px;
-  font-weight: 400;
+.subheading h4 {
+  font-size: 30px;
+  line-height: 130%;
+  font-weight: 500;
+  margin: 0;
 }
 
 @media only screen and (max-width: 1023px) {
-  .box {
-    width: 171px;
-    margin-bottom: 18px;
-  }
-
-  .definition {
-    padding-top: 24px;
-  }
-
-  .definition .title {
-    font-size: 18px;
-    line-height: 150%;
-    width: 154px;
-  }
-
-  .definition .content p {
-    font-size: 12px;
-    margin-bottom: 0;
+  .subheading h4 {
+    font-size: 23px;
   }
 }
 
-@media only screen and (min-width: 1023px) and (max-width: 1439px) {
-  .box {
-    width: 175px;
-    margin-bottom: 16px;
-  }
-
-  .definition .title {
-    font-size: 20px;
-    line-height: 150%;
-    width: 154px;
-  }
-
-  .definition .content p {
-    font-size: 12px;
-    margin-bottom: 0;
-  }
-
-  .definition:not(:last-child) {
-    padding-top: 50px;
-    padding-left: 10px;
-    padding-right: 10px;
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+  .subheading h4 {
+    font-size: 23px;
   }
 }

@@ -1,11 +1,12 @@
-<div class={InterviewBlockStyles.section} data-bsi-element="interviewblock">
-      <Subheading text="Selecting a strategy" />
-      <b class={InterviewBlockStyles.name} data-bsi-element-part="plain-text">
+<div class="interviewblock_section" data-bsi-element="interviewblock">
+      {% include '../../elements/Subheading/template.twig' with {
+          subheading: "Selecting a strategy"
+        } %}
+      <b class="interviewblock_name" data-bsi-element-part="plain-text">
         Yves:
       </b>
-      <Text>
-        <p>
-          The ‘currency’ narrative has really done a disservice to the emerging digital asset class.
+      {% include '../../elements/Text/template.twig' with {
+        text: "The ‘currency’ narrative has really done a disservice to the emerging digital asset class.
           For the record, I prefer to call them crypto assets, or crypto coins, as they have little
           to do with the fiat currencies of our world. The focus on the coins’ volatility and
           operational issues, including energy costs, will prove to be a distraction in the grand
@@ -13,7 +14,6 @@
           revolution will have much deeper consequences, and will most likely disrupt not only
           financial services, but will propagate across all sectors throughout the economy, as
           businesses rely more and more heavily on technology. We are entering a new era of Web 3.0
-          where decentralisation of technology and internet will rule.
-        </p>
-      </Text>
+          where decentralisation of technology and internet will rule."
+      } %}
     </div>

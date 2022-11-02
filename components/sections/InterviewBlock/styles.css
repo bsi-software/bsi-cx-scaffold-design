@@ -1,13 +1,13 @@
-.section {
+.interviewblock_section {
   max-width: var(--contentWidth);
   margin: 120px auto;
 }
 
-.section h4 {
+.interviewblock_section h4 {
   margin-bottom: 40px;
 }
 
-.name {
+.interviewblock_name {
   font-size: 14px;
   line-height: 17px;
   letter-spacing: 0.06em;
@@ -15,7 +15,7 @@
 }
 
 @media only screen and (max-width: 1023px) {
-  .section {
+  .interviewblock_section {
     margin: 80px auto;
     max-width: var(--contentWidthMobile);
   }

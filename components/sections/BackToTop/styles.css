@@ -1,8 +1,8 @@
-.section {
+.backtotop {
   max-width: 100vw;
 }
 
-.linkArea {
+.backtotop_linkArea {
   width: 100%;
   padding: 60px 0;
   display: flex;
@@ -10,23 +10,23 @@
   text-decoration: none;
 }
 
-.linkText {
+.backtotop_linkText {
   font-size: 16px;
   line-height: 130%;
   color: var(--royalblue);
 }
 
-.linkArea img {
+.backtotop_linkArea img {
   transform: rotate(90deg);
   margin-left: 23px;
 }
 
 @media only screen and (max-width: 1023px) {
-  .linkArea {
+  .backtotop_linkArea {
     padding: 40px 0;
   }
 
-  .linkText {
+  .backtotop_linkText {
     font-size: 14px;
   }
 }

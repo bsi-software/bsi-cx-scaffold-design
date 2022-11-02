@@ -1,11 +1,6 @@
-<div class={BoxStyles.box} data-bsi-element="box">
-      <Subheading subheading={props.subheading} />
-      <Text>
-        <p>
-          When the term cryptocurrency is used, it refers to a currency that is digital and
-          decentralised, i.e. no central authority or banks are involved. However, as the term
-          currency is reserved for legal forms of payment, we refrain from using it, and instead
-          talk about crypto coins and tokens, as appropriate.
-        </p>
-      </Text>
+<div class="box" data-bsi-element="box">
+      {% include '../../elements/Subheading/template.twig' %}
+      {% include '../../elements/Text/template.twig' with {
+        text: "When the term cryptocurrency is used, it refers to a currency that is digital and decentralised, i.e. no central authority or banks are involved. However, as the term currency is reserved for legal forms of payment, we refrain from using it, and instead talk about crypto coins and tokens, as appropriate."
+      } %}
     </div>

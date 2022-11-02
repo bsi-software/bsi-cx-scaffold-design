@@ -6,8 +6,8 @@ ul {
     background: #efefef;
     font-size: 0;
     text-align: center;
-    position: fixed;
-    bottom: 10px
+   /*  position: fixed;
+    bottom: 10px */
 }
 
 li {

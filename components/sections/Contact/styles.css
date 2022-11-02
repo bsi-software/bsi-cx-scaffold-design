@@ -1,35 +1,35 @@
-.section {
+.contact_section {
   background-color: var(--grey);
   display: flex;
   box-sizing: border-box;
 }
 
-div:global(.home) .section {
+div:global(.contact_home) .contact_section {
   scroll-snap-align: start;
 }
 
-.section > div {
+.contact_section > div {
   width: 50%;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
 }
 
-.title {
+.contact_title {
   text-align: center;
   padding: 120px 0;
 }
 
-.title h2 {
+.contact_title h2 {
   color: var(--royalblue);
 }
 
-.content {
+.contact_content {
   padding: 120px;
   padding-left: 0;
 }
 
-.content .text {
+.contact_content .contact_text {
   color: var(--royalblue);
   font-size: 20px;
   line-height: 150%;
@@ -38,112 +38,112 @@ div:global(.home) .section {
   margin-bottom: 32px;
 }
 
-.btnWrapper {
+.contact_btnWrapper {
   display: flex;
   flex-direction: row;
 }
 
-div:global(.home) .hidden {
+div:global(.contact_home) .contact_hidden {
   display: block;
 }
 
-.hidden {
+.contact_hidden {
   display: none;
   min-width: 250px;
 }
 
-.hidden a {
+.contact_hidden a {
   padding: 17px 30px;
 }
 
 @media only screen and (max-width: 767px) {
-  .section {
+  .contact_section {
     max-width: 100vw;
     display: flex;
     flex-direction: column;
     padding: 80px 0;
   }
 
-  .btnWrapper {
+  .contact_btnWrapper {
     flex-direction: column;
     justify-content: flex-start;
   }
 
-  .content .button_dark {
+  .contact_content .contact_button_dark {
     margin-bottom: 12px;
   }
 
-  .section .title,
-  .section .content {
+  .contact_section .contact_title,
+  .contact_section .contact_content {
     width: var(--contentWidthMobile);
     margin: auto;
     padding: unset;
   }
 
-  .title {
+  .contact_title {
     text-align: start;
   }
 
-  .title h2 {
+  .contact_title h2 {
     margin-top: 0;
     margin-bottom: 20px;
   }
 
-  .content .text {
+  .contact_content .contact_text {
     width: 100%;
   }
 
-  .hidden {
+  .contact_hidden {
     display: block;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .section {
+  .contact_section {
     display: flex;
     box-sizing: border-box;
     padding: 60px 50px;
   }
 
-  .btnWrapper {
+  .contact_btnWrapper {
     flex-direction: column;
     justify-content: flex-start;
   }
 
-  .content .button_dark {
+  .contact_content .contact_button_dark {
     margin-bottom: 12px;
   }
 
-  .section .title,
-  .section .content {
+  .contact_section .contact_title,
+  .contact_section .contact_content {
     width: var(--contentWidthTablet);
     margin: 0 auto;
     padding: unset;
   }
 
-  .title {
+  .contact_title {
     text-align: start;
   }
 
-  .content .text {
+  .contact_content .contact_text {
     width: 100%;
     font-size: 18px;
   }
 
-  .hidden {
+  .contact_hidden {
     display: block;
   }
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1439px) {
-  .hidden {
+  .contact_hidden {
     display: block;
   }
-  .content .text {
+  .contact_content .contact_text {
     width: 100%;
   }
 
-  .title {
+  .contact_title {
     padding-left: 90px;
     padding-top: 140px;
     text-align: start;
