@@ -1,0 +1,18 @@
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "html.format.indentHandlebars": true,
+    "html.format.indentInnerHtml": true,
+    "html.format.templating": true,
+    "editor.formatOnPaste": true,
+    "html.format.wrapAttributes": "force",
+    "editor.snippetSuggestions": "inline",
+    "emmet.includeLanguages": {
+        "twig": "html"
+    },
+    "[twig]": {
+        "editor.defaultFormatter": "junstyle.twig-language"
+    },
+    "html.format.wrapAttributesIndentSize": 20,
+    "html.format.wrapLineLength": 20
+}

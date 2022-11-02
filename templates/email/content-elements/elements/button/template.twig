@@ -1,11 +1,73 @@
-<table role="presentation" border="0" cellspacing="0" cellpadding="0">
-  <tbody>
-    <tr>
-      <td align="center" valign="middle" height="{{ button_height }}" bgcolor="#023991" style="padding-left: 15px;padding-right: 15px;border-radius: 1px; background-color: #023991; border-width: 1px; border-style: 'solid'; border-color: #023991;">
-        <a data-bsi-element-part="link" href="{{ button_href }}" target="_blank" style="font-size: 16px; line-height: 1px; font-family: TT Norms; color: #ffffff;
-                 font-weight:700; font-style:normal;text-decoration:none;
-                    vertical-align:middle;text-align:center;border-radius: 1px; padding: 15px 0;">{{ button_text ? : 'ANMELDEN' }}</a>
-      </td>
-    </tr>
-  </tbody>
+<table role="presentation"
+    border="0"
+    cellspacing="0"
+    cellpadding="0">
+    <tbody>
+        <tr>
+            <td align="center"
+                valign="middle"
+                height="{{
+                button_height
+                }}"
+                bgcolor="{{
+                button_bg_color
+                }}"
+                style="padding-left: {{
+                button_padding_left_right
+                }}px;padding-right: {{
+                button_padding_left_right
+                }}px;border-radius: {{
+                button_radius
+                }}px; background-color: {{
+                button_bg_color
+                }}; border-width: {{
+                button_border_width
+                }}px; border-style: {{
+                button_border_style
+                    ?
+                    : 'solid'
+                }}; border-color: {{
+                button_border_color
+                }}; margin-right: {{
+                margin_right
+                    ?
+                    : 0
+                }}">
+                <a id="d025b164-5514-11ed-bdc3-0242ac120002"
+                    data-bsi-element-part="link"
+                    href="{{
+                    button_href
+                        ?
+                        : 'https://www.gateb.com'
+                    }}"
+                    target="_blank"
+                    style="font-size: {{
+                    button_font_size
+                        ?
+                        : 16
+                    }}px; line-height: {{
+                    button_height
+                    }}px; font-family: {{
+                    button_font_family
+                        ?
+                        : 'TT Norms'
+                    }}; color: {{
+                    button_label_color
+                    }};
+                 font-weight:{{
+                    button_font_weight
+                        ?
+                        : 400
+                    }}; font-style:normal;text-decoration:none;text-transform:uppercase;vertical-align:middle;text-align:center;border-radius: {{
+                    button_radius
+                    }}px; padding: {{
+                    button_padding_top_bottom
+                    }}px 0;">
+                    {{ button_label_text
+                        ?
+                        : 'Hier Klicken' }}
+                </a>
+            </td>
+        </tr>
+    </tbody>
 </table>
