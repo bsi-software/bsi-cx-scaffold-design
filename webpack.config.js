@@ -4,11 +4,11 @@ const {BuildConfig, ModuleConfig, WebpackConfigBuilder, Version, DesignType} = r
 
 module.exports = WebpackConfigBuilder.fromConfigs(
   new BuildConfig()
-    .withName('landingpage')
+    .withName('detailpage')
     .withVersion('1.0.0')
     .withDesignType(DesignType.LANDINGPAGE)
     .withTargetVersion(Version.CX_1_3)
-    .withRootPath(path.resolve(__dirname, 'templates', 'landingpage'))
+    .withRootPath(path.resolve(__dirname, 'templates', 'detailpage'))
     .withPropertiesFilePath('properties.js')
     .withModules(
       new ModuleConfig()

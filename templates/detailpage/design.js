@@ -3,7 +3,7 @@ require('./styles/styles.scss');
 const {cx, Locale} = require('@bsi-cx/design-build');
 
 module.exports = cx.design
-  .withTitle('Landingpage Scaffold')
+  .withTitle('Detailpage Digital Magazine')
   .withAuthor('BSI Business Systems Integration AG')
   .withDate('20.05.2022')
   .withPreviewImage(require('./thumbnail.png'))
