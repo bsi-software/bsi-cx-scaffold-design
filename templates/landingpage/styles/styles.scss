@@ -29,15 +29,6 @@
 @import '../../../components/elements/Text/styles.css';
 
 
-body {
-  margin: 0;
-  padding: 0.5rem;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-}
 
 :root {
   --royalblue: #141e55;
@@ -72,9 +63,155 @@ main {
   font-weight: 200;
 }
 
+/* General Styles */
 
 body {
   font-family: "VerlagSSm", "Arial", sans-serif;
   margin: 0 auto;
   scroll-behavior: smooth;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  margin: 0;
+}
+
+@media only screen and (min-width: 1930px) {
+  .main {
+    max-width: 1920px;
+    margin: auto;
+  }
+}
+
+
+/* BSI Styles Property Classes */
+
+/* Horizontal Scroll aka Slider Sections */
+
+.white-bg {
+  background-color: white;
+}
+
+.grey-bg {
+  background-color: var(--grey);
+  padding: 40px 0;
+}
+
+.blue-bg {
+  background-color: var(--royalblue);
+}
+
+.blue-bg h2,
+.blue-bg p {
+  color: white;
+}
+
+.white-bg h2,
+.white-bg p {
+  color: black;
+}
+
+.blue-bg #overlay {
+  background-image: linear-gradient(to right, var(--royalblue) 50%, transparent);
+}
+
+.white-bg #overlay {
+  background-image: linear-gradient(to right, white 50%, transparent);
+}
+
+.white-bg div::-webkit-scrollbar {
+  border-left: 220px solid white;
+  border-right: 20px solid white;
+}
+
+.white-bg div::-webkit-scrollbar-thumb {
+  background: black;
+  border-left: 220px solid white;
+  border-right: 20px solid white;
+}
+
+.blue-bg div::-webkit-scrollbar {
+  border-left: 220px solid var(--royalblue);
+  border-right: 20px solid var(--royalblue);
+}
+
+.blue-bg div::-webkit-scrollbar-thumb {
+  background: white;
+  border-left: 220px solid var(--royalblue);
+  border-right: 20px solid var(--royalblue);
+}
+
+.blue-bg #scrollindicator svg {
+  fill: white;
+  stroke: white;
+}
+
+.white-bg #scrollindicator svg {
+  fill: black;
+  stroke: black;
+}
+
+/* Contact Section */
+
+.one-button > div > div a:nth-last-child(1) {
+  display: none;
+}
+
+.two-buttons > div > div a:nth-last-child(1) {
+  display: flex;
+}
+
+/* 
+BSI Editor specific styles 
+*/
+
+.bsi-ce-edit-mode #definition-section {
+  overflow-x: scroll !important;
+  overflow-y: hidden !important;
+}
+
+.bsi-ce-edit-mode #slidersection {
+  height: 1000px;
+}
+
+/* Slider Section Styles */
+
+.three-slides li#carousel__slide8,
+.three-slides li#carousel__slide7,
+.three-slides li#carousel__slide6,
+.three-slides li#carousel__slide5,
+.three-slides li#carousel__slide4 {
+  display: none;
+}
+
+.four-slides li#carousel__slide8,
+.four-slides li#carousel__slide7,
+.four-slides li#carousel__slide6,
+.four-slides li#carousel__slide5 {
+  display: none;
+}
+
+.five-slides li#carousel__slide8,
+.five-slides li#carousel__slide7,
+.five-slides li#carousel__slide6 {
+  display: none;
+}
+
+.six-slides li#carousel__slide8,
+.six-slides li#carousel__slide7 {
+  display: none;
+}
+
+.seven-slides li#carousel__slide8 {
+  display: none;
 }

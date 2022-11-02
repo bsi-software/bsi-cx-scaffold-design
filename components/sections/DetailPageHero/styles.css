@@ -78,6 +78,10 @@
   .detailpagehero_subtitle > div {
     width: max-content;
   }
+
+  .detailpagehero_subtitle h2 {
+    text-transform: uppercase;
+  }
   
   /* Responsiveness */
   
