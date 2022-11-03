@@ -5,4 +5,9 @@ module.exports = cx.contentElement
   .withLabel('Text Block')
   .withDescription('')
   .withIcon(Icon.SNIPPET)
-  .withFile(require('./template.twig'));
+  .withFile(require('./template.twig'))
+  .withParts(
+    cx.part.formattedText
+      .withLabel('Subheading'),
+    cx.part.formattedText
+      .withLabel('Text Editor'));

@@ -5,4 +5,9 @@ module.exports = cx.contentElement
   .withLabel('Figure')
   .withDescription('')
   .withIcon(Icon.SNIPPET)
-  .withFile(require('./template.twig'));
+  .withFile(require('./template.twig'))
+  .withParts(
+    cx.part.image
+      .withLabel('Image'),
+    cx.part.formattedText
+      .withLabel('Image Description'));

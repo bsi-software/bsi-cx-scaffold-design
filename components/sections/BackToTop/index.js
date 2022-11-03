@@ -5,4 +5,7 @@ module.exports = cx.contentElement
   .withLabel('Back To Top')
   .withDescription('')
   .withIcon(Icon.SNIPPET)
-  .withFile(require('./template.twig'));
+  .withFile(require('./template.twig'))
+  .withParts(
+    cx.part.plainText
+      .withLabel('Text'));

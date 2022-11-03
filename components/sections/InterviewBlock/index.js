@@ -5,4 +5,11 @@ module.exports = cx.contentElement
   .withLabel('Interview Block')
   .withDescription('')
   .withIcon(Icon.SNIPPET)
-  .withFile(require('./template.twig'));
+  .withFile(require('./template.twig'))
+  .withParts(
+    cx.part.formattedText
+      .withLabel('Interview Question'),
+    cx.part.plainText
+      .withLabel('Name'),
+    cx.part.formattedText
+      .withLabel('Interview Answer'));

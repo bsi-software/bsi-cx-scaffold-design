@@ -5,4 +5,11 @@ module.exports = cx.contentElement
   .withLabel('Header')
   .withDescription('')
   .withIcon(Icon.SNIPPET)
-  .withFile(require('./template.twig'));
+  .withFile(require('./template.twig'))
+  .withParts(
+    cx.part.link
+      .withLabel('Link back to Overviewpage'),
+    cx.part.plainText
+      .withLabel('Link Text'),
+    cx.part.link
+      .withLabel('Button'));

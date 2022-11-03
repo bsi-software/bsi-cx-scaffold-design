@@ -5,4 +5,13 @@ module.exports = cx.contentElement
   .withLabel('Contact')
   .withDescription('')
   .withIcon(Icon.SNIPPET)
-  .withFile(require('./template.twig'));
+  .withFile(require('./template.twig'))
+  .withParts(
+    cx.part.formattedText
+      .withLabel('Subtitle'),
+    cx.part.formattedText
+      .withLabel('Text Editor'),
+    cx.part.link
+      .withLabel('Primary Button'),
+    cx.part.link
+      .withLabel('Secondary Button'));
