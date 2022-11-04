@@ -1,25 +1,37 @@
 @font-face {
   font-family: "TT Norms";
-  src: url("../../../resources/fonts/TTNormsProXBd.woff2") format("woff2");
+  src: url("../../../resources/fonts/TTNormsProXBd.woff2")
+    format("woff2");
   font-weight: 700;
+  mso-font-alt: "Arial";
+  mso-generic-font-family: swiss;
 }
 
 @font-face {
   font-family: "TT Norms";
-  src: url("../../../resources/fonts/TTNormsProBd.woff2") format("woff2");
+  src: url("../../../resources/fonts/TTNormsProBd.woff2")
+    format("woff2");
   font-weight: 600;
+  mso-font-alt: "Arial";
+  mso-generic-font-family: swiss;
 }
 
 @font-face {
   font-family: "TT Norms";
-  src: url("../../../resources/fonts/TTNormsProRg.woff2") format("woff2");
+  src: url("../../../resources/fonts/TTNormsProRg.woff2")
+    format("woff2");
   font-weight: 400;
+  mso-font-alt: "Arial";
+  mso-generic-font-family: swiss;
 }
 
 @font-face {
   font-family: "TT Norms";
-  src: url("../../../resources/fonts/TTNormsProLt.woff2") format("woff2");
+  src: url("../../../resources/fonts/TTNormsProLt.woff2")
+    format("woff2");
   font-weight: 200;
+  mso-font-alt: "Arial";
+  mso-generic-font-family: swiss;
 }
 
 html {
@@ -34,7 +46,9 @@ html {
 
 body {
   position: relative;
-  font-family: "TT Norms", Arial, sans-serif;
+  font-family: "TT Norms",
+    Arial,
+    sans-serif;
   padding: 0;
   color: #000000;
   font-size: 16px;
@@ -45,8 +59,14 @@ body {
 }
 
 * {
-  font-family: "TT Norms", Arial, sans-serif;
+  font-family: "TT Norms",
+    Arial,
+    sans-serif;
   color: inherit;
   font-size: inherit;
   line-height: inherit;
+}
+
+table {
+  border-collapse: collapse;
 }

@@ -114,6 +114,7 @@ module.exports =
         .withAllowedElements(
           require("./content-elements/sections/gradient-block-header"),
           require("./content-elements/sections/header"),
+          require("./content-elements/elements/spacer"),
         ),
       cx.dropzone
         .withDropzone(
@@ -122,5 +123,7 @@ module.exports =
         .withAllowedElements(
           require("./content-elements/sections/brand-leadership"),
           require("./content-elements/sections/footer"),
+          require("./content-elements/elements/spacer"),
+          require("./content-elements/elements/divider"),
         ),
     );

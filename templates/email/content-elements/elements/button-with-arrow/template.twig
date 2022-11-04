@@ -1,101 +1,86 @@
 <table role="presentation"
-    border="0"
-    cellspacing="0"
-    cellpadding="0">
-    <tbody>
-        <tr>
-            <td align="left"
-                valign="bottom"
-                width="87"
-                height="{{
-                button_arrow_height
-                    ?
-                    : '40'
-                }}"
-                bgcolor="{{
-                button_arrow_bg_color
-                }}"
-                style="font-family:'TT Norms';padding-left: {{
-                button_arrow_padding_left_right
-                }}px;padding-right: {{
-                button_arrow_padding_left_right
-                }}px;border-radius: {{
-                button_arrow_radius
-                }}px;border: {{
-                button_arrow_border
-                }};
-                 background-color: {{
-                button_arrow_bg_color
-                }}; border-width: {{
-                button_arrow_border_width
-                }}px; border-style: {{
-                button_arrow_border_style
-                    ?
-                    : 'none'
-                }}; border-color: {{
-                button_arrow_border_color
-                }}; margin-right: {{
-                margin_arrow_right
-                    ?
-                    : 0
-                }};">
-                <a id="41a651ec-56a3-11ed-9b6a-0242ac120002"
-                    data-bsi-element-part="link"
-                    href="{{
-                    button_arrow_href
-                        ?
-                        : 'https://www.gateb.com'
-                    }}"
-                    target="_blank"
-                    style="font-size: {{
-                    button_arrow_font_size
-                        ?
-                        : 18
-                    }}px; line-height: {{
-                    button_arrow_height
-                    }}px; font-family: {{
-                    button_arrow_font_family
-                        ?
-                        : 'TT Norms'
-                    }}; color: {{
-                    button_arrow_label_color
-                    }};
+  border="0"
+  cellspacing="0"
+  cellpadding="0"
+  style="border-top:15px solid #ffffff">
+  <tbody>
+    <tr>
+      <td align="left"
+        valign="bottom"
+        height="{{
+        button_arrow_height
+          ?
+          : '40'
+        }}"
+        bgcolor="{{
+        button_arrow_bg_color
+        }}"
+        style="font-family:'TT Norms';padding-left: {{
+        button_arrow_padding_left_right
+        }}px;padding-right: {{
+        button_arrow_padding_left_right
+        }}px;border-right: 10px solid #ffffff; margin-right: {{
+        margin_arrow_right
+          ?
+          : 0
+        }};">
+        <a id="41a651ec-56a3-11ed-9b6a-0242ac120002"
+          data-bsi-element-part="link"
+          href="{{
+          button_arrow_href
+            ?
+            : 'https://www.gateb.com'
+          }}"
+          target="_blank"
+          style="font-size: {{
+          button_arrow_font_size
+            ?
+            : 18
+          }}px; line-height: {{
+          button_arrow_height
+          }}px; font-family: {{
+          button_arrow_font_family
+            ?
+            : 'TT Norms'
+          }}; color: {{
+          button_arrow_label_color
+          }};
                  font-weight:{{
-                    button_arrow_font_weight
-                        ?
-                        : 400
-                    }}; font-family:'TT Norms';font-style:normal;text-decoration:none;border: none;
+          button_arrow_font_weight
+            ?
+            : 400
+          }}; width:80px;font-family:'TT Norms';font-style:normal;text-decoration:none;border: none;
                     text-transform: lowercase;vertical-align:middle;
                     text-align:center;text-transform:{{
-                    text_arrow_transform
-                        ?
-                        : 'lowercase'
-                    }};border-radius: {{
-                    button_arrow_radius
-                    }}px; padding: {{
-                    button_arrow_padding_top_bottom
-                    }}px 0;">
-                    {{ button_arrow_label_text
-                        ?
-                        : 'read more' }}
-                </a>
-            </td>
-            <td width="16"
-                height="16"
-                align="center"
-                valign="middle">
-                <img src="{{
-                    url
-                        ?
-                        : bsi_cx_asset(
-                            '../../../../images/arrow.png'
-                        )
-                    }}"
-                    alt="arrow"
-                    width="16"
-                    height="16"
-                    style="margin-left: 10px;padding-top:8px" />
-            </td>
-        </tr>
-    </tbody>
+          text_arrow_transform
+            ?
+            : 'lowercase'
+          }};border-radius: {{
+          button_arrow_radius
+          }}px; padding: {{
+          button_arrow_padding_top_bottom
+          }}px 0;">
+          {{ button_arrow_label_text
+            ?
+            : 'read more' }}
+        </a>
+      </td>
+      <td width="30%"
+        height="16"
+        align="left"
+        valign="middle">
+        <img src="{{
+          url
+            ?
+            : bsi_cx_asset(
+              '../../../../images/arrow.png'
+            )
+          }}"
+          alt="arrow"
+          width="16"
+          height="16"
+          style="padding-top:8px" />
+      </td>
+    </tr>
+  </tbody>
 </table>
