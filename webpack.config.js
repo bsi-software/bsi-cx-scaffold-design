@@ -13,4 +13,15 @@ module.exports = WebpackConfigBuilder.fromConfigs(
     .withModules(
       new ModuleConfig()
         .withName('main')
+        .withPath('main.js')),
+  new BuildConfig()
+    .withName('overviewpage')
+    .withVersion('1.0.0')
+    .withDesignType(DesignType.LANDINGPAGE)
+    .withTargetVersion(Version.CX_1_3)
+    .withRootPath(path.resolve(__dirname, 'templates', 'overviewpage'))
+    .withPropertiesFilePath('properties.js')
+    .withModules(
+      new ModuleConfig()
+        .withName('main')
         .withPath('main.js')));
