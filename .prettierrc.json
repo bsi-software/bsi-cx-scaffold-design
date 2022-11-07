@@ -1,7 +1,7 @@
 {
-  "trailingComma": "es5",
-  "tabWidth": 4,
-  "semi": false,
-  "singleQuote": true,
-  "plugins": ["./node_modules/prettier-plugin-twig-melody"]
+    "trailingComma": "es5",
+    "tabWidth": 4,
+    "semi": false,
+    "singleQuote": true,
+    "plugins": ["./node_modules/prettier-plugin-twig-melody"]
 }
