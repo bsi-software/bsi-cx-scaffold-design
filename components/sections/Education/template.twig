@@ -1,0 +1,33 @@
+<div class="educational_section" data-bsi-element="educational">
+    <div class="educational_chapter">
+        {% include '../../elements/Chapter/template.twig' with {
+            chapter: 'Chapter 1'
+        } %}
+    </div>
+    <div class="educational_box"
+        data-bsi-element-part="background-image"
+        style="background-image: url('{{
+        bsi_cx_asset(
+            './educational.jpg'
+        )
+        }}');">
+        <div class="educational_content">
+            {% include '../../elements/Chapter/template.twig' with {
+                chapter: 'Chapter 1'
+            } %}
+            <div class="educational_number">
+                <p data-bsi-element-part="plain-text">
+                    6
+                </p>
+            </div>
+            <div class="educational_text">
+                {% include '../../elements/Text/template.twig' with {
+                    text: 'Six topics that provide ample food for thought when talking about blockchain technology.'
+                } %}
+            </div>
+            {% include '../../elements/Button/template.twig' with {
+                text: 'Full Article'
+            } %}
+        </div>
+    </div>
+</div>
