@@ -3,13 +3,18 @@
     data-bsi-element="definitions">
     <div class="definitions_chapter">
         <div class="definitions_chapterBox">
-            <Chapter />
+            {% include '../../elements/Chapter/template.twig' %}
         </div>
     </div>
     <div class="definitions_content">
         <div>
-            <Subtitle text="Key terms on digital assets" />
-            <Button dark text="full article" />
+            {% include '../../elements/Subtitle/template.twig' with {
+                text: 'Key terms on digital assets'
+            } %}
+            {% include '../../elements/Button/template.twig' with {
+                text: 'Full Article',
+                dark: true
+            } %}
         </div>
         <div class="definitions_scrollindicator" id="scrollindicator">
             <p data-bsi-element-part="plain-text">

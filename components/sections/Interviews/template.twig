@@ -1,19 +1,24 @@
-<div class={interviews.section} data-bsi-element="interviews">
-      <div class={interviews.chapter}>
-        <Chapter />
-      </div>
-      <div class={interviews.columnOne}>
-        <div class={interviews.content}>
-          <Subtitle />
-          <TextSmall text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod." />
+<div class="interviews_section" data-bsi-element="interviews">
+    <div class="interviews_chapter">
+        {% include '../../elements/Chapter/template.twig' %}
+    </div>
+    <div class="interviews_columnOne">
+        <div class="interviews_content">
+            {% include '../../elements/Subtitle/template.twig' with {
+                text: 'Sample Subtitle'
+            } %}
+            {% include '../../elements/TextSmall/template.twig' with {
+                text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.'
+            } %}
         </div>
         <div data-bsi-dropzone="interview-teaser-one">
-          <InterviewTeaser />
+            <InterviewTeaser />
+            {% include '../../elements/InterviewTeaser/template.twig' %}
         </div>
-      </div>
-      <div class={interviews.columnTwo}>
-        <div data-bsi-dropzone="interview-teaser-two">
-          <InterviewTeaser />
-        </div>
-      </div>
     </div>
+    <div class="interviews_columnTwo">
+        <div data-bsi-dropzone="interview-teaser-two">
+            {% include '../../elements/InterviewTeaser/template.twig' %}
+        </div>
+    </div>
+</div>
