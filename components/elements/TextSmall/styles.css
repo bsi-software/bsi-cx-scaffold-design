@@ -1,17 +1,15 @@
-.text,
-.text {
-  font-style: normal;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 155%;
+.smalltext,
+.smalltext {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 155%;
 }
 
 @media only screen and (max-width: 1023px) {
-  .text {
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 148%;
-  }
+    .smalltext {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 148%;
+    }
 }
-
-  

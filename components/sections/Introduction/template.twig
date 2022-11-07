@@ -1,17 +1,21 @@
-<div class={introduction.section} data-bsi-element="introduction">
-      <div class={introduction.chapter}>
-        {/* <Chapter /> */}
-        <SideNavigation active="one" />
-      </div>
-      <div class={introduction.introWrapper}>
-        <div data-bsi-dropzone="cardspot" class={introduction.cardWrapper}>
-          <Card />
-        </div>
-        <div class={introduction.content}>
-          <div class={introduction.title}>
-            <Subtitle subtitle="Welcome to your financial future" />
-          </div>
-          <TextSmall text="Investing is essential to securing your, and your family’s, financial future. In this guide – the first in a series on the fundamental topics of finance – we will help answer the important questions about investing, whether you are a first-time investor or a skilled stock picker. We hope that it will empower you to make the best decisions, both today and in the future." />
-        </div>
-      </div>
+<div class="introduction_section" data-bsi-element="introduction">
+    <div class="introduction_chapter">
+        {# <Chapter /> #}
+        {# <SideNavigation active="one" /> #}
     </div>
+    <div class="introduction_introWrapper">
+        <div data-bsi-dropzone="cardspot" class="introduction_cardWrapper">
+            {# <Card /> #}
+        </div>
+        <div class="introduction_content">
+            <div class="introduction_title">
+                {% include '../../elements/Subtitle/template.twig' with {
+                    subtitle: 'Welcome to your financial future'
+                } %}
+            </div>
+            {% include '../../elements/TextSmall/template.twig' with {
+                text: 'Investing is essential to securing your, and your family’s, financial future. In this guide – the first in a series on the fundamental topics of finance – we will help answer the important questions about investing, whether you are a first-time investor or a skilled stock picker. We hope that it will empower you to make the best decisions, both today and in the future.'
+            } %}
+        </div>
+    </div>
+</div>
