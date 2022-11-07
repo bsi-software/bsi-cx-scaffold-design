@@ -1,29 +1,30 @@
 <div
       data-bsi-element="card"
-      id={props.cardID}
+      id="{{cardID}}"
       data-bsi-hide-remove-button=""
-      class={styles.card}
+      class="card"
       data-bsi-element-part="background-image"
-      style={{
-        backgroundImage: props.backgroundImage
-          ? props.backgroundImage
-          : 'url("img/articleteasers/fade/image_teaser_theory.jpg")',
-      }}
-    >
+      style="background-image: url('{{ backgroundImage ?? bsi_cx_asset('./image_teaser_theory.jpg')}}');">
       <a
         data-bsi-element-part="link"
-        class={styles.cardLink}
-        href={props.link ? props.link : "[cardlink|url=https://example.com]"}
-        target={props.newTab ? "_blank" : "_self"}
+        class="cardLink"
+        href={{link ?? "[cardlink|url=https://example.com]"}}
+        target={{newTab ? "_blank" : "_self" }}
         data-bsi-link-fixed-inner-html=""
       >
-        <Chapter chapter={props.chapter} />
-        <div class={styles.contentWrapper}>
-          <TeaserTitle subtitle={props.subtitle ?? "Subtitle"} />
-          <TeaserText text={props.text ?? "Example text"} />
-          <div class={styles.button}>
-            <p class={styles.buttonText} data-bsi-element-part="plain-text">
-              {props.buttonText ? props.buttonText : "Start Reading"}
+        {% include '../../elements/Chapter/template.twig' with {
+                    chapter: 'Chapter 1'
+        } %}
+        <div class="contentWrapper">
+        {% include '../../elements/TeaserTitle/template.twig' with {
+                    subtitle: 'Subtitle'
+                } %}
+          {% include '../../elements/TeaserText/template.twig' with {
+                    text: 'Example Text'
+                } %}
+          <div class="card_button">
+            <p class="card_buttonText" data-bsi-element-part="plain-text">
+              {{ buttonText ?? "Start Reading"}}
             </p>
           </div>
         </div>

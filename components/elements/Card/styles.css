@@ -1,120 +1,120 @@
 .card {
-  width: 492px;
-  height: 628px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-size: 100%;
-  transition: background-size 250ms ease-out;
-  transition-delay: 50ms;
+    width: 492px;
+    height: 628px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-size: 100%;
+    transition: background-size 250ms ease-out;
+    transition-delay: 50ms;
 }
 
 .card:hover {
-  background-size: 105%;
+    background-size: 105%;
 }
 
 .cardLink {
-  height: 100%;
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    height: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .cardLink,
 .cardLink * {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .card p,
 .card h3 {
-  color: white;
+    color: white;
 }
 
 .card a > p {
-  color: var(--royalblue);
+    color: var(--royalblue);
 }
 
 .card h3 {
-  margin-bottom: 8px;
+    margin-bottom: 8px;
 }
 
 .contentWrapper {
-  transition: transform 250ms ease-out;
+    transition: transform 250ms ease-out;
 }
 
 .card:hover .contentWrapper {
-  transform: translateY(-10px);
+    transform: translateY(-10px);
 }
 
-.button {
-  background-color: white;
-  padding: 17px 40px;
-  max-width: fit-content;
-  text-decoration: none;
-  color: var(--royalblue);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-width: 120px;
+.card_button {
+    background-color: white;
+    padding: 17px 40px;
+    max-width: fit-content;
+    text-decoration: none;
+    color: var(--royalblue);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 120px;
 }
 
-.button .buttonText {
-  color: var(--royalblue);
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: 12px;
-  line-height: 14px;
-  font-weight: 600;
-  text-align: center;
-  letter-spacing: 0.09em;
-  margin: 0px;
-  min-width: 120px;
-  width: max-content;
+.card_button .card_buttonText {
+    color: var(--royalblue);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.09em;
+    margin: 0px;
+    min-width: 120px;
+    width: max-content;
 }
 
-.button .buttonText p {
-  color: var(--royalblue);
+.card_button .card_buttonText p {
+    color: var(--royalblue);
 }
 
 @media only screen and (max-width: 1023px) {
-  .card {
-    background-size: cover;
-    width: 320px;
-    height: 380px;
-  }
+    .card {
+        background-size: cover;
+        width: 320px;
+        height: 380px;
+    }
 
-  .cardLink {
-    padding: 30px 20px;
-  }
+    .cardLink {
+        padding: 30px 20px;
+    }
 
-  .cardLink a {
-    display: none;
-  }
+    .cardLink a {
+        display: none;
+    }
 
-  .card .button {
-    display: none;
-  }
+    .card .card_button {
+        display: none;
+    }
 
-  .card h3 {
-    margin-bottom: 6px;
-  }
+    .card h3 {
+        margin-bottom: 6px;
+    }
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1439px) {
-  .card {
-    width: 352px;
-    height: 420px;
-  }
-  .card .button {
-    display: none;
-  }
+    .card {
+        width: 352px;
+        height: 420px;
+    }
+    .card .card_button {
+        display: none;
+    }
 
-  .button {
-    display: none;
-  }
+    .card_button {
+        display: none;
+    }
 }

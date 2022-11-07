@@ -1,4 +1,4 @@
-.section {
+.definitions_section {
     max-width: 100vw;
     display: flex;
     flex-direction: row;
@@ -10,9 +10,9 @@
     box-sizing: border-box;
     -ms-overflow-style: none;
     scrollbar-width: none;
-  }
-  
-  .section::-webkit-scrollbar {
+}
+
+.definitions_section::-webkit-scrollbar {
     /* display: none; */
     height: 6px;
     background-color: inherit;
@@ -20,27 +20,27 @@
     max-width: 300px;
     width: 300px;
     padding: 20px;
-  }
-  
-  .section::-webkit-scrollbar-thumb {
+}
+
+.definitions_section::-webkit-scrollbar-thumb {
     border-radius: 10px;
     border-left: 220px solid white;
     border-right: 20px solid white;
-  }
-  
-  .section::-webkit-scrollbar {
+}
+
+.definitions_section::-webkit-scrollbar {
     /* display: none; */
     border-left: 220px solid white;
     border-right: 20px solid white;
-  }
-  
-  .section::-webkit-scrollbar-thumb {
+}
+
+.definitions_section::-webkit-scrollbar-thumb {
     background: black;
     border-left: 220px solid white;
     border-right: 20px solid white;
-  }
-  
-  .chapter {
+}
+
+.definitions_chapter {
     padding: 40px;
     margin: auto 0;
     position: sticky;
@@ -52,23 +52,23 @@
     z-index: 2;
     max-height: 560px;
     box-sizing: border-box;
-  }
-  
-  .chapterBox {
+}
+
+.definitions_chapterBox {
     height: 560px;
     display: flex;
     align-items: center;
-  }
-  
-  .chapterBox div:first-child {
+}
+
+.definitions_chapterBox div:first-child {
     align-items: center;
-  }
-  
-  .chapterBox div:first-child p {
+}
+
+.definitions_chapterBox div:first-child p {
     transform: rotate(-90deg);
-  }
-  
-  .content {
+}
+
+.definitions_content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -78,105 +78,104 @@
     padding: 0 100px;
     box-sizing: border-box;
     position: relative;
-  }
-  
-  .content > div {
+}
+
+.definitions_content > div {
     width: 70%;
-  }
-  
-  .content h2 {
+}
+
+.definitions_content h2 {
     margin: unset;
     margin-bottom: 24px;
-  }
-  
-  .content #scrollindicator svg {
+}
+
+.definitions_content #scrollindicator svg {
     fill: black;
     stroke: black;
-  }
-  
-  .scrollindicator {
+}
+
+.definitions_scrollindicator {
     display: flex;
     align-items: center;
     position: absolute;
     bottom: 0;
     transition: transform 250ms ease-out;
     transition-delay: 50ms;
-  }
-  
-  .scrollindicator:hover {
+}
+
+.definitions_scrollindicator:hover {
     transform: translateX(10px);
-  }
-  
-  .scrollindicator p {
+}
+
+.definitions_scrollindicator p {
     text-transform: uppercase;
     margin: 0;
     margin-right: 10px;
     font-size: 12px;
     letter-spacing: 0.13em;
-  }
-  
-  .scrollindicator svg {
+}
+
+.definitions_scrollindicator svg {
     fill: black;
     stroke: black;
-  }
-  
-  .definitions {
+}
+
+.definitions_definitions {
     display: flex;
     height: 500px;
-  }
-  
-  .definitions > div:nth-child(even) > div {
+}
+
+.definitions_definitions > div:nth-child(even) > div {
     justify-content: end;
-  }
-  
-  .definitions > div > div {
+}
+
+.definitions_definitions > div > div {
     box-sizing: border-box;
-  }
-  
-  @media only screen and (max-width: 1023px) {
-    .section {
-      flex-direction: column;
-      overflow-x: unset;
-      max-height: unset;
-      margin: 20px 0;
+}
+
+@media only screen and (max-width: 1023px) {
+    .definitions_section {
+        flex-direction: column;
+        overflow-x: unset;
+        max-height: unset;
+        margin: 20px 0;
     }
-  
-    .chapter {
-      display: none;
+
+    .definitions_chapter {
+        display: none;
     }
-  
-    .content {
-      margin: auto;
-      width: var(--contentWidthMobile);
-      padding: 40px 0;
+
+    .definitions_content {
+        margin: auto;
+        width: var(--contentWidthMobile);
+        padding: 40px 0;
     }
-  
-    .content > div {
-      width: 100%;
+
+    .definitions_content > div {
+        width: 100%;
     }
-  
-    .scrollindicator {
-      display: none;
+
+    .definitions_scrollindicator {
+        display: none;
     }
-  
-    .definitions {
-      overflow-x: scroll;
-      margin-left: 16px;
-      min-height: 500px;
-      -ms-overflow-style: none;
-      scrollbar-width: none;
+
+    .definitions_definitions {
+        overflow-x: scroll;
+        margin-left: 16px;
+        min-height: 500px;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
     }
-  
-    .definitions::-webkit-scrollbar {
-      display: none;
+
+    .definitions_definitions::-webkit-scrollbar {
+        display: none;
     }
-  
-    .definitions > div {
-      box-sizing: border-box;
+
+    .definitions_definitions > div {
+        box-sizing: border-box;
     }
-  
-    .definitions > div > div {
-      box-sizing: border-box;
+
+    .definitions_definitions > div > div {
+        box-sizing: border-box;
     }
-  }
-  
+}

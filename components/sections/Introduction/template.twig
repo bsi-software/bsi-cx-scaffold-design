@@ -5,7 +5,9 @@
     </div>
     <div class="introduction_introWrapper">
         <div data-bsi-dropzone="cardspot" class="introduction_cardWrapper">
-            {# <Card /> #}
+            {% include '../../elements/Card/template.twig' with {
+                buttonText: 'Hello there'
+            } %}
         </div>
         <div class="introduction_content">
             <div class="introduction_title">
