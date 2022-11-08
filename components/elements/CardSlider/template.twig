@@ -1,0 +1,33 @@
+<div class="slider_slider">
+    <div class="slider_carousel" aria-label="Gallery">
+        <ol class="slider_carousel__viewport" id="carousel-viewport">
+            {% for i in 1..6 %}
+                <li id={{"carousel__slide1" + i }}
+                    tabIndex={{i}}
+                    class="slider_carousel__slide">
+                    <div data-bsi-dropzone={{ "card" + i}}
+                        data-bsi-hide-remove-button=""
+                        class="slider_carddropzone">
+                        {% include '../../elements/Card/template.twig' with {
+                            chapter: 'Chapter 1',
+                            subtitle: 'Theory',
+                            text: 'How investing works',
+                            buttonText: 'Read',
+                            link: '[chapterOne]'
+                        } %}
+                    </div>
+                    <div class="slider_carousel__snapper" id="carouselsnapper">
+                        {# <a href="#carousel__slide5"
+                            class="slider_carousel__prev">
+                            Go to last slide
+                        </a>
+                        <a href="#carousel__slide2"
+                            class="slider_carousel__next">
+                            Go to next slide
+                        </a> #}
+                    </div>
+                </li>
+            {% endfor %}
+        </ol>
+    </div>
+</div>
