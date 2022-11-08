@@ -1,24 +1,31 @@
-/* Scroll Behaviour */
+const mainContainer = document.getElementById('main');
 
-const scrollContainer = document.getElementById('carousel-viewport');
+let scrollSections = mainContainer.getElementsByClassName(
+    'slidersection_slidersection'
+);
 
-const buttonNext = document.getElementById('nextcard');
-const buttonPrev = document.getElementById('prevcard');
+for (let i = 0; i < scrollSections.length; i++) {
+    let scrollContainer = scrollSections[i].getElementsByClassName(
+        'slider_carousel__viewport'
+    );
 
-function scrollPosition(element) {
-    element.scrollLeft += 500;
-    console.log(element.scrollLeft + ' and ' + element.scrollWidth);
+    const buttonNext = scrollSections[i].getElementsByClassName(
+        'slidersection_controlRight'
+    )[0];
+
+    const buttonPrev = scrollSections[i].getElementsByClassName(
+        'slidersection_controlLeft'
+    )[0];
+
+    buttonNext.addEventListener('click', function() {
+        changeScrollPosition(scrollContainer[0], 500);
+    });
+
+    buttonPrev.addEventListener('click', function() {
+        changeScrollPosition(scrollContainer[0], -500);
+    });
 }
 
-function scrollRight(element) {
-    element.scrollLeft -= 500;
-    console.log(element.scrollLeft + ' and ' + element.scrollWidth);
+function changeScrollPosition(element, num) {
+    element.scrollLeft += num;
 }
-
-buttonNext.addEventListener('click', () => {
-    scrollPosition(scrollContainer);
-});
-
-buttonPrev.addEventListener('click', () => {
-    scrollRight(scrollContainer);
-});
