@@ -15,14 +15,14 @@
             text: 'Explore the chapters of our guide to investing'
         } %}
         <div class="slidersection_controls">
-            <div class="slidersection_controlLeft">
+            <div class="slidersection_controlLeft" id="prevcard">
                 <img src="{{ bsi_cx_asset('./arrow-left.svg') }}" />
             </div>
-            <div class="slidersection_controlRight">
+            <div class="slidersection_controlRight" id="nextcard">
                 <img src="{{ bsi_cx_asset('./arrow-right.svg') }}" />
             </div>
         </div>
-        <div class="slidersection_arrows">
+        {# <div class="slidersection_arrows">
             <a id="prevcard">
                 <img class="slidersection_arrowPrev"
                     src="icons/arrow-right.svg" />
@@ -31,7 +31,7 @@
                 <img class="slidersection_arrowNext"
                     src="icons/arrow-right.svg" />
             </a>
-        </div>
+        </div> #}
     </div>
     {# <Slider ref={scroller} /> #}
     {% include '../../elements/CardSlider/template.twig' with {
