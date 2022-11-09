@@ -1,0 +1,27 @@
+<div class="glossaryslider_slider">
+    <div class="glossaryslider_carousel" aria-label="Gallery">
+        <ol class="glossaryslider_carousel__viewport slider_carousel__viewport" id="carousel-viewport">
+            {% for i in 1..6 %}
+                <li id={{"carousel__slide1" + i }}
+                    tabIndex={{i}}
+                    class="glossaryslider_carousel__slide">
+                    <div data-bsi-dropzone={{ "card" + i}}
+                        data-bsi-hide-remove-button=""
+                        class="glossaryslider_carddropzone">
+                        {% include '../../elements/Definition/template.twig' %}
+                    </div>
+                    <div class="glossaryslider_carousel__snapper" id="carouselsnapper">
+                        {# <a href="#carousel__slide5"
+                            class="glossaryslider_carousel__prev">
+                            Go to last slide
+                        </a>
+                        <a href="#carousel__slide2"
+                            class="glossaryslider_carousel__next">
+                            Go to next slide
+                        </a> #}
+                    </div>
+                </li>
+            {% endfor %}
+        </ol>
+    </div>
+</div>

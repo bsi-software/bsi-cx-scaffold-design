@@ -1,14 +1,14 @@
-<div data-bsi-element="definition" class={styles.box}>
-      <div class={styles.definition}>
-        <div class={styles.title}>
-          <Subheading>
-            <p>{props.subheading ?? "Definition"}</p>
-          </Subheading>
+<div data-bsi-element="definition" class="definition_box">
+    <div class="definition_definition">
+        <div class="definition_title">
+            {% include '../../elements/Subheading/template.twig' with {
+                subheading: 'Definition'
+            } %}
         </div>
-        <div class={styles.textSmall}>
-          <TextSmall>
-            <p>{props.text ?? "This is an example text for the Definition element."}</p>
-          </TextSmall>
+        <div class="definition_textSmall">
+            {% include '../../elements/TextSmall/template.twig' with {
+                text: 'This is an example text for the Definition element.'
+            } %}
         </div>
-      </div>
     </div>
+</div>

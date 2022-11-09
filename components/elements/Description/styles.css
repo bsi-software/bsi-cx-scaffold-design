@@ -1,282 +1,282 @@
 .input {
-  position: absolute;
-  z-index: -1;
-  width: 0;
-  opacity: 0;
-  height: 0;
-  overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
 }
 
 .box {
-  /* width: 100%; */
-  height: 100%;
-  color: white;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  width: 320px;
-  margin-left: auto;
-  margin-right: auto;
+    /* width: 100%; */
+    height: 100%;
+    color: white;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .title {
-  width: 100%;
-  height: 100%;
-  cursor: default;
+    width: 100%;
+    height: 100%;
+    cursor: default;
 }
 
 .titleText,
 .titleText h3 {
-  cursor: default;
-  color: white;
-  font-size: 30px;
-  line-height: 130%;
-  font-weight: 500;
-  margin: 0;
+    cursor: default;
+    color: white;
+    font-size: 30px;
+    line-height: 130%;
+    font-weight: 500;
+    margin: 0;
 }
 
 .text {
-  color: white;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 27px;
-  transition: all 0.35s;
-  display: none;
+    color: white;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 27px;
+    transition: all 0.35s;
+    display: none;
 }
 
 .icon {
-  display: none;
+    display: none;
 }
 
-div:global(.descriptionshown) .title {
-  background-color: rgba(20, 30, 85, 0.85);
-  /* opacity: 0.85; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  animation-name: fadeIn;
-  animation-duration: 2s;
-  transition: background-color 2s;
+.descriptionshown .title {
+    background-color: rgba(20, 30, 85, 0.85);
+    /* opacity: 0.85; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    transition: background-color 2s;
 }
 
-div:global(.descriptionhidden) .title {
-  background-color: rgba(20, 30, 85, 0);
-  transition: background-color 0.6s;
+.descriptionhidden .title {
+    background-color: rgba(20, 30, 85, 0);
+    transition: background-color 0.6s;
 }
 
-div:global(.descriptionshown) .titleText {
-  transform: translateY(0px);
-  transition: transform 2s;
+.descriptionshown .titleText {
+    transform: translateY(0px);
+    transition: transform 2s;
 }
 
-div:global(.descriptionhidden) .titleText {
-  transform: translateY(10px);
-  transition: transform 1s;
+.descriptionhidden .titleText {
+    transform: translateY(10px);
+    transition: transform 1s;
 }
 
-div:global(.descriptionshown) .titleText h3 {
-  color: white;
+.descriptionshown .titleText h3 {
+    color: white;
 }
 
-div:global(.descriptionshown) .title .text {
-  display: inline-block;
-  margin-top: 24px;
-  animation-name: textReveal;
-  animation-duration: 2s;
-  opacity: 1;
-  transform: translateY(0px);
-  transition: opacity 1s, transform 2s;
+.descriptionshown .title .text {
+    display: inline-block;
+    margin-top: 24px;
+    animation-name: textReveal;
+    animation-duration: 2s;
+    opacity: 1;
+    transform: translateY(0px);
+    transition: opacity 1s, transform 2s;
 }
 
-div:global(.descriptionhidden) .title .text {
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 1s, transform 2s;
+.descriptionhidden .title .text {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 1s, transform 2s;
 }
 
 @media only screen and (max-width: 1439px) {
-  div:global(.descriptionshown) .title {
-    opacity: 1;
-    background-color: rgba(20, 30, 85, 1);
-    transition: none;
-  }
+    .descriptionshown .title {
+        opacity: 1;
+        background-color: rgba(20, 30, 85, 1);
+        transition: none;
+    }
 
-  div:global(.descriptionhidden) .title {
-    border-bottom: 1px solid rgba(20, 30, 85, 0.15);
-    background-color: rgba(20, 30, 85, 0.1);
-    transition: none;
-  }
+    .descriptionhidden .title {
+        border-bottom: 1px solid rgba(20, 30, 85, 0.15);
+        background-color: rgba(20, 30, 85, 0.1);
+        transition: none;
+    }
 
-  div:global(.descriptionhidden) .titleText {
-    transform: none;
-    transition: none;
-  }
+    .descriptionhidden .titleText {
+        transform: none;
+        transition: none;
+    }
 
-  div:global(.descriptionshown) .box {
-    padding: 50px 0;
-  }
+    .descriptionshown .box {
+        padding: 50px 0;
+    }
 
-  .title {
-    width: 100%;
-    height: 100%;
-  }
+    .title {
+        width: 100%;
+        height: 100%;
+    }
 
-  .titleText,
-  .titleText h3 {
-    font-weight: 400;
-    font-size: 23px;
-    line-height: 130%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: black;
-    cursor: pointer;
-  }
+    .titleText,
+    .titleText h3 {
+        font-weight: 400;
+        font-size: 23px;
+        line-height: 130%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: black;
+        cursor: pointer;
+    }
 
-  .text {
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 155%;
-  }
+    .text {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 155%;
+    }
 
-  div:global(.descriptionhidden) .titleText {
-    color: white;
-    padding: 40px 0;
-    width: 100%;
-  }
+    .descriptionhidden .titleText {
+        color: white;
+        padding: 40px 0;
+        width: 100%;
+    }
 
-  input:checked + .title .text {
-    margin-top: 18px;
-  }
+    input:checked + .title .text {
+        margin-top: 18px;
+    }
 }
 
 @media only screen and (max-width: 767px) {
-  div:global(.descriptionshown) .title {
-    opacity: 1;
-    width: 100%;
-    height: 100%;
-  }
+    .descriptionshown .title {
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+    }
 
-  div:global(.descriptionhidden) .title {
-    border-bottom: 1px solid rgba(20, 30, 85, 0.15);
-    background-color: var(--accordionBGC);
-    width: 100%;
-    height: 100%;
-  }
+    .descriptionhidden .title {
+        border-bottom: 1px solid rgba(20, 30, 85, 0.15);
+        background-color: var(--accordionBGC);
+        width: 100%;
+        height: 100%;
+    }
 
-  div:global(.descriptionhidden) .titleText {
-    /* color: white;
+    .descriptionhidden .titleText {
+        /* color: white;
     width: var(--contentWidthMobile); */
-    color: white;
-    padding: 40px 0;
-    width: 100%;
-    /* margin: auto; */
-  }
+        color: white;
+        padding: 40px 0;
+        width: 100%;
+        /* margin: auto; */
+    }
 
-  input:checked + .title .text {
-    margin-top: 18px;
-  }
+    input:checked + .title .text {
+        margin-top: 18px;
+    }
 
-  div:global(.descriptionhidden) .icon {
-    display: flex;
-    width: 30px;
-    margin-left: 10px;
-  }
-  /* 
-  div:global(.descriptionshown) .box {
+    .descriptionhidden .icon {
+        display: flex;
+        width: 30px;
+        margin-left: 10px;
+    }
+    /* 
+  .descriptionshown .box {
     height: 100%;
     width: var(--contentWidthMobile);
     margin: auto;
     padding: 15px;
   } */
 
-  .box {
-    height: 100%;
-    width: var(--contentWidthMobile);
-    margin: auto;
-    padding: 15px;
-  }
+    .box {
+        height: 100%;
+        width: var(--contentWidthMobile);
+        margin: auto;
+        padding: 15px;
+    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  div:global(.descriptionshown) .title {
-    opacity: 1;
-    width: 100%;
-    height: 100%;
-  }
+    .descriptionshown .title {
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+    }
 
-  div:global(.descriptionhidden) .title {
-    border-bottom: 1px solid rgba(20, 30, 85, 0.15);
-    background-color: var(--accordionBGC);
-    width: 100%;
-    height: 100%;
-  }
+    .descriptionhidden .title {
+        border-bottom: 1px solid rgba(20, 30, 85, 0.15);
+        background-color: var(--accordionBGC);
+        width: 100%;
+        height: 100%;
+    }
 
-  div:global(.descriptionhidden) .titleText {
-    color: white;
-    padding: 40px 0;
-    width: 100%;
-  }
+    .descriptionhidden .titleText {
+        color: white;
+        padding: 40px 0;
+        width: 100%;
+    }
 
-  input:checked + .title .text {
-    margin-top: 18px;
-  }
+    input:checked + .title .text {
+        margin-top: 18px;
+    }
 
-  div:global(.descriptionhidden) .icon {
-    display: flex;
-    width: 30px;
-    margin-left: 10px;
-  }
+    .descriptionhidden .icon {
+        display: flex;
+        width: 30px;
+        margin-left: 10px;
+    }
 
-  .box {
-    height: 100%;
-    width: var(--textWidthTablet);
-    margin: auto;
-    padding: 15px;
-  }
+    .box {
+        height: 100%;
+        width: var(--textWidthTablet);
+        margin: auto;
+        padding: 15px;
+    }
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1439px) {
-  div:global(.descriptionhidden) .titleText:after {
-    content: url("/icons/plus.svg");
-    position: absolute;
-    right: 230px;
-  }
+    .descriptionhidden .titleText:after {
+        content: url('/icons/plus.svg');
+        position: absolute;
+        right: 230px;
+    }
 
-  .box {
-    width: var(--textWidthDesktop);
-  }
+    .box {
+        width: var(--textWidthDesktop);
+    }
 }
 
 /* animation */
 
 @keyframes titleReveal {
-  0% {
-    transform: translateY(10px);
-  }
+    0% {
+        transform: translateY(10px);
+    }
 
-  100% {
-    transform: translateY(0px);
-  }
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 @keyframes textReveal {
-  0% {
-    transform: translateY(10px);
-    opacity: 0;
-  }
+    0% {
+        transform: translateY(10px);
+        opacity: 0;
+    }
 
-  15% {
-    transform: translateY(10px);
-    opacity: 1;
-  }
+    15% {
+        transform: translateY(10px);
+        opacity: 1;
+    }
 
-  100% {
-    transform: translateY(0px);
-  }
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 /* @keyframes fadeIn {

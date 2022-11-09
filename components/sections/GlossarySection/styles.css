@@ -1,14 +1,14 @@
-.slidersection_slidersection {
+.glossarysection_slidersection {
     width: 100%;
     height: 100vh;
     scroll-snap-align: start;
 }
 
-.bsi-ce-edit-mode .slidersection_slidersection {
+.bsi-ce-edit-mode .glossarysection_slidersection {
     height: 1000px;
 }
 
-.slidersection_chapter {
+.glossarysection_chapter {
     padding: 40px;
     margin: auto 0;
     position: absolute;
@@ -20,26 +20,26 @@
     box-sizing: border-box;
 }
 
-.bsi-ce-edit-mode .slidersection_chapter {
+.bsi-ce-edit-mode .glossarysection_chapter {
     height: 1000px;
 }
 
-.slidersection_chapterBox {
+.glossarysection_chapterBox {
     height: 560px;
     display: flex;
     align-items: center;
     color: white;
 }
 
-.slidersection_chapterBox div:first-child {
+.glossarysection_chapterBox div:first-child {
     align-items: center;
 }
 
-.slidersection_chapterBox div:first-child p {
+.glossarysection_chapterBox div:first-child p {
     transform: rotate(-90deg);
 }
 
-.slidersection_overlay {
+.glossarysection_overlay {
     color: white;
     z-index: 2;
     position: absolute;
@@ -51,22 +51,26 @@
     align-items: center;
 }
 
-.bsi-ce-edit-mode .slidersection_overlay {
+.bsi-ce-edit-mode .glossarysection_overlay {
     z-index: 0;
 }
 
-.slidersection_overlay > div {
+.glossarysection_overlay > div {
     width: 400px;
 }
 
-.slidersection_arrowPrev {
+.glossarysection_overlay .glossarysection_cta {
+    margin-top: 24px;
+}
+
+.glossarysection_arrowPrev {
     height: 120px;
     width: 100px;
     transform: rotate(180deg);
     width: 26px;
 }
 
-.slidersection_arrowNext {
+.glossarysection_arrowNext {
     height: 120px;
     width: 100px;
     transform: rotate(0);
@@ -74,51 +78,52 @@
     margin-left: 32px;
 }
 
-.slidersection_arrowNext:hover {
+.glossarysection_arrowNext:hover {
     animation-name: tonext;
     animation-timing-function: ease;
     animation-duration: 4s;
     animation-iteration-count: infinite;
 }
 
-.slidersection_arrows {
+.glossarysection_arrows {
     display: none;
 }
 
-.slidersection_controls {
+.glossarysection_controlLeft {
+    margin-right: 16px;
+}
+
+.glossarysection_controlRight {
+    margin-left: 16px;
+}
+
+.glossarysection_controlLeft:hover,
+.glossarysection_controlRight:hover {
+    cursor: pointer;
+}
+
+.white-bg .glossarysection_controlLeft svg path,
+.white-bg .glossarysection_controlRight svg path {
+    stroke: var(--royalblue);
+}
+
+/* Controls */
+
+.glossarysection_controls {
     display: flex;
     margin-top: 70px;
 }
 
-.slidersection_controlLeft {
-    margin-right: 16px;
-}
-
-.slidersection_controlRight {
-    margin-left: 16px;
-}
-
-.slidersection_controlLeft:hover,
-.slidersection_controlRight:hover {
-    cursor: pointer;
-}
-
-.white-bg .slidersection_controlLeft svg path,
-.white-bg .slidersection_controlRight svg path {
-    stroke: var(--royalblue);
-}
-
 @media only screen and (max-width: 1023px) {
-    .slidersection_chapter {
+    .glossarysection_chapter {
         display: none;
     }
 
-    .slidersection_slidersection {
+    .glossarysection_slidersection {
         height: unset;
-        padding-top: 60px;
     }
 
-    .slidersection_overlay {
+    .glossarysection_overlay {
         position: relative;
         max-width: 100vw;
         width: 100%;
@@ -126,56 +131,48 @@
         align-items: flex-start;
         padding: 0 16px;
         box-sizing: border-box;
+        padding-top: 60px;
     }
 
-    .slidersection_overlay div {
+    .glossarysection_overlay div {
         width: unset;
     }
 
-    .slidersection_arrows {
+    .glossarysection_arrows {
         display: none;
     }
 
-    .slidersection_controls {
+    .glossarysection_controls {
         display: none;
     }
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1439px) {
-    .slidersection_chapter {
+    .glossarysection_slidersection {
+        height: auto;
+    }
+    .glossarysection_controls {
         display: none;
     }
 
-    .slidersection_slidersection {
-        height: unset;
-        padding-top: 60px;
-    }
-
-    .slidersection_controls {
+    .glossarysection_chapter {
         display: none;
     }
 
-    .slidersection_overlay {
+    .glossarysection_overlay {
         position: relative;
         max-width: 100vw;
         height: max-content;
         align-items: flex-start;
         padding: 0;
         box-sizing: border-box;
+        padding-top: 60px;
         margin-left: 90px;
-    }
-
-    .slidersection_overlay div {
-        width: unset;
-    }
-
-    .slidersection_arrows {
-        display: none;
     }
 }
 
 @media only screen and (min-width: 1930px) {
-    .slidersection_overlay {
+    .glossarysection_overlay {
         width: calc(1920px / 2);
     }
 }

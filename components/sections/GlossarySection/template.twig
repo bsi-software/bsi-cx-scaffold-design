@@ -1,0 +1,63 @@
+<div data-bsi-element="glossarysection"
+    id="glossarysection"
+    class="white-bg eight-slides glossarysection_glossarysection slidersection_slidersection">
+    <div class="glossarysection_chapter">
+        <div class="glossarysection_chapterBox">
+            {# <Chapter /> #}
+            {# <SideNavigation active="two" /> #}
+        </div>
+    </div>
+    <div id="overlay" class="glossarysection_overlay">
+        {% include '../../elements/Subtitle/template.twig' with {
+            subtitle: 'How to invest'
+        } %}
+        {% include '../../elements/TextSmall/template.twig' with {
+            text: 'Explore the chapters of our guide to investing'
+        } %}
+        <div class="glossarysection_controls">
+            <div class="glossarysection_controlLeft slidersection_controlLeft"
+                id="prevcard">
+                <svg width="26"
+                    height="16"
+                    viewBox="0 0 26 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clipPath="url(#clip0_194_5)">
+                        <path d="M1 8L26 8" />
+                        <path d="M7 14L1 8L7 2" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_194_5">
+                            <rect width="26"
+                                height="16"
+                                fill="white"
+                                transform="translate(26 16) rotate(-180)" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </div>
+            <div class="glossarysection_controlRight slidersection_controlRight"
+                id="nextcard">
+                <svg width="26"
+                    height="16"
+                    viewBox="0 0 26 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25 8L-8.34465e-07 8" stroke="white" />
+                    <path d="M19 2L25 8L19 14" stroke="white" />
+                </svg>
+            </div>
+        </div>
+        {# <div class="glossarysection_arrows">
+            <a id="prevcard">
+                <img class="glossarysection_arrowPrev"
+                    src="icons/arrow-right.svg" />
+            </a>
+            <a id="nextcard">
+                <img class="glossarysection_arrowNext"
+                    src="icons/arrow-right.svg" />
+            </a>
+        </div> #}
+    </div>
+    {% include '../../elements/GlossarySlider/template.twig' %}
+</div>
