@@ -1,0 +1,10 @@
+.element.layout-columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.element.layout-columns > .column {
+  width: 50%;
+}
+/*# sourceMappingURL=styles.css.map */

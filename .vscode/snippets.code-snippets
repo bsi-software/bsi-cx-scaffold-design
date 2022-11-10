@@ -1,0 +1,1507 @@
+{
+    "BSI Element": {
+        "scope": "html,twig",
+        "prefix": "bsi",
+        "body": ["<div data-bsi-element=\"$1\">$0</div>"],
+        "description": "BSI Element Tag"
+    },
+
+    "BSI Element Attribute": {
+        "scope": "html,twig",
+        "prefix": "bsielem",
+        "body": ["data-bsi-element=\"$1\"$0"],
+        "description": "BSI Element Attribute"
+    },
+
+    "Dropzone Div": {
+        "scope": "html,twig",
+        "prefix": "drop",
+        "body": [
+            "<div data-bsi-dropzone=\"$1\" ${2:data-bsi-dropzone-allowed-elements=\"$3\"} ${4:data-bsi-dropzone-max-number-of-elements=\"$5\"}>$0</div>"
+        ],
+        "description": "Container div holding attributes needed for dropzone"
+    },
+
+    "BSI Element + Dropzone": {
+        "scope": "html,twig",
+        "prefix": "dropbsi",
+        "body": [
+            "<div data-bsi-element=\"$1\" data-bsi-dropzone=\"$2\" ${3:data-bsi-dropzone-allowed-elements=\"$4\"} ${5:data-bsi-dropzone-max-number-of-elements=\"$6\"}>$0</div>"
+        ],
+        "description": "BSI Element Div also holding attributes needed for dropzone"
+    },
+
+    "Dropzone Attributes": {
+        "scope": "html,twig",
+        "prefix": "dropattr",
+        "body": [
+            "data-bsi-dropzone=\"$1\" ${2:data-bsi-dropzone-allowed-elements=\"$3\"} ${4:data-bsi-dropzone-max-number-of-elements=\"$5\"}$0"
+        ],
+        "description": "BSI Attributes used for BSI Dropzones"
+    },
+
+    "BSI Element Group": {
+        "scope": "html,twig",
+        "prefix": "bsig",
+        "body": ["<div data-bsi-group=\"$1\">$0</div>"],
+        "description": "Group of BSI content Elements for use in content-elements.twig"
+    },
+
+    "BSI Element Group Label": {
+        "scope": "properties,twig",
+        "prefix": "propgroup",
+        "body": ["group.$1.label={{ $0 }}"],
+        "description": "BSI Element group label property for design UI"
+    },
+
+    "BSI Element Properties Without Description": {
+        "scope": "properties",
+        "prefix": "propelem",
+        "body": [
+            "element.$1.label=$2\nelement.$1.icon=${3|asterisk,chain,checkbox,communication,compass,divider,document,dropdown,envelope,facebook,formfield,handshake,heading,headset,heart,image,info,list,megaphone,metadata,one-column,paperclip,parameter-large,person-female,person-male,phone,pile,qrcode,radiobutton,signpost,smiley,snippet,social-follow,social-share,table,text,textarea,text-with-image,three-columns,twitter,two-columns,video,youtube|}"
+        ],
+        "description": "Must-have BSI Element properties for design UI"
+    },
+
+    "BSI Element Properties With Description": {
+        "scope": "properties",
+        "prefix": "propelemd",
+        "body": [
+            "element.$1.label=$2\nelement.$1.description=$3\nelement.$1.icon=${4|asterisk,chain,checkbox,communication,compass,divider,document,dropdown,envelope,facebook,formfield,handshake,heading,headset,heart,image,info,list,megaphone,metadata,one-column,paperclip,parameter-large,person-female,person-male,phone,pile,qrcode,radiobutton,signpost,smiley,snippet,social-follow,social-share,table,text,textarea,text-with-image,three-columns,twitter,two-columns,video,youtube|}"
+        ],
+        "description": "Must-have BSI Element properties for design UI + description"
+    },
+
+    "BSI Element Parts Label": {
+        "scope": "properties",
+        "prefix": "proppart",
+        "body": "element.$1.parts.${2|plain-text,formatted-text,link,video,image,form-field,form-select,form-textarea,form-checkbox,form-radio|}[$3].label=$4"
+    },
+
+    "HTML Editor Configs Properties": {
+        "scope": "properties",
+        "prefix": "prophtmledit",
+        "body": "html-editor-config.$1.features=${2:bold,}${3:italic,}${4:underline,}${5:alignLeft,}${6:alignCenter,}${7:alignRight,}${8:formatOL,}${9:formatUL,}${10:textColor,}${11:fontSize,}${12:specialCharacters,}${13:insertLink,}${14:html,}${15:paragraphFormat}\n${15:html-editor-config.$1.formats=${16:h1,p}}\n${17:html-editor-config.$1.font-sizes=${18:12,13,14,15,16,17,18,19,20,21,22,23,24}}\n${19:html-editor-config.$1.font-size-unit=${20:px}}\n${21:html-editor-config.$1.font-size-default=${22:16}}\n${23:html-editor-config.$1.text-colors=${24:#}}\n${25:html-editor-config.$1.line-heights=${26:1.1,1.5}}\n${27:html-editor-config.$1.enter=${28:br}}\n\nelement.$29.parts.formatted-text.html-editor-config=$1",
+        "description": "Definition of HTML Editor Configs for Formatted-Text BSI Element Part"
+    },
+
+    "Style Variants via Properties": {
+        "scope": "properties",
+        "prefix": "propstyles",
+        "body": "style.$1.label=$2\nstyle.$1.class.$3.label=$4\nstyle.$1.class.$5.label=$6\n\nelement.$7.styles=$1${8:,$9}",
+        "description": "Definition of different style variants of BSI elements"
+    },
+
+    "Twig Include for BSI Elements": {
+        "scope": "twig",
+        "prefix": "twinc",
+        "body": [
+            "{% include \"${1:content-elements}/${2:elements}/$3/template.twig\" ${4:with { $5 : $6 \\}} ${7:only} %} $0"
+        ]
+    },
+
+    "Twig Block": {
+        "scope": "twig",
+        "prefix": "twblo",
+        "body": ["{% block $1 %}\n$0{% endblock %}"]
+    },
+
+    "Twig Extend": {
+        "scope": "twig",
+        "prefix": "twext",
+        "body": ["{% extends '$1.twig' %}$0"]
+    },
+
+    "Twig Embed": {
+        "scope": "twig",
+        "prefix": "twemb",
+        "body": [
+            "{% embed '$1' ${2:with {$3}}%}\n{% block $4 %}\n$0{% endblock %}\n{% endembed %}"
+        ]
+    },
+
+    "Twig If ElseIf Else": {
+        "scope": "twig",
+        "prefix": "twif",
+        "body": [
+            "{% if ${1:condition1} %}\n$2${3:\n{% elseif ${4:condition2} %\\}\n$5}${6:\n{% else %\\}\n$7}\n{% endif %}$0"
+        ]
+    },
+
+    "Disable prettier formatter - next line": {
+        "scope": "twig",
+        "prefix": "twignore",
+        "body": ["{# prettier-ignore #}$0"]
+    },
+
+    "Disable prettier formatter - start": {
+        "scope": "twig",
+        "prefix": "twigstart",
+        "body": ["{# prettier-ignore-start #}$0"]
+    },
+
+    "Disable prettier formatter - end": {
+        "scope": "twig",
+        "prefix": "twigend",
+        "body": ["{# prettier-ignore-end #}$0"]
+    },
+
+    "Twig Ternary HTML Attribute for BSI Compiler": {
+        "scope": "twig,html",
+        "prefix": "twattternary",
+        "body": [
+            "${1:condition} ? ('${2:attribute}=\"' ~ ${3:value_if_true} ~ '\"' )|raw : '${4:value_if_false}'$0"
+        ],
+        "description": "BSI Compiler escapes quotes to '&quot;', which is why this snippet has been prepared"
+    },
+
+    "Twig Set": {
+        "scope": "twig",
+        "prefix": "twset",
+        "body": ["{% set ${1:variable_name} = ${2:variable_value} %}$0"]
+    },
+
+    "Design Properties Blocks": {
+        "scope": "twig",
+        "prefix": "propadd",
+        "body": [
+            "{% set elements = [\n'$1'\n] %}\n\n{% for element in elements %}\n{% include 'content-elements/elements/' ~ element ~ '/design.properties' %}\n{{ '\\n' }}\n{% endfor %}\n\n{% set layouts = [\n'$2'\n] %}\n\n{% for layout in layouts %}\n{% include 'content-elements/layouts/' ~ layout ~ '/design.properties' %}\n{{ '\\n' }}\n{% endfor %}\n\n{% set sections = [\n'$3'\n] %}\n\n{% for section in sections %}\n{% include 'content-elements/sections/' ~ section ~ '/design.properties' %}\n{{ '\\n' }}\n{% endfor %}\n$0"
+        ],
+        "description": "For use in the design.properties.twig file"
+    },
+
+    "Single Design Properties Block": {
+        "scope": "twig",
+        "prefix": "propsingleadd",
+        "body": [
+            "{% set $1 = [\n'$3'\n] %}\n\n{% for $2 in $1 %}\n{% include 'content-elements/$1/' ~ $2 ~ '/design.properties' %}\n{{ '\\n' }}\n{% endfor %}\n$0"
+        ],
+        "description": "For use in the design.properties.twig file"
+    },
+
+    "BSI Video Element Part's Properties": {
+        "scope": "properties",
+        "prefix": "proppartvid",
+        "body": [
+            "element.$1.label=Video\nelement.$1.icon=${2:youtube}\n\nelement.$1.parts.video[0].label=${3:Video Details}$0"
+        ]
+    },
+
+    "Design Templates Block": {
+        "scope": "twig",
+        "prefix": "bsitempadd",
+        "body": [
+            "{% set elements = [\n'$1'\n] %}\n\n<div data-bsi-group=\"elements\">\n{% for element in elements %}\n{% include 'content-elements/elements/' ~ element ~ '/template.twig' %}\n{% endfor %}\n</div>\n{% set layouts = [\n'$2'\n] %}\n\n<div data-bsi-group=\"layouts\">\n{% for layout in layouts %}\n{% include 'content-elements/layouts/' ~ layout ~ '/template.twig' %}\n{% endfor %}\n</div>\n{% set sections = [\n'$3'\n] %}\n\n<div data-bsi-group=\"sections\">\n{% for section in sections %}\n{% include 'content-elements/sections/' ~ section ~ '/template.twig' %}\n{% endfor %}\n</div>\n$0"
+        ],
+        "description": "For use in the content-elements.twig file"
+    },
+
+    "Single Design Templates Block": {
+        "scope": "twig",
+        "prefix": "bsisingletempadd",
+        "body": [
+            "{% set $1 = [\n'$3'\n] %}\n\n<div data-bsi-group=\"$1\">\n{% for $2 in $1 %}\n{% include 'content-elements/$1/' ~ $2 ~ '/template.twig' %}\n{% endfor %}\n</div>\n$0"
+        ],
+        "description": "For use in the content-elements.twig file"
+    },
+
+    "Design Custom Script Blocks": {
+        "scope": "twig",
+        "prefix": "jsadd",
+        "body": [
+            "{% set elements = [\n'$1'\n] %}\n\n{% for element in elements %}\n{% include 'content-elements/elements/' ~ element ~ '/custom.js' %}\n{% endfor %}\n\n{% set layouts = [\n'$2'\n] %}\n\n{% for layout in layouts %}\n{% include 'content-elements/layouts/' ~ layout ~ '/custom.js' %}\n{% endfor %}\n\n{% set sections = [\n'$3'\n] %}\n\n{% for section in sections %}\n{% include 'content-elements/sections/' ~ section ~ '/custom.js' %}\n{% endfor %}\n$0"
+        ],
+        "description": "For use in the design.js.twig file"
+    },
+
+    "Single Design Custom Script Block": {
+        "scope": "twig",
+        "prefix": "jssingleadd",
+        "body": [
+            "{% set $1 = [\n'$3'\n] %}\n\n{% for $2 in $1 %}\n{% include 'content-elements/$1/' ~ $2 ~ '/custom.js' %}\n{% endfor %}\n$0"
+        ],
+        "description": "For use in the design.js.twig file"
+    },
+
+    "Js Function used to highlight required radiobutton fields": {
+        "scope": "javascript",
+        "prefix": "jsradioreq",
+        "body": [
+            "(function() {",
+            "// Function which higlights required radiobuttons fields",
+            "function highlightRequiredRadios() {",
+            "let radioSets = document.getElementsByClassName(",
+            "\"radiobutton-set-container\"",
+            ");",
+            "if (radioSets.length !== 0) {",
+            "// .map only works for arrays, not for HTML Collections, so convert to array",
+            "[...radioSets].map(function(radioSet) {",
+            "if (radioSet.querySelector('input[required=\"\"]') !== null) {",
+            "radioSet.parentNode.children[0].className +=\"required-radiobutton-field\";",
+            "}",
+            "});",
+            "}",
+            "}",
+            "// Immediately run on page load",
+            "highlightRequiredRadios();",
+            "})();"
+        ],
+        "description": "Only fully functional if coupled with 'fpartradio' (twig) and 'cssradio' (css) snippets"
+    },
+
+    "Custom Form Feedback Generator": {
+        "scope": "javascript",
+        "prefix": "jsformfeedback",
+        "body": [
+            "(function () {\r",
+            "    \r",
+            "    const submissionForms = document.getElementsByClassName(\"submission-form\");\r",
+            "    const amountOfForms = submissionForms.length;\r",
+            "\r",
+            "    if (amountOfForms > 0) {\r",
+            "\r",
+            "        function verifyFields(event) {\r",
+            "\r",
+            "            const form = event.target.closest( 'form' );\r",
+            "\r",
+            "            \r",
+            "            event.preventDefault();\r",
+            "             \r",
+            "            // Get all of the required form fields\r",
+            "            // Query the form fields in the order in which they appear in the form, to facilitate the addition of an eventually\r",
+            "            // wanted scroll animation\r",
+            "            let requiredFields = form.querySelectorAll('[required=\"\"]');\r",
+            "\r",
+            "            // Pick out all of the radiobuttons, as these must be handled differently\r",
+            "            let radiobuttonNames = [];\r",
+            "            let missingFields = [];\r",
+            "            [...requiredFields].forEach(function (field) {\r",
+            "                // Check if the currently iterated field is a radiobutton\r",
+            "                if (field.tagName === \"INPUT\" && field.hasAttribute(\"type\") && field.getAttribute(\"type\") === \"radio\") {\r",
+            "                    // Push the current radiobuttons name into the raidobuttonNames to not do the following thing twice\r",
+            "                    const currentName = field.getAttribute(\"name\");\r",
+            "                    if (radiobuttonNames.indexOf(currentName) === -1) {\r",
+            "                        radiobuttonNames.push(currentName);\r",
+            "                        // And in this case, check if any of the available options have been checked\r",
+            "                        if (document.querySelector('input[type=\"radio\"][name=\"' + currentName + '\"]:checked') === null) {\r",
+            "                            // If not, simply add the first radiobutton element of the group into the missingFields array\r",
+            "                            missingFields.push(field);\r",
+            "                            return;\r",
+            "                        }\r",
+            "                    }\r",
+            "                } else if ((field.tagName === \"INPUT\" && field.hasAttribute(\"type\") && field.getAttribute(\"type\") === \"checkbox\")) {\r",
+            "\r",
+            "                    // In this case, simply return the concerned checkbox\r",
+            "                    missingFields.push(field);\r",
+            "                    return;\r",
+            "\r",
+            "                } else if (\r",
+            "                    // Treat all of the following elements in the same way, as they should all gain a highlighted border \r",
+            "                    // if they're missing\r",
+            "                    (\r",
+            "                        (field.tagName === \"INPUT\" && field.hasAttribute(\"type\")) &&\r",
+            "                        field.getAttribute(\"type\") === \"text\" ||\r",
+            "                        field.getAttribute(\"type\") === \"email\"\r",
+            "                    ) ||\r",
+            "                    field.tagName === \"SELECT\" ||\r",
+            "                    field.tagName === \"TEXTAREA\"\r",
+            "                ) {\r",
+            "                    // Add a class used to highlight field as missing\r",
+            "                    let fieldsClass = field.classList;\r",
+            "                    // If the current field value is empty\r",
+            "                    if (field.value.trim() === \"\") {\r",
+            "                        if (!fieldsClass.contains(\"missing-required-field\")) {\r",
+            "                            fieldsClass.add(\"missing-required-field\");\r",
+            "                        }\r",
+            "                        // And in this case add the field into the field of missing fields\r",
+            "                        missingFields.push(field);\r",
+            "                        return;\r",
+            "                    } else {\r",
+            "                        if (fieldsClass.contains(\"missing-required-field\")) {\r",
+            "                            fieldsClass.remove(\"missing-required-field\");\r",
+            "                        }\r",
+            "                    }\r",
+            "                }\r",
+            "            });\r",
+            "\r",
+            "            if (missingFields.length !== 0) {\r",
+            "                document.getElementById(\"required-missing-feedback\").className=\"enable\";\r",
+            "            } else {\r",
+            "                document.getElementById(\"required-missing-feedback\").className = \"\";\r",
+            "                // Form can now safely be submitted\r",
+            "                form.submit();\r",
+            "            }\r",
+            "        }\r",
+            "\r",
+            "        document\r",
+            "            .querySelector('.submission-form input[type=\"submit\"]')\r",
+            "            .addEventListener(\"click\", function(event) {\r",
+            "                verifyFields(event);\r",
+            "            });\r",
+            "\r",
+            "    }\r",
+            "}());"
+        ],
+        "description": "This snippet is used together with the snippets used to create forms and submit buttons 'partform' and 'fpartsubmit', respectively, and the 'cssformfeedback' snippet for according styling"
+    },
+
+    "Design Custom Styling Blocks": {
+        "scope": "twig",
+        "prefix": "lessadd",
+        "body": [
+            "{% set elements = [\n'$1'\n] %}\n\n{% for element in elements %}\n{% include 'content-elements/elements/' ~ element ~ '/styles.less' %}\n{% endfor %}\n\n{% set layouts = [\n'$2'\n] %}\n\n{% for layout in layouts %}\n{% include 'content-elements/layouts/' ~ layout ~ '/styles.less' %}\n{% endfor %}\n\n{% set sections = [\n'$3'\n] %}\n\n{% for section in sections %}\n{% include 'content-elements/sections/' ~ section ~ '/styles.less' %}\n{% endfor %}\n$0"
+        ],
+        "description": "For use in the components.less.twig file"
+    },
+
+    "Single Design Custom Styling Block": {
+        "scope": "twig",
+        "prefix": "lesssingleadd",
+        "body": [
+            "{% set $1 = [\n'$3'\n] %}\n\n{% for $2 in $1 %}\n{% include 'content-elements/$1/' ~ $2 ~ '/styles.less' %}\n{% endfor %}\n$0"
+        ],
+        "description": "For use in the components.less.twig file"
+    },
+
+    "Twig with block": {
+        "scope": "twig",
+        "prefix": "twwith",
+        "body": ["with { $1 : $2 }$0"]
+    },
+
+    "Twig for block": {
+        "scope": "twig",
+        "prefix": "twfor",
+        "body": ["{% for ${1|key,value\\,value|} in $2 %}\n$3\n{% endfor %}$0"]
+    },
+
+    "CSS Comment": {
+        "scope": "css, less",
+        "prefix": "csscomm",
+        "body": "/* $1 */$0"
+    },
+
+    "Custom Checkbox Styling": {
+        "scope": "css, less",
+        "prefix": "csscheck",
+        "body": [
+            "/* disable default checkbox display */",
+            "",
+            "input[type=\"checkbox\"] {",
+            "display: none;",
+            "}",
+            "",
+            "/* correctly align content */",
+            "",
+            ".custom-checkbox-container {",
+            "display: flex;",
+            "flex-direction: row-reverse;",
+            "justify-content: flex-end;",
+            "align-items: center;",
+            "}",
+            "",
+            "/* accomodate spacing for custom checkbox in label */",
+            "",
+            ".custom-checkbox-container label {",
+            "padding-left: 30px;",
+            "/* In BSI, the label cannot wrap around the input element,",
+            "as it is traditionally done when using custom checkbox for optimal",
+            "UX + styling. Hence, we have to position the checkbox label",
+            "above the .custom-checkbox-frame; otherwise the checkbox would",
+            "not be directly clickable */",
+            "/* to assure that checkbox is always clickable (place label above) */",
+            "z-index: 2;",
+            "margin-left: -15px;",
+            "}",
+            "",
+            ".custom-checkbox-container label:hover {",
+            "cursor: pointer;",
+            "}",
+            "",
+            "/* create custom checkbox frame */",
+            "",
+            ".custom-checkbox-container .custom-checkbox-frame {",
+            "background-color: white;",
+            "width: 15px;",
+            "height: 15px;",
+            "border: 1px solid black;",
+            "display: flex;",
+            "justify-content: center;",
+            "/* assure that checkbox is clickable (place below label) */",
+            "z-index: 1;",
+            "}",
+            "",
+            ".custom-checkbox-container label:hover ~ .custom-checkbox-frame {",
+            "background-color: #eee;",
+            "}",
+            "",
+            "/* create custom checkbox checked symbol */",
+            "",
+            ".custom-checkbox-frame::after {",
+            "content: \"\";",
+            "width: 5px;",
+            "height: 10px;",
+            "transform: rotate(45deg);",
+            "border-bottom: 2px solid black;",
+            "border-right: 2px solid black;",
+            "display: none;",
+            "/* to assure that checkbox is clickable (place below label) also when checked */",
+            "z-index: 1;",
+            "}",
+            "",
+            ".custom-checkbox-container input:checked ~ .custom-checkbox-frame::after {",
+            "display: block;",
+            "}"
+        ],
+        "description": "Allows for custom styling while compatible with BSI requirements"
+    },
+
+    "General CSS Page LP Setup": {
+        "prefix": "csslpsetup",
+        "body": [
+            "body {\r",
+            "    margin: 0;\r",
+            "    padding: 0;\r",
+            "    font-family: Arial;\r",
+            "    color: #333333;\r",
+            "    font-size: 16px;\r",
+            "    line-height: 1.5;\r",
+            "}\r",
+            "\r",
+            "* {\r",
+            "    font-family: inherit;\r",
+            "    color: inherit;\r",
+            "    font-size: inherit;\r",
+            "    line-height: inherit;\r",
+            "    box-sizing: border-box;\r",
+            "}\r",
+            "\r",
+            ".content-container {\r",
+            "    display: flex;\r",
+            "    flex-direction: column;\r",
+            "}"
+        ],
+        "description": "Adds minimally needed stylings for LP"
+    },
+
+    "Custom Radiobutton Styling": {
+        "scope": "css, less",
+        "prefix": "cssradio",
+        "body": [
+            "/* highlight required radiobutton sets with required star */",
+            ".required-radiobutton-field::after {",
+            "content: \"*\";",
+            "color: red;",
+            "padding-left: 5px;",
+            "}",
+            "/* disable default radiobutton display */",
+            "",
+            "input[type=\"radio\"] {",
+            "display: none;",
+            "}",
+            "",
+            "/* correctly align content */",
+            "",
+            ".custom-radiobutton-container {",
+            "display: flex;",
+            "flex-direction: row-reverse;",
+            "justify-content: flex-end;",
+            "align-items: center;",
+            "}",
+            "",
+            "/* accomodate spacing for custom radiobutton in label */",
+            "",
+            ".custom-radiobutton-container label {",
+            "padding-left: 30px;",
+            "/* In BSI, the label cannot wrap around the input element,",
+            "as it is traditionally done when using custom radiobutton for optimal",
+            "UX + styling. Hence, we have to position the radiobutton label",
+            "above the .custom-radiobutton-frame; otherwise the radiobutton would",
+            "not be directly clickable */",
+            "/* to assure that checkbox is always clickable (place label above) */",
+            "z-index: 2;",
+            "margin-left: -15px;",
+            "}",
+            "",
+            ".custom-radiobutton-container label:hover {",
+            "cursor: pointer;",
+            "}",
+            "",
+            "/* create custom radiobutton frame */",
+            "",
+            ".custom-radiobutton-container .custom-radiobutton-frame {",
+            "background-color: white;",
+            "width: 15px;",
+            "height: 15px;",
+            "border: 1px solid black;",
+            "display: flex;",
+            "justify-content: center;",
+            "/* assure that radiobutton is clickable (place below label) */",
+            "z-index: 1;",
+            "}",
+            "",
+            ".custom-radiobutton-container label:hover ~ .custom-radiobutton-frame {",
+            "background-color: #eee;",
+            "}",
+            "",
+            "/* create custom radiobutton checked symbol */",
+            "",
+            ".custom-radiobutton-frame::after {",
+            "content: \"\";",
+            "width: 5px;",
+            "height: 10px;",
+            "transform: rotate(45deg);",
+            "border-bottom: 2px solid black;",
+            "border-right: 2px solid black;",
+            "display: none;",
+            "/* to assure that radiobutton is clickable (place below label) also when checked */",
+            "z-index: 1;",
+            "}",
+            "",
+            ".custom-radiobutton-container input:checked ~ .custom-radiobutton-frame::after {",
+            "display: block;",
+            "}",
+            "",
+            ".radiobutton-container-wrapper {",
+            "margin: 10px 0;",
+            "}",
+            "",
+            ".radiobutton-container-wrapper > div > label {",
+            "margin-bottom: 5px;",
+            "}"
+        ],
+        "description": "Allows for custom styling while compatible with BSI requirements"
+    },
+
+    "Styling for Custom Form Feedback": {
+        "scope": "css, less",
+        "prefix": "cssformfeedback",
+        "body": [
+            "form .missing-required-field {\r",
+            "  border-color: red;\r",
+            "}\r",
+            "\r",
+            "#required-missing-feedback {\r",
+            "    display: flex;\r",
+            "    width: 100%;\r",
+            "    justify-content: center;\r",
+            "    color: red;\r",
+            "    overflow: hidden;\r",
+            "    height: 0;\r",
+            "}\r",
+            "\r",
+            "#required-missing-feedback.enable {\r",
+            "    height: auto;\r",
+            "}"
+        ],
+        "description": "This snippet can be used together with 'jsformfeedback' and 'partform' and 'fpartsubmit' for custom form submission feedbacks"
+    },
+
+    "Radiobutton Scale Styling": {
+        "scope": "css, less",
+        "prefix": "cssrating",
+        "body": [
+            ".rating-set-container {",
+            "display: flex;",
+            "width: 100%;",
+            "margin-top: 10px;",
+            "height: 40px;",
+            "}",
+            "",
+            ".rating-set-container > .custom-radiobutton-container {",
+            "flex-grow: 1;",
+            "position: relative;",
+            "}",
+            "",
+            ".rating-set-container .custom-radiobutton-container label {",
+            "position: absolute;",
+            "width: 100%;",
+            "height: 100%;",
+            "padding: 0;",
+            "margin: 0;",
+            "display: flex;",
+            "justify-content: center;",
+            "align-items: center;",
+            "}",
+            "",
+            "/* highlight required radiobutton sets with required star */",
+            ".required-radiobutton-field::after {",
+            "content: \"*\";",
+            "color: red;",
+            "padding-left: 5px;",
+            "}",
+            "/* disable default radiobutton display */",
+            "",
+            "input[type=\"radio\"] {",
+            "display: none;",
+            "}",
+            "",
+            "/* correctly align content */",
+            "",
+            ".custom-radiobutton-container {",
+            "display: flex;",
+            "flex-direction: row-reverse;",
+            "justify-content: flex-end;",
+            "align-items: center;",
+            "}",
+            "",
+            "/* accomodate spacing for custom radiobutton in label */",
+            "",
+            ".custom-radiobutton-container label {",
+            "padding-left: 30px;",
+            "/* In BSI, the label cannot wrap around the input element,",
+            "as it is traditionally done when using custom radiobutton for optimal",
+            "UX + styling. Hence, we have to position the radiobutton label",
+            "above the .custom-radiobutton-frame; otherwise the radiobutton would",
+            "not be directly clickable */",
+            "/* to assure that checkbox is always clickable (place label above) */",
+            "z-index: 2;",
+            "margin-left: -15px;",
+            "}",
+            "",
+            ".custom-radiobutton-container label:hover {",
+            "cursor: pointer;",
+            "}",
+            "",
+            "/* create custom radiobutton frame */",
+            "",
+            ".custom-radiobutton-container .custom-radiobutton-frame-rating {",
+            "background-color: white;",
+            "width: 15px;",
+            "height: 15px;",
+            "border: 1px solid black;",
+            "display: flex;",
+            "justify-content: center;",
+            "/* assure that radiobutton is clickable (place below label) */",
+            "z-index: 1;",
+            "width: 100%;",
+            "height: 100%;",
+            "}",
+            "",
+            ".rating-set-container .custom-radiobutton-container:first-of-type .custom-radiobutton-frame-rating {",
+            "border-top-left-radius: 10px;",
+            "border-bottom-left-radius: 10px;",
+            "}",
+            "",
+            ".rating-set-container .custom-radiobutton-container:last-of-type .custom-radiobutton-frame-rating {",
+            "border-top-right-radius: 10px;",
+            "border-bottom-right-radius: 10px;",
+            "}",
+            "",
+            ".custom-radiobutton-container label:hover ~ .custom-radiobutton-frame-rating {",
+            "background-color: #eee;",
+            "}",
+            "",
+            ".custom-radiobutton-container input:checked ~ .custom-radiobutton-frame-rating {",
+            "background-color: #13aff0;",
+            "}",
+            "",
+            ".rating-labels {",
+            "margin-top: 10px;",
+            "display: flex;",
+            "flex-direction: row;",
+            "width: 100%;",
+            "}",
+            "",
+            ".rating-labels .label-left {",
+            "width: 50%;",
+            "display: flex;",
+            "justify-content: flex-start;",
+            "}",
+            "",
+            ".rating-labels .label-right {",
+            "width: 50%;",
+            "display: flex;",
+            "justify-content: flex-end;",
+            "}"
+        ],
+        "description": "Allows for custom styling while compatible with BSI requirements"
+    },
+
+    "General HTML Form Styles": {
+        "prefix": "cssformgeneral",
+        "body": [
+            "/* generally used form stylings */\r",
+            "textarea {\r",
+            "    resize: none;\r",
+            "}\r",
+            "\r",
+            "input[type=\"text\"],\r",
+            "input[type=\"email\"],\r",
+            "select,\r",
+            "textarea {\r",
+            "    border-radius: 3px;\r",
+            "    border: 1px solid #687374;\r",
+            "    padding: 5px 10px;\r",
+            "    margin: 10px 0;\r",
+            "    background-color: white;\r",
+            "}\r",
+            "\r",
+            "/* increased padding for select to have same appearance as input fields */\r",
+            "select {\r",
+            "    padding: 10px 10px;\r",
+            "}\r",
+            "\r",
+            "select::-ms-expand {\r",
+            "    display: none;\r",
+            "}\r",
+            "\r",
+            "*:-moz-focusring {\r",
+            "    outline: none;\r",
+            "}\r",
+            "\r",
+            "*:focus {\r",
+            "    outline: none;\r",
+            "}\r",
+            "\r",
+            "select:hover {\r",
+            "    cursor: pointer;\r",
+            "}\r",
+            "\r",
+            "input[type=\"submit\"] {\r",
+            "    color: white;\r",
+            "    padding: 10px 20px;\r",
+            "    border-radius: 0;\r",
+            "    font-size: 16px;\r",
+            "    margin: 20px 0;\r",
+            "    transition: border-color 0.5s, color 0.5s, background 0.5s;\r",
+            "}\r",
+            "\r",
+            "input[type=\"submit\"] {\r",
+            "    background: ${1:@styles[primary_color]};\r",
+            "    border: 3px solid ${1:@styles[primary_color]};\r",
+            "}\r",
+            "\r",
+            "input[type=\"submit\"]:hover,\r",
+            "input[type=\"submit\"]:focus {\r",
+            "    color: ${1:@styles[primary_color]};\r",
+            "    border-color: ${1:@styles[primary_color]};\r",
+            "    background-color: white;\r",
+            "}\r",
+            "\r",
+            "input[type=\"submit\"]:hover {\r",
+            "    cursor: pointer;\r",
+            "}\r",
+            "\r",
+            "/* to ensure same perceived size of these fields */",
+            "input:not([type=\"submit\"]),\r",
+            "select {\r",
+            "    height: 40px;\r",
+            "}"
+        ],
+        "description": "Snippet adds styles generally needed for HTML forms"
+    },
+
+    "Twig Comment": {
+        "scope": "twig",
+        "prefix": "twcomm",
+        "body": "{# $1 #}$0"
+    },
+
+    "No Edit Button in BSI": {
+        "scope": "twig",
+        "prefix": "bsihide",
+        "body": "data-bsi-hide-edit-button=\"true\"$0"
+    },
+
+    "BSI Element Part Attribute": {
+        "scope": "twig",
+        "prefix": "part",
+        "body": "data-bsi-element-part=\"$1\"$0"
+    },
+
+    "BSI Image": {
+        "scope": "twig",
+        "prefix": "partimg",
+        "body": "<img src=\"./img/$1\" alt=\"$2\" data-bsi-element-part=\"image\"/>$0"
+    },
+
+    "BSI Plain Text": {
+        "scope": "twig",
+        "prefix": "partplain",
+        "body": "<p data-bsi-element-part=\"plain-text\" ${1:data-bsi-multiline=\"\"}>$2</p>$0"
+    },
+
+    "BSI Formatted Text": {
+        "scope": "twig",
+        "prefix": "partformatted",
+        "body": "<p data-bsi-element-part=\"formatted-text\">$1</p>$0"
+    },
+
+    "BSI Video": {
+        "scope": "twig",
+        "prefix": "partvid",
+        "body": "<div data-bsi-element-part=\"video\" data-bsi-video-data-url=\"\">\n${1:<iframe style=\"width: 100%; height: 100%;\"></iframe>}\n${2:<img src=\"$3\" data-bsi-video-thumbnail=\"\"/>}\n${4:<p data-bsi-video-title=\"$5\"></p>}\n${6:<p data-bsi-video-description=\"\">$7</p>}\n${8:<a data-bsi-video-link=\"\">$9</a>}\n</div>$0"
+    },
+
+    "BSI Link": {
+        "scope": "twig",
+        "prefix": "partlink",
+        "body": "<a href=\"#\" data-bsi-element-part=\"link\" ${1:data-bsi-link-fixed-inner-html=\"\"}>\n${2:<span data-bsi-link-text-part=\"\">$3</span>}$4\n</a>$0"
+    },
+
+    "BSI Form": {
+        "scope": "twig",
+        "prefix": "partform",
+        "body": "<form data-bsi-element-part=\"form\" class=\"submission-form\">\n<div data-bsi-form-validation=\"\">\n<p data-bsi-form-validation-item=\"\"></p>\n</div>\n<div data-bsi-dropzone=\"${1:form-container}\" data-bsi-dropzone-allowed-elements=\"$2\">$0</div>\n<div class=\"form-submit-button-container\">\n<span id=\"required-missing-feedback\">${3:custom_text_which_shows_if_required_field_is_missing_combine_with_jsformfeedback_and_cssformfeedback_snippets_to_work}</span>\n<input data-bsi-part=\"form-submit\" type=\"submit\" value=\"${4:Senden}\" />\n</div>\n</form>"
+    },
+
+    "Required Form Field Styling": {
+        "scope": "css, less",
+        "prefix": "cssreq",
+        "body": ".reverse-for-required { display:flex; flex-direction: column-reverse; width: 100%; }\n\n/* spacing needed due to reversing */ .reverse-for-required > label {margin-bottom: 3px;}\n\ninput:not([type=\"radio\"]):required ~ label::after, select:required ~ label::after, textarea:required ~ label::after {content: \"*\";color: $1;padding-left: 5px;}$0"
+    },
+
+    "BSI Form Select": {
+        "scope": "twig",
+        "prefix": "fpartsel",
+        "body": "<div data-bsi-element-part=\"form-select\" data-bsi-value-list=\"$1\" class=\"reverse-for-required\" ${2:data-bsi-value=\"$3\"} ${4:data-bsi-form-select-fixed-value-list=\"$5\"}>\n<select id=\"$6\" name=\"$6\" ${7:class=\"${8:custom-select}}\" spellcheck=\"false\"><option value=\"$9\">$10</option></select>\n<label for=\"$6\">$11</label>\n</div>$0"
+    },
+
+    "BSI Form Select Value List": {
+        "scope": "twig",
+        "prefix": "fpartselval",
+        "body": "$1${2:label|${3:value}}",
+        "description": "For different value + label"
+    },
+
+    "BSI Form Input": {
+        "scope": "twig",
+        "prefix": "fpartinp",
+        "body": "<div data-bsi-element-part=\"form-field\" class=\"reverse-for-required\" ${2:data-bsi-form-field-fixed-type=\"$3\"}>\n<input id=\"$4\" name=\"$4\" type=\"$5\" ${6:class=\"${7:custom-form-field}\"} ${8:pattern=\"$9\" title=\"$10\"} spellcheck=\"false\"/>\n<label for=\"$4\">$11</label>\n</div>$0"
+    },
+
+    "BSI Form Custom Checkbox": {
+        "scope": "twig",
+        "prefix": "fpartbox",
+        "body": "<div data-bsi-element=\"${1:checkbox}\">\n<div data-bsi-element-part=\"form-checkbox\" class=\"custom-checkbox-container\" data-bsi-form-field-fixed-type=\"\">\n<input id=\"${2:sample-checkbox}\"\nname=\"${2:sample-checkbox}\"\ntype=\"checkbox\"\nclass=\"custom-checkbox-field\" spellcheck=\"false\"/>\n<label for=\"${2:sample-checkbox}\">$3</label>\n<span class=\"custom-checkbox-frame\"></span>\n</div>\n</div>$0"
+    },
+
+    "BSI Form Custom Radiobutton": {
+        "scope": "twig",
+        "prefix": "fpartradio_normal",
+        "body": "<div data-bsi-element=\"radiobutton-container\" class=\"radiobutton-container-wrapper\">\n<div id=\"${8:field-id}\" data-bsi-element-part=\"form-radio\"\ndata-bsi-value-list=\"$1|$2\n$3|$4\"\n${5:data-bsi-fixed-value-list=\"\"}>\n<label>$7</label>\n<div data-bsi-radio-group=\"\" class=\"radiobutton-set-container\">\n<div data-bsi-radio-item=\"\" class=\"custom-radiobutton-container\">\n<input type=\"radio\" name=\"$6\" id=\"$6-1\" value=\"$2\" spellcheck=\"false\"/>\n<label for=\"$6-1\">$1</label>\n<span class=\"custom-radiobutton-frame\"></span>\n</div>\n<div data-bsi-radio-item=\"\" class=\"custom-radiobutton-container\">\n<input type=\"radio\" name=\"$6\" id=\"$6-2\" value=\"$4\" spellcheck=\"false\"/>\n<label for=\"$6-2\">$3</label>\n<span class=\"custom-radiobutton-frame\"></span>\n</div>\n</div>\n</div>\n</div>$0",
+        "description": "Custom radiobuttons ensemble.\nUse together with styles accessible via 'cssradio' snippet (in elements' styles.less) for proper layout and 'jsradioreq' snippet (in elements' custom.js) for required highlighting of main label"
+    },
+
+    "BSI Form Scale Radiobutton": {
+        "scope": "twig",
+        "prefix": "fpartradio_scale",
+        "body": "<div data-bsi-element=\"rating\" class=\"radiobutton-container-wrapper\">\n<div id=\"${8:field-id}\" data-bsi-element-part=\"form-radio\"\ndata-bsi-value-list=\"$1|$2\n$3|$4\"\n${5:data-bsi-fixed-value-list=\"\"}>\n<label>$7</label>\n<div data-bsi-radio-group=\"\" class=\"radiobutton-set-container rating-set-container\">\n<div data-bsi-radio-item=\"\" class=\"custom-radiobutton-container\">\n<input type=\"radio\" name=\"$6\" id=\"$6-1\" value=\"$2\" spellcheck=\"false\"/>\n<label for=\"$6-1\">$1</label>\n<span class=\"custom-radiobutton-frame-rating\"></span>\n</div>\n<div data-bsi-radio-item=\"\" class=\"custom-radiobutton-container\">\n<input type=\"radio\" name=\"$6\" id=\"$6-2\" value=\"$4\" spellcheck=\"false\"/>\n<label for=\"$6-2\">$3</label>\n<span class=\"custom-radiobutton-frame-rating\"></span>\n</div>\n</div>\n</div>\n<div class=\"rating-labels\">\n<span data-bsi-element-part=\"plain-text\" class=\"label-left\">$9</span>\n<span data-bsi-element-part=\"plain-text\" class=\"label-right\">$10</span>\n</div>\n</div>$0",
+        "description": "Custom rating scale.\nUse together with 'cssrating' snippet (in elements' styles.less) for proper layout and 'jsradioreq' snippet (in elements' custom.js) for required highlighting of main label"
+    },
+
+    "BSI Form Rating Scale Labels": {
+        "scope": "twig",
+        "prefix": "fpartradio_scale_labels",
+        "body": "<div class=\"rating-labels\">\n<span class=\"label-left\">$1</span>\n<span class=\"label-right\">$2</span>\n</div>$0",
+        "description": "Labels of radiobutton (NPS) Extremes, to be placed as last div within 'fpartradio', and apply 'cssrating' styles"
+    },
+
+    "BSI Form Custom Radio Item": {
+        "scope": "twig",
+        "prefix": "fpartradioitem",
+        "body": "<div data-bsi-radio-item=\"\" class=\"custom-radiobutton-container\">\n<input type=\"radio\" name=\"$2\" id=\"$2-$1\" value=\"$1\" spellcheck=\"false\"/>\n<label for=\"$2-$1\">$3</label>\n<span class=\"${4|custom-radiobutton-frame,custom-radiobutton-frame-rating|}\"></span>\n</div>$0",
+        "description": "Choose between the 'custom-radiobutton-frame' or the 'custom-radiobutton-frame-rating' option to add either a custom radiobutton or a scale element, respectively.\nUse in conjunction with the respective style snippets 'cssradio' or 'cssrating' in the elements' styles.less file."
+    },
+
+    "BSI Form Textarea": {
+        "scope": "twig",
+        "prefix": "fpartarea",
+        "body": "<div data-bsi-element-part=\"form-textarea\" class=\"reverse-for-required\">\n<textarea id=\"$1\" name=\"$1\" ${2:class=\"$3\"} ${4:rows=\"${5:3}\" cols=\"${6:4}\"} spellcheck=\"false\"></textarea>\n<label for=\"$1\">$7</label>\n</div>$0"
+    },
+
+    "Custom Full Width / Page Width Section (BSI Element) with inner dropzone for inner BSI Elements": {
+        "scope": "twig",
+        "prefix": "lplay_one_section_dropzone",
+        "body": [
+            "{% embed '../../layouts/${1|full-width,one-column|}/template.twig' with {",
+            "    custom_section: '${2:section_bsi_element_name}',",
+            "    ${3:allowed_elements: '${4:enter-allowed elements-here}',}",
+            "    ${5:amount_allowed_elements: ${6:number_of_allowed_elements},}",
+            "    ${7:custom_class: '${8:class_of_bsi_element_div}'}",
+            "} %}",
+            "",
+            "{% block custom_section_content %}",
+            "$0",
+            "{% endblock %}",
+            "",
+            "{% endembed %}"
+        ],
+        "description": "Used to create a custom section (BSI Element) with either the full width or single column layout, with dropzone."
+    },
+
+    "Custom Full Width / Page Width Section (BSI Element) without inner dropzone / fixed inner HTML": {
+        "scope": "twig",
+        "prefix": "lplay_one_section_fixed_content",
+        "body": [
+            "{% embed \"../../layouts/${1|full-width,one-column|}/template.twig\" with {\r",
+            "    custom_section: '${2:section_bsi_element_name}',",
+            "    ${3:custom_class: '${4:class_of_bsi_element_div}'}",
+            "} %} \r",
+            "\r",
+            "{% block custom_section_content_not_dropzone %}\r",
+            "$0\r",
+            "{% endblock %}\r",
+            "\r",
+            "{% endembed %}"
+        ],
+        "description": "Used to create a custom section (BSI Element) with either the full width or single column layout, with fixed content."
+    },
+
+    "Custom Full Width / Page Width Dropzone": {
+        "scope": "twig",
+        "prefix": "lplay_one_dropzone",
+        "body": [
+            "{% embed \"../../layouts/${1|full-width,one-column|}/template.twig\" with {\r",
+            "    dropzone_name: '${2:dropzone_name}',\r",
+            "    ${3:allowed_elements: '${4:enter-allowed elements-here}',}",
+            "    ${5:amount_allowed_elements: ${6:number_of_allowed_elements}}",
+            "} %} \r",
+            "\r",
+            "{% block dropzone_content %}\r",
+            "$0\r",
+            "{% endblock %}\r",
+            "\r",
+            "{% endembed %}"
+        ],
+        "description": "Used to create a custom dropzone with either the full width or single column layout."
+    },
+
+    "Custom Full Width / Page Width Layout Container (No Dropzone, No BSI Element)": {
+        "scope": "twig",
+        "prefix": "lplay_one_container",
+        "body": [
+            "{% embed \"../../layouts/${1|full-width,one-column|}/template.twig\" with {\r",
+            "    simple_container: true,",
+            "    ${2:container_class: '${3:class_of_container_div}'}",
+            "} %} \r",
+            "\r",
+            "{% block simple_container_content %}\r",
+            "$0\r",
+            "{% endblock %}\r",
+            "\r",
+            "{% endembed %}"
+        ],
+        "description": "Used to create a custom markup with either the full width or single column layout, but without dropzone and not as BSI Element."
+    },
+
+    "Custom Two-Column Section (BSI Element)": {
+        "prefix": "lplay_two_section",
+        "body": [
+            "{% embed \"../../layouts/${1|one-one,one-one-reverse,one-two,one-two-reverse,two-one,two-one-reverse|}/template.twig\" with {\r",
+            "    custom_section: '${2:section_bsi_element_name}',\r",
+            "    section_padding: '${3:4_values_padding_of_section_wrapper}',",
+            "    ${4:custom_class: '${5:class_of_bsi_element_div}',}",
+            "    ${6:allowed_elements_one: '${7:enter-allowed elements-of first-column-here}',}",
+            "    ${8:amount_allowed_elements_one: ${9:number_of_allowed_elements_first_column}},",
+            "    section_column_one_padding: '${10:specify_padding_of_first_column_via_padding_value_like 15px 0 10px 0}',\r",
+            "    ${11:allowed_elements_two: '${12:enter-allowed elements-of second-column-here}',}",
+            "    ${13:amount_allowed_elements_two: ${14:number_of_allowed_elements_second_column}},",
+            "    section_column_two_padding: '${15:specify_padding_of_second_column_via_padding_value_like 15px 0 10px 0}',\r",
+            "} %} \r",
+            "\r",
+            "{% block custom_section_content_one %}\r",
+            "$0\r",
+            "{% endblock %}\r",
+            "\r",
+            "{% block custom_section_content_two %}\r",
+            "\r",
+            "{% endblock %}\r",
+            "\r",
+            "{% endembed %}"
+        ],
+        "description": "Used to create a custom section (BSI Element) based on any of the two-column layouts."
+    },
+
+    "Custom Two-Column Dropzone": {
+        "prefix": "lplay_two_dropzone",
+        "body": [
+            "{% embed \"../../layouts/${1|one-one,one-one-reverse,one-two,one-two-reverse,two-one,two-one-reverse|}/template.twig\" with {\r",
+            "    dropzone_padding: '${2:4_values_padding_of_dropzone_wrapper}',",
+            "    dropzone_name_one: '${3:name_of_first_column_dropzone}',\r",
+            "    dropzone_name_two: '${4:name_of_second_column_dropzone}',\r",
+            "    ${5:allowed_elements_one: '${6:enter-allowed elements-of first-column-here}',}",
+            "    ${7:amount_allowed_elements_one: ${8:number_of_allowed_elements_first_column}},",
+            "    dropzone_column_one_padding: '${9:specify_padding_of_first_column_via_padding_value_like 15px 0 10px 0}',\r",
+            "    ${10:allowed_elements_two: '${11:enter-allowed elements-of second-column-here}',}",
+            "    ${12:amount_allowed_elements_two: ${13:number_of_allowed_elements_second_column}},",
+            "    dropzone_column_two_padding: '${14:specify_padding_of_second_column_via_padding_value_like 15px 0 10px 0}',\r",
+            "} %} \r",
+            "\r",
+            "{% block dropzone_column_one %}\r",
+            "$0\r",
+            "{% endblock %}\r",
+            "\r",
+            "{% block dropzone_column_two %}\r",
+            "\r",
+            "{% endblock %}\r",
+            "\r",
+            "{% endembed %}"
+        ],
+        "description": "Used to create a custom dropzone based on any of the two-column layouts."
+    },
+
+    "Two-Column Layout Container (No Dropzone, No BSI Element)": {
+        "scope": "twig",
+        "prefix": "lplay_two_container",
+        "body": [
+            "{% embed \"../../layouts/${1|one-one,one-one-reverse,one-two,one-two-reverse,two-one,two-one-reverse|}/template.twig\" with {\r",
+            "    simple_container: true,",
+            "    ${2:container_class: '${3:class_of_container_div}'}",
+            "} %} \r",
+            "\r",
+            "{% block container_first %}\r",
+            "$0\r",
+            "{% endblock %}\r",
+            "{% block container_second %}\r",
+            "\r",
+            "{% endblock %}\r",
+            "\r",
+            "{% endembed %}"
+        ],
+        "description": "Used to create a custom container (no dropzones, no BSI Element) based on any of the two-column layouts."
+    },
+
+    "Custom Page Width Email Section (BSI Element) with inner dropzone for inner BSI Elements": {
+        "scope": "twig",
+        "prefix": "mail_lay_one_section_dropzone",
+        "body": [
+            "{% embed '../../layouts/one-column/template.twig' with {",
+            "    custom_section: '${1:section_bsi_element_name}',",
+            "    ${2:allowed_elements: '${3:enter-allowed elements-here}',}",
+            "    ${4:amount_allowed_elements: ${5:number_of_allowed_elements},}",
+            "} %}",
+            "",
+            "{% block custom_section_content %}",
+            "$0",
+            "{% endblock %}",
+            "",
+            "{% endembed %}"
+        ],
+        "description": "Used to create a custom section (BSI Element) with the single column layout, with dropzone, for email designs."
+    },
+
+    "Custom Page Width Email Section (BSI Element) without inner dropzone / fixed inner HTML": {
+        "scope": "twig",
+        "prefix": "mail_lay_one_section_fixed_content",
+        "body": [
+            "{% embed \"../../layouts/one-column/template.twig\" with {\r",
+            "    custom_section: '${1:section_bsi_element_name}'",
+            "} %} \r",
+            "\r",
+            "{% block custom_section_content_not_dropzone %}\r",
+            "$0\r",
+            "{% endblock %}\r",
+            "\r",
+            "{% endembed %}"
+        ],
+        "description": "Used to create a custom section (BSI Element) with the single column layout, with fixed content."
+    },
+
+    "Custom Page Width Dropzone": {
+        "scope": "twig",
+        "prefix": "mail_lay_one_dropzone",
+        "body": [
+            "{% embed \"../../layouts/one-column/template.twig\" with {\r",
+            "    dropzone_name: '${1:dropzone_name}',\r",
+            "    ${2:allowed_elements: '${3:enter-allowed elements-here}',}",
+            "    ${4:amount_allowed_elements: ${5:number_of_allowed_elements}}",
+            "} %} \r",
+            "\r",
+            "{% block dropzone_content %}\r",
+            "$0\r",
+            "{% endblock %}\r",
+            "\r",
+            "{% endembed %}"
+        ],
+        "description": "Used to create a custom dropzone for e-mail designs with the single column layout."
+    },
+
+    "Custom Page Width Layout Container (No Dropzone, No BSI Element)": {
+        "scope": "twig",
+        "prefix": "mail_lay_one_container",
+        "body": [
+            "{% embed \"../../layouts/one-column/template.twig\" with {\r",
+            "    simple_container: true",
+            "} %} \r",
+            "\r",
+            "{% block simple_container_content %}\r",
+            "$0\r",
+            "{% endblock %}\r",
+            "\r",
+            "{% endembed %}"
+        ],
+        "description": "Used to create a custom e-mail design markup with the single column layout, but without dropzone and not as BSI Element."
+    },
+
+    "Custom Two-Column E-mail Section (BSI Element)": {
+        "prefix": "mail_lay_two_section",
+        "body": [
+            "{% embed \"../../layouts/${1|one-one,one-one-reverse,one-two,one-two-reverse,two-one,two-one-reverse|}/template.twig\" with {\r",
+            "    custom_section: '${2:section_bsi_element_name}',\r",
+            "    horizontal_alignment: '${3|left,center,right|}',",
+            "    vertical_alignment: '${4|top,middle,bottom|}',",
+            "    ${5:allowed_elements_one: '${6:enter-allowed elements-of first-column-here}',}",
+            "    ${7:amount_allowed_elements_one: ${8:number_of_allowed_elements_first_column}},",
+            "    ${9:allowed_elements_two: '${10:enter-allowed elements-of second-column-here}',}",
+            "    ${11:amount_allowed_elements_two: ${12:number_of_allowed_elements_second_column}},",
+            "} %} \r",
+            "\r",
+            "{% block custom_section_content_one %}\r",
+            "$0\r",
+            "{% endblock %}\r",
+            "\r",
+            "{% block custom_section_content_two %}\r",
+            "\r",
+            "{% endblock %}\r",
+            "\r",
+            "{% endembed %}"
+        ],
+        "description": "Used to create a custom E-mail section (BSI Element) based on any of the two-column layouts."
+    },
+
+    "Custom E-Mail Two-Column Dropzone": {
+        "prefix": "mail_lay_two_dropzone",
+        "body": [
+            "{% embed \"../../layouts/${1|one-one,one-one-reverse,one-two,one-two-reverse,two-one,two-one-reverse|}/template.twig\" with {\r",
+            "    horizontal_alignment: '${2|left,center,right|}',",
+            "    vertical_alignment: '${3|top,middle,bottom|}',",
+            "    dropzone_name_one: '${4:name_of_first_column_dropzone}',\r",
+            "    ${5:allowed_elements_one: '${6:enter-allowed elements-of first-column-here}',}",
+            "    ${7:amount_allowed_elements_one: ${8:number_of_allowed_elements_first_column}},",
+            "    dropzone_name_two: '${9:name_of_second_column_dropzone}',\r",
+            "    ${10:allowed_elements_two: '${11:enter-allowed elements-of second-column-here}',}",
+            "    ${12:amount_allowed_elements_two: ${13:number_of_allowed_elements_second_column}},",
+            "} %} \r",
+            "\r",
+            "{% block dropzone_column_one %}\r",
+            "$0\r",
+            "{% endblock %}\r",
+            "\r",
+            "{% block dropzone_column_two %}\r",
+            "\r",
+            "{% endblock %}\r",
+            "\r",
+            "{% endembed %}"
+        ],
+        "description": "Used to create an e-mail custom dropzone based on any of the two-column layouts."
+    },
+
+    "Two-Column E-Mail Layout Container (No Dropzone, No BSI Element)": {
+        "scope": "twig",
+        "prefix": "mail_lay_two_container",
+        "body": [
+            "{% embed \"../../layouts/${1|one-one,one-one-reverse,one-two,one-two-reverse,two-one,two-one-reverse|}/template.twig\" with {\r",
+            "    simple_container: true",
+            "} %} \r",
+            "\r",
+            "{% block container_first %}\r",
+            "$0\r",
+            "{% endblock %}\r",
+            "{% block container_second %}\r",
+            "\r",
+            "{% endblock %}\r",
+            "\r",
+            "{% endembed %}"
+        ],
+        "description": "Used to create an e-mail custom container (no dropzones, no BSI Element) based on any of the two-column layouts."
+    },
+
+    "HTML E-Mail Base": {
+        "prefix": "mail_template",
+        "body": [
+            "<!DOCTYPE html>\r",
+            "<html lang=\"{{mail.language}}\" xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\">{# INFO_COMMENT  defines the XML and OOXML (Office Open XML) namespaces which we need for Outlook on Windows  #}\r",
+            "<head>\r",
+            "  <meta charset=\"UTF-8\" />{# INFO_COMMENT  you may need to change this if you need to use any characters that aren’t included in the UTF-8 character set  #}\r",
+            "  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\r",
+            "  <meta name=\"x-apple-disable-message-reformatting\" /> {# INFO_COMMENT  prevents Apple from doing any unwanted scaling or zooming out of your email on iOS devices  #}\r",
+            "  <!--[if !mso]><!-->\r",
+            "  {# INFO_COMMENT  used to improve rendering in Internet Explorer 9 or lower, which is getting less and less common, so you could use your discretion with this one. In the past it was also used to improve rendering on Windows Phones. It is placed between conditional tags so that it’s hidden from Windows Live Mail, which otherwise won’t display images if this tag is used  #}\r",
+            "  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />\r",
+            "  <!--<![endif]-->\r",
+            "  <title></title>\r",
+            "  {# INFO_COMMENT  Styles that shall only apply in Microsoft Outlook (border-spacing:0, the CSS equivalent of cellspacing=\"0\", is used to prevent gaps and cellpadding on tables. Also zero margins on all div elements and use !important to prevent Outlook from adding a lot of extra, unpredictable and unwanted space to the layout.)  #}\r",
+            "  {# INFO_COMMENT  OOXML Element (o:OfficeDocumentSettings) with its settings tells Microsoft Outlook that the template is operating at a base resolution of 96 dpi; to ensure that MO always accurately transforms everything in the emai lto adapt to the screen zoom percentage configured in Windows settings for high-DPI displays (=most displays these days). All written inside a noscript tag to prevent T-Online clients from displaying the 96.  #}\r",
+            "  <!--[if mso]>\r",
+            "  <style type=\"text/css\">\r",
+            "        table {border-collapse:collapse;border:0;border-spacing:0;margin:0;}\r",
+            "        div, td {padding:0;}\r",
+            "        div {margin:0 !important;}\r",
+            "  </style>\r",
+            "  <noscript>\r",
+            "  <xml>\r",
+            "    <o:OfficeDocumentSettings>\r",
+            "        <o:PixelsPerInch>96</o:PixelsPerInch>\r",
+            "    </o:OfficeDocumentSettings>\r",
+            "  </xml>\r",
+            "  </noscript>\r",
+            "  <![endif]-->\r",
+            "\r",
+            "  {# INFO_COMMENT  custom CSS is added here, but the template should exclusively rely on inline CSS  #} \r",
+            "  <style type=\"text/css\">\r",
+            "  \r",
+            "    body,\r",
+            "    table,\r",
+            "    td,\r",
+            "    a {\r",
+            "      -webkit-text-size-adjust: 100%;\r",
+            "      -ms-text-size-adjust: 100%;\r",
+            "    }\r",
+            "\r",
+            "    table,\r",
+            "    td {\r",
+            "      mso-table-lspace: 0pt;\r",
+            "      mso-table-rspace: 0pt;\r",
+            "    }\r",
+            "\r",
+            "    img {\r",
+            "      -ms-interpolation-mode: bicubic;\r",
+            "    }\r",
+            "\r",
+            "    img {\r",
+            "      border: 0;\r",
+            "      height: auto;\r",
+            "      line-height: 100%;\r",
+            "      outline: none;\r",
+            "      text-decoration: none;\r",
+            "    }\r",
+            "\r",
+            "    table {\r",
+            "      border-collapse: collapse !important;\r",
+            "    }\r",
+            "\r",
+            "    body {\r",
+            "      height: 100% !important;\r",
+            "      margin: 0 !important;\r",
+            "      padding: 0 !important;\r",
+            "      width: 100% !important;\r",
+            "    }\r",
+            "\r",
+            "    a[x-apple-data-detectors] {\r",
+            "      color: inherit !important;\r",
+            "      text-decoration: none !important;\r",
+            "      font-size: inherit !important;\r",
+            "      font-family: inherit !important;\r",
+            "      font-weight: inherit !important;\r",
+            "      line-height: inherit !important;\r",
+            "    }\r",
+            "\r",
+            "    @media screen and (max-width: 600px) {\r",
+            "      .img-max {\r",
+            "        width: 100% !important;\r",
+            "        max-width: 100% !important;\r",
+            "        height: auto !important;\r",
+            "      }\r",
+            "\r",
+            "      .max-width {\r",
+            "        max-width: 100% !important;\r",
+            "      }\r",
+            "\r",
+            "      .mobile-wrapper {\r",
+            "        width: 85% !important;\r",
+            "        max-width: 85% !important;\r",
+            "      }\r",
+            "\r",
+            "      .mobile-padding {\r",
+            "        padding-left: 5% !important;\r",
+            "        padding-right: 5% !important;\r",
+            "      }\r",
+            "    }\r",
+            "\r",
+            "    div[style*=\"margin: 16px 0;\"] {\r",
+            "      margin: 0 !important;\r",
+            "    }\r",
+            "  </style>\r",
+            "\r",
+            "</head>\r",
+            "\r",
+            "{# INFO_COMMENT  word-spacing:normal prevents Gmail from defaulting word-spacing to 1px for the body, adding 1px between columns and thus causing them to stack.  #}\r",
+            "<body style=\"margin: 0 !important; padding: 0; !important; word-spacing: normal; background-color: #ffffff;\" bgcolor=\"#ffffff\">\r",
+            "{# INFO_COMMENT defines the primary email area's role as an article, and adds more details via aria-roledescription; such that screen readers will announce that it's an email, or at least that it's an article, which defines it as a primary piece of content and will assist with navigation #}\r",
+            "<div role=\"article\" aria-roledescription=\"email\" lang=\"{{mail.language}}\" style=\"-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;background-color:#ffffff;\">\r",
+            "{# HIDDEN PREHEADER TEXT #}\r",
+            "<div style=\"display: none; font-size: 1px; color: #fefefe; line-height: 1px; font-family: Open Sans, Helvetica, Arial, sans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;\">\r",
+            "    {{mail.preheader_text}}\r",
+            "</div>\r",
+            "{# INFO_COMMENT  always set the role of any table used purely for layout to presentation, such that screen readers won't announce the presence and structure of the rows and columns, but will instead only announce the content inside.  #}\r",
+            "<table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" bgcolor=\"{{styles.mail_background}}\" style=\"background: {{styles.mail_background}};\">\r",
+            "    <tr>\r",
+            "        <td align=\"center\" valign=\"top\" width=\"100%\" style=\"padding: 0;\">\r",
+            "\r",
+            "          {# INFO_COMMENT  Microsoft Outlook does not properly support the CSS max-width property, especially not combined with multiple columns displayed side-by-side; which is why the so-called ghost tables are needed (=fallback HTML tables, only displayed for Outlook Clients, to yield the same layout / behavior as the one coded with max-width for other clients)  #}\r",
+            "\r",
+            "            <!--[if (gte mso 9)|(IE)]>\r",
+            "            <table role=\"presentation\" align=\"center\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"{{styles.mail_max_width}}\">\r",
+            "            <tr>\r",
+            "            <td align=\"center\" valign=\"top\" width=\"{{styles.mail_max_width}}\">\r",
+            "            <![endif]-->\r",
+            "\r",
+            "            <table role=\"presentation\" align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"max-width: {{styles.mail_max_width}}px;\">\r",
+            "              <tr>\r",
+            "                <td align=\"center\" valign=\"top\" width=\"100%\" style=\"padding: 0;\">\r",
+            "                {% block mail_header %}\r",
+            "\r",
+            "                {% endblock %}\r",
+            "\r",
+            "                {% block mail_body %}\r",
+            "\r",
+            "                {% endblock %}\r",
+            "\r",
+            "                {% block mail_footer %}\r",
+            "\r",
+            "                {% endblock %}\r",
+            "                </td>\r",
+            "              </tr>\r",
+            "            </table>\r",
+            "\r",
+            "            <!--[if (gte mso 9)|(IE)]>\r",
+            "            </td>\r",
+            "            </tr>\r",
+            "            </table>\r",
+            "            <![endif]-->\r",
+            "\r",
+            "        </td>\r",
+            "    </tr>\r",
+            "  </table>\r",
+            "</div>\r",
+            "\r",
+            "</body>\r",
+            "</html>\r",
+            ""
+        ],
+        "description": "General E-Mail Startoff Template"
+    },
+
+    "Element Container": {
+        "scope": "twig,html",
+        "prefix": "mail_element_container",
+        "body": [
+            "<table role=\"presentation\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"100%\">",
+            "  <tr>",
+            "    <td align=\"${1|left,center,right|}\" valign=\"top\" bgcolor=\"#${2:ffffff}\" style=\"background: #${2:ffffff}; padding: ${3:15px 30px 15px 30px}; font-family: Open Sans, Helvetica, Arial, sans-serif; ${4:border-left: ${5:1}px solid #${6:000000};} ${7:border-right: ${8:1}px solid #${9:000000};} ${10:border-top: ${11:1}px solid #${12:000000};} ${13:border-bottom: ${14:1}px solid #${15:000000};}\">",
+            "      ${0:insert mail_element_x here}",
+            "    </td>",
+            "  </tr>",
+            "</table>"
+        ],
+        "description": "Creates a new table to be inserted into the e-mail's main table cell of the 'mail_template' E-Mail snippet"
+    },
+
+    "Cross-Mail-Client Button": {
+        "scope": "twig,html",
+        "prefix": "mail_element_button",
+        "body": [
+            "<table role=\"presentation\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">",
+            "  <tr>",
+            "    <td align=\"center\" bgcolor=\"#${1:background_color}\" style=\"border-radius: 5px; background-color: #${1:background_color};\">",
+            "      <a data-bsi-element-part=\"link\" href=\"${2:button_link}\" target=\"_blank\" style=\"font-size: 16px; line-height:22px; font-family: Open Sans, Helvetica, Arial, sans-serif; color: #ffffff; font-weight: bold; text-decoration: none;border-radius: 5px; padding: 12px 18px; border: 1px solid #ffffff; display: inline-block;\">${3:button_text}</a>",
+            "    </td>",
+            "  </tr>",
+            "</table>"
+        ],
+        "description": "E-Mail Element (insert into 'mail_element_container' snippet): Button correctly displayed across all e-mail clients, only border-radius not supported in outlook"
+    },
+
+    "mail_element_image": {
+        "prefix": "mail_element_img",
+        "body": [
+            "<img src=\"./img/visual_sample.jpg\" alt=\"\" data-bsi-element-part=\"image\" width=\"${1:type_number_of_containers_max_width_here}\" style=\"width:100%; height: auto; display: block;\" />"
+        ],
+        "description": "Creates an img tag (to be inserted into 'mail_element_container' snippet) with everything needed to be properly used within an HTML Email using the boilerplate design"
+    },
+
+    "Bullet-Proof E-Mail Button, based on Button Template": {
+        "prefix": "mail_template_button",
+        "body": [
+            "{% include '../../templates/button/template.twig' with {\r",
+            "    button_template_bsi_name: '${1:specify the BSI Element name}',\r",
+            "    button_template_alignment: '${2|left,center,right|}',\r",
+            "    button_template_background: ${3:styles.primary_color},\r",
+            "    button_template_font_color: '${4:#ffffff}',\r",
+            "    button_template_label: '${5:Button Label}'\r",
+            "} only %}"
+        ],
+        "description": "Generates a cross-client bullet proof button element that can be directly inserted into any layout component of the E-Mail boilerplate"
+    },
+
+    "Image Variant For E-Mail": {
+        "prefix": "mail_template_img",
+        "body": [
+            "{% include '../../templates/image/template.twig' with {\r",
+            "    image_template_width: ${1:Provide the Width of the image (hardcoded number)},\r",
+            "    image_template_bsi_element_name: '${2:Type the BSI Element Name}'\r",
+            "} %}"
+        ],
+        "description": "Generates a new image element based on the image template"
+    },
+
+    "Social Icons For E-Mail Footer": {
+        "scope": "twig,html",
+        "prefix": "mail_element_socials",
+        "body": [
+            "${10:<!-- DELETE COMMENTS AFTER CONFIGURING; COMMENTS INCREASE SPAM RATE -->",
+            "<!-- The width of this element (157) is the sum of the widths of the icons + the paddings; you may adapt this as you want -->",
+            "<!-- The padding for the facebook icon is somewhat smaller because the icon is slimmer than the others,",
+            "so a smaller padding is required to make it appear centered with the others -->}",
+            "",
+            "<!--[if (gte mso 9)|(IE)]>",
+            "<table role=\"presentation\" align=\"${9|left,center,right|}\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"${1:157}\">",
+            "  <tr>",
+            "    <td align=\"${9|left,center,right|}\" valign=\"top\" width=\"${1:157}\">",
+            "<![endif]-->",
+            "",
+            "    <table role=\"presentation\" align=\"${9|left,center,right|}\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"max-width:${1:157}px;\">",
+            "      <tr>",
+            "        <td style=\"padding:0;\">",
+            "          <a data-bsi-element-part=\"link\" data-bsi-link-fixed-inner-html=\"\" href=\"https://www.instagram.com/${5:companyname}/\" target=\"_blank\" style=\"text-decoration: none;\"><img src=\"/icons/Instagram.png\" alt=\"Link for Instagram Channel\" width=\"${2:30}\" height=\"${2:30}\" style=\"height:auto;display:block;border:0;\" /></a>",
+            "        </td>",
+            "        <td style=\"padding:${3:0 0 0 15px;}\">",
+            "          <a data-bsi-element-part=\"link\" data-bsi-link-fixed-inner-html=\"\" href=\"https://www.linkedin.com/company/${6:companyname}\" target=\"_blank\" style=\"text-decoration: none;\"><img src=\"/icons/LinkedIn.png\" alt=\"Link for LinkedIn Channel\" width=\"${2:30}\" height=\"${2:30}\" style=\"height:auto;display:block;border:0;\" /></a>",
+            "        </td>",
+            "        <td style=\"padding:${3:0 0 0 15px;}\">",
+            "          <a data-bsi-element-part=\"link\" data-bsi-link-fixed-inner-html=\"\" href=\"https://twitter.com/${7:companyname}\" target=\"_blank\" style=\"text-decoration: none;\"><img src=\"/icons/Twitter.png\" alt=\"Link for Twitter Channel\" width=\"${2:30}\" height=\"${2:30}\" style=\"height:auto;display:block;border:0;\" /></a>",
+            "        </td>",
+            "        <td style=\"padding:${4:0 0 0 7px;}\">",
+            "          <a data-bsi-element-part=\"link\" data-bsi-link-fixed-inner-html=\"\" href=\"https://www.facebook.com/${8:companyname}\" target=\"_blank\" style=\"text-decoration: none;\"><img src=\"/icons/Facebook.png\" alt=\"Link for Facebook Channel\" width=\"${2:30}\" height=\"${2:30}\" style=\"height:auto;display:block;border:0;\" /></a>",
+            "        </td>",
+            "      </tr>",
+            "    </table>",
+            "",
+            "<!--[if (gte mso 9)|(IE)]>",
+            "    </td>",
+            "  </tr>",
+            "</table>",
+            "<![endif]-->"
+        ],
+        "description": "E-Mail Element (insert into 'mail_element_container' snippet): Creates a social icons section for HTML E-Mail footers. Check HTML comments for infos about use, and delete comments afterwards (comments can increase Spam chances)"
+    },
+
+    "E-Mail Paragraph": {
+        "scope": "twig,html",
+        "prefix": "mail_element_paragraph",
+        "body": [
+            "<p style=\"color: #${1:000000}; font-family: Open Sans, Helvetica, Arial, sans-serif; ${2|font-size: 16px; line-height: 22px;,font-size: 18px; line-height: 24px;,font-size: 20px; line-height: 26px;|} margin: 0;\">${3:text}</p>${4:<br/>}"
+        ],
+        "description": "E-Mail Element (insert into 'mail_element_container' snippet): Paragraph for E-Mail"
+    },
+
+    "E-Mail Title": {
+        "scope": "twig,html",
+        "prefix": "mail_element_header",
+        "body": [
+            "<${1|h1,h2,h3,h4,h5,h6|} style=\"font-family: Open Sans, Helvetica, Arial, sans-serif; ${2|font-size: 16px; line-height: 22px;,font-size: 18px; line-height: 24px;,font-size: 20px; line-height: 26px;|} color: #${3:000000};\">${4:title}</${1|h1,h2,h3,h4,h5,h6|}>"
+        ],
+        "description": "E-Mail Element (insert into 'mail_element_container' snippet): Header for E-Mails"
+    },
+
+    "E-Mail Visual": {
+        "scope": "twig,html",
+        "prefix": "mail_element_visual",
+        "body": [
+            "<img src=\"${1:/visuals/visual.png}\" width=\"${2:600}\" border=\"0\" alt=\"\" style=\"display: block; width: 100%; height:auto;\" class=\"img-max\"/>"
+        ],
+        "description": "E-Mail Element (insert into 'mail_element_container' snippet): Visual. The specified width should match with the e-mails container table width"
+    }
+}

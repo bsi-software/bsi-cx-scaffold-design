@@ -14,5 +14,9 @@ module.exports = cx.contentElement
       .withLabel("Date-2"),
     cx.part.plainText
       .withId("b9b0f140-449e-11ed-b878-0242ac120002")
-      .withLabel("Date-3")
+      .withLabel("Date-3"),
+    cx.part.formattedText
+      .withId("3a32bee2-457c-11ed-b878-0242ac120002")
+      .withLabel("Header Main Text Event")
+      .withHtmlEditorConfig(require("../../../../formatted-text-config"))
   );

@@ -1,49 +1,67 @@
-<div data-bsi-element="date-header">
-  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+<div data-bsi-element="date-header"
+  style="height: 100%; display: flex;margin-bottom:24px"
+  class="hello">
+  <table border="0"
+    cellpadding="0"
+    cellspacing="0"
+    width="100%">
     <tbody>
       <tr>
         <td>
-          <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="border:0;">
+          <table align="center"
+            border="0"
+            cellpadding="0"
+            cellspacing="0"
+            width="580"
+            style="border:0;width:580px;">
             <tbody>
               <tr>
-                <td style="padding: 15px;">
-                  <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" style="width: {{ _contentWidth ? : '100%' }};">
+                <td width="580"
+                  style="padding-left:24px; padding-right:24px">
+                  <table align="center"
+                    role="presentation"
+                    border="0"
+                    cellpadding="0"
+                    cellspacing="0"
+                    width="100%">
                     <tbody>
                       <tr>
-                        <td valign="top" align="left" style="padding-top: 0px;height:100%;">
-                          <table align="left" border="0" width="49%" cellpadding="0" cellspacing="0" valign="top" style="width: {{ _columnWidth ? : '27%' }};height:100%;">
-                            <tbody>
-                              <tr align="center">
-                                <td style="height:100%;">
-                                  <div class="column" style="border-width: 0px !important;margin-top: 0px!important;margin-bottom: 0px !important;height:100%;">
-                                    <div style="flex: 1 1 0px; height: 100%; font-size: 52px; font-weight:700;">
-                                      <div style="padding-top: 24px;">
-                                        <div id="b9b0fac8-449e-11ed-b878-0242ac120002" data-bsi-element-part="plain-text">23</div>
-                                      </div>
-                                      <div style="font-weight: bold;font-size: 18px; display: flex; flex-direction: row; justify-content: center;">
-                                        <div id="b9b0f6b8-449e-11ed-b878-0242ac120002" data-bsi-element-part="plain-text">Dec</div>
-                                        <div id="b9b0f140-449e-11ed-b878-0242ac120002" data-bsi-element-part="plain-text">´22</div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                          <table align="right" border="0" cellpadding="0" width="49%" cellspacing="0" valign="top" style="width: {{ _columnWidth ? : '73%' }};">
-                            <tbody>
-                              <tr align="center">
-                                <td>
-                                  <div class="column" style="border-width: 0px !important;margin-top: 0px!important;margin-bottom: 0px !important;">
-                                    <div align="left" style="border-left: 2px solid black; flex: 1 1 0px; font-weight: 700;font-size: 24px;
-        line-height: 120%; padding:0px 20px 15px 32px">
-                                      {% include '../../elements/h3/template.twig' with { text: 'Large Event ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium ' } %}
-                                    </div>
-                                  </div>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
+                        <td style="width:120px;vertical-align:top;background-color: #023991;background-image:linear-gradient(90deg, #023991 10.94%, #00FF55 88.02%);"
+                          width="120"
+                          align="center"
+                          valign="top">
+                          <div style="vertical-align:top;padding:24px 24px 80px 24px;margin-top: 0px!important;margin-bottom: 0px !important;">
+                            <div id="9117192e-4649-11ed-b878-0242ac120002"
+                              data-bsi-element-part="plain-text"
+                              style="text-align:center;font-family: TT Norms,Arial,sans-serif;font-style: normal;font-weight: 700;font-size: 52px;line-height: 100%;color:#ffffff;">23</div>
+
+                            <div id="91171802-4649-11ed-b878-0242ac120002"
+                              data-bsi-element-part="plain-text"
+                              style="text-align:center;font-family: TT Norms,Arial,sans-serif;
+                              font-style: normal;font-weight: 700;font-size: 18px;line-height: 100%;
+                              color:#ffffff;">Dec´22</div>
+                          </div>
+                        </td>
+
+                        <td width="460"
+                          height="174"
+                          valign="top"
+                          style="padding:0 24px 0 24px;vertical-align:top;">
+                          <div align="left"
+                            valign="top"
+                            style="display:flex;align-items: center;font-weight: 700; font-size: 18px; line-height: 24px;vertical-align:top;height:174px">
+                            <a href="#"
+                              style="text-decoration:none">
+                              <p id="3a32bee2-457c-11ed-b878-0242ac120002"
+                                data-bsi-element-part="formatted-text"
+                                style="font-family: TT Norms,Arial,sans-serif;font-style: normal;font-weight: 700;font-size: 48px;line-height: 120%;color: #000000;margin:0">Main
+                                Event
+                                ipsum
+                                dolor
+                                sit
+                                ahmet</p>
+                            </a>
+                          </div>
                         </td>
                       </tr>
                     </tbody>
@@ -57,25 +75,3 @@
     </tbody>
   </table>
 </div>
-
-{# <div data-bsi-element="date-header" style="height: 100%; display: flex;" class="hello" id="date-header">
-  {% embed '../../layouts/two-columns-gradient/template.twig' %}
-    {% block columnLeft %}
-      <div style="flex: 1 1 0px; height: 100%; font-size: 52px; font-weight:700;">
-        <div style="padding-top: 24px;">
-          {% include '../../elements/text/template.twig' with { text: '23' } %}
-        </div>
-        <div style="font-weight: bold;font-size: 18px; display: flex; flex-direction: row; justify-content: center;">
-          {% include '../../elements/text/template.twig' with { text: 'Dec' } %}
-          {% include '../../elements/text/template.twig' with { text: '´22' } %}
-        </div>
-      </div>
-    {% endblock %}
-    {% block columnRight %}
-      <div align="left" style="border-left: 2px solid black; flex: 1 1 0px; font-weight: 700;font-size: 24px;
-        line-height: 120%; padding:0px 20px 15px 32px">
-        {% include '../../elements/h3/template.twig' with { text: 'Large Event ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium ' } %}
-      </div>
-    {% endblock %}
-  {% endembed %}
-</div> #}
