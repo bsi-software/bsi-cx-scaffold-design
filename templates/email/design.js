@@ -105,7 +105,6 @@ module.exports =
           require("./content-elements/elements/h1"),
           require("./content-elements/elements/h3"),
           require("./content-elements/elements/plain-text"),
-          require("./content-elements/elements/image-full-width"),
         ),
       cx.dropzone
         .withDropzone(
