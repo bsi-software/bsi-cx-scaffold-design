@@ -1,74 +1,64 @@
 @font-face {
-  font-family: "TT Norms";
-  src: url("../../../resources/fonts/TTNormsProXBd.woff2")
-    format("woff2");
-  font-weight: 700;
-  mso-font-alt: "Arial";
-  mso-generic-font-family: swiss;
+    font-family: 'TT Norms';
+    src: url('../../../resources/fonts/TTNormsProXBd.woff2') format('woff2');
+    font-weight: 700;
+    mso-font-alt: 'Arial';
+    mso-generic-font-family: swiss;
 }
 
 @font-face {
-  font-family: "TT Norms";
-  src: url("../../../resources/fonts/TTNormsProBd.woff2")
-    format("woff2");
-  font-weight: 600;
-  mso-font-alt: "Arial";
-  mso-generic-font-family: swiss;
+    font-family: 'TT Norms';
+    src: url('../../../resources/fonts/TTNormsProBd.woff2') format('woff2');
+    font-weight: 600;
+    mso-font-alt: 'Arial';
+    mso-generic-font-family: swiss;
 }
 
 @font-face {
-  font-family: "TT Norms";
-  src: url("../../../resources/fonts/TTNormsProRg.woff2")
-    format("woff2");
-  font-weight: 400;
-  mso-font-alt: "Arial";
-  mso-generic-font-family: swiss;
+    font-family: 'TT Norms';
+    src: url('../../../resources/fonts/TTNormsProRg.woff2') format('woff2');
+    font-weight: 400;
+    mso-font-alt: 'Arial';
+    mso-generic-font-family: swiss;
 }
 
 @font-face {
-  font-family: "TT Norms";
-  src: url("../../../resources/fonts/TTNormsProLt.woff2")
-    format("woff2");
-  font-weight: 200;
-  mso-font-alt: "Arial";
-  mso-generic-font-family: swiss;
+    font-family: 'TT Norms';
+    src: url('../../../resources/fonts/TTNormsProLt.woff2') format('woff2');
+    font-weight: 200;
+    mso-font-alt: 'Arial';
+    mso-generic-font-family: swiss;
 }
 
 html {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 body {
-  position: relative;
-  font-family: "TT Norms",
-    Arial,
-    sans-serif;
-  padding: 0;
-  color: #000000;
-  font-size: 16px;
-  line-height: 1.5;
-  height: 100%;
-  margin: 0;
+    position: relative;
+    font-family: 'TT Norms', Arial, sans-serif;
+    padding: 0;
+    color: #000000;
+    font-size: 16px;
+    line-height: 1.5;
+    height: 100%;
+    margin: 0;
 }
 
 * {
-  font-family: "TT Norms",
-    Arial,
-    sans-serif;
-  color: inherit;
-  font-size: inherit;
-  line-height: inherit;
+    font-family: 'TT Norms', Arial, sans-serif;
+    color: inherit;
+    font-size: inherit;
+    line-height: inherit;
 }
 
 table {
-  border-collapse: collapse;
-  font-family: "TT Norms",
-    Arial,
-    sans-serif;
+    border-collapse: collapse;
+    font-family: 'TT Norms', Arial, sans-serif;
 }

@@ -1,33 +1,38 @@
 {
-  "name": "@bsi-cx/scaffold-design",
-  "version": "1.0.0",
-  "description": "A simple scaffold design for BSI CX templates.",
-  "private": false,
-  "engines": {
-    "node": ">=14.16.0"
-  },
-  "scripts": {
-    "build": "webpack --config webpack.config.js --mode production --progress",
-    "watch": "webpack --config webpack.config.js --mode development --watch --progress",
-    "serve": "webpack serve --config webpack.config.js --mode development --progress"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bsi-software/bsi-cx-scaffold-design.git"
-  },
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/bsi-software/bsi-cx-scaffold-design/issues"
-  },
-  "contributors": [
-    {
-      "name": "Oliver Fabel",
-      "url": "https://www.bsi-software.com/"
+    "name": "@bsi-cx/scaffold-design",
+    "version": "1.0.0",
+    "description": "A simple scaffold design for BSI CX templates.",
+    "private": false,
+    "engines": {
+        "node": ">=14.16.0"
+    },
+    "scripts": {
+        "pretty": "prettier --write \"./**/*.{js,twig}\"",
+        "build": "webpack --config webpack.config.js --mode production --progress",
+        "watch": "webpack --config webpack.config.js --mode development --watch --progress",
+        "serve": "webpack serve --config webpack.config.js --mode development --progress"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/bsi-software/bsi-cx-scaffold-design.git"
+    },
+    "author": "",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/bsi-software/bsi-cx-scaffold-design/issues"
+    },
+    "contributors": [
+        {
+            "name": "Oliver Fabel",
+            "url": "https://www.bsi-software.com/"
+        }
+    ],
+    "homepage": "https://github.com/bsi-software/bsi-cx-scaffold-design#readme",
+    "devDependencies": {
+        "@bsi-cx/design-build": "github:bsi-software/bsi-cx-design-build#semver:^1.8.0"
+    },
+    "dependencies": {
+        "prettier": "^2.8.0",
+        "prettier-plugin-twig-melody": "^0.4.6"
     }
-  ],
-  "homepage": "https://github.com/bsi-software/bsi-cx-scaffold-design#readme",
-  "devDependencies": {
-    "@bsi-cx/design-build": "github:bsi-software/bsi-cx-design-build#semver:^1.8.0"
-  }
 }

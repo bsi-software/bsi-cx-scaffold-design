@@ -6,32 +6,18 @@
         cellspacing="0"
         align="center"
         width="100%"
-        height="{{
-        spacer_height
-            ?
-            : '32'
-        }}">
+        height="{{ spacer_height ? : '32' }}">
         <tbody>
-            <tr height="{{
-                spacer_height
-                    ?
-                    : '32'
-                }}">
-                <td height="{{
-                    spacer_height
-                        ?
-                        : '32'
-                    }}"
+            <tr height="{{ spacer_height ? : '32' }}">
+                <td height="{{ spacer_height ? : '32' }}"
                     width="100%"
-                    style="font-size: {{
-                    font_size
-                        ?
-                        : '32'
-                    }}px;line-height: {{
+                    style="font-size: {{ font_size ? : '32' }}px;line-height: {{
                     line_height
                         ?
                         : '32'
-                    }}px;">&nbsp;</td>
+                    }}px;">
+                    &nbsp;
+                </td>
             </tr>
         </tbody>
     </table>

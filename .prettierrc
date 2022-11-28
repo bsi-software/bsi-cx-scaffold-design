@@ -1,24 +1,8 @@
 {
-    "printWidth": 20,
-    "twigPrintWidth": 20,
-    "maxLineLength": 20,
-    "proseWrap": "always",
-    "editor.tabSize": 2,
-    "tabWidth": 2,
-    "plugins": [
-        "c:/Users/iryna.alchynska/node_modules/prettier-plugin-twig-melody"
-    ],
+    "trailingComma": "es5",
+    "tabWidth": 4,
     "semi": true,
-    "trailingComma": "all",
-    "bracketSpacing": true,
-    "bracketSameLine": true,
-    "singleAttributePerLine": false,
-    "twigAlwaysBreakObjects": true,
-    "twigFollowOfficialCodingStandards": true,
-    "twigMultiTags": [
-        "nav,endnav",
-        "switch,case,default,endswitch",
-        "ifchildren,endifchildren",
-        "cache,endcache"
-    ]
+    "singleQuote": true,
+    "printWidth": 80,
+    "plugins": ["./node_modules/prettier-plugin-twig-melody"]
 }
