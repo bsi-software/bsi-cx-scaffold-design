@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: "TT Norms";
   src: url("../../../resources/fonts/TTNormsProXBd.woff2") format("woff2");
   font-weight: 700;
@@ -20,32 +20,32 @@
   font-family: "TT Norms";
   src: url("../../../resources/fonts/TTNormsProLt.woff2") format("woff2");
   font-weight: 200;
-}
+} */
 
 html {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 body {
-  position: relative;
-  font-family: "TT Norms", Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  color: $primaryColorText;
-  font-size: 16px;
-  line-height: 1.5;
-  height: 100%;
+    position: relative;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: $primaryColorText;
+    font-size: 16px;
+    line-height: 1.5;
+    height: 100%;
 }
 
 * {
-  font-family: "TT Norms", Arial, sans-serif;
-  color: inherit;
-  font-size: inherit;
-  line-height: inherit;
+    font-family: Arial, sans-serif;
+    color: inherit;
+    font-size: inherit;
+    line-height: inherit;
 }

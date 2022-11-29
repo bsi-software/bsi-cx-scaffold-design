@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
     font-family: 'TT Norms';
     src: url('../../../resources/fonts/TTNormsProXBd.woff2') format('woff2');
     font-weight: 700;
@@ -28,7 +28,7 @@
     font-weight: 200;
     mso-font-alt: 'Arial';
     mso-generic-font-family: swiss;
-}
+} */
 
 html {
     box-sizing: border-box;
@@ -42,7 +42,7 @@ html {
 
 body {
     position: relative;
-    font-family: 'TT Norms', Arial, sans-serif;
+    font-family: Arial, sans-serif;
     padding: 0;
     color: #000000;
     font-size: 16px;
@@ -52,7 +52,7 @@ body {
 }
 
 * {
-    font-family: 'TT Norms', Arial, sans-serif;
+    font-family: Arial, sans-serif;
     color: inherit;
     font-size: inherit;
     line-height: inherit;
@@ -60,5 +60,5 @@ body {
 
 table {
     border-collapse: collapse;
-    font-family: 'TT Norms', Arial, sans-serif;
+    font-family: Arial, sans-serif;
 }
