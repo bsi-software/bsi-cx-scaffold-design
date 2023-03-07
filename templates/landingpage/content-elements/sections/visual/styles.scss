@@ -1,0 +1,26 @@
+.visual {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+//animation
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.visual {
+    animation-name: zoomIn;
+    animation-duration: 1.5s;
+}

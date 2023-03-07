@@ -1,0 +1,430 @@
+form .missing-required-field {
+    border-color: red;
+}
+
+#required-missing-feedback {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    color: red;
+    overflow: hidden;
+    height: 0;
+}
+
+#required-missing-feedback.enable {
+    height: auto;
+}
+
+.reverse-for-required {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+/* spacing needed due to reversing */
+.reverse-for-required > label {
+    margin-top: 3px;
+    padding-left: 10px;
+}
+
+input[type='text']:required ~ label::after,
+input[type='number']:required ~ label::after,
+input[type='email']:required ~ label::after,
+input[type='tel']:required ~ label::after,
+select:required ~ label::after {
+    content: '*';
+    color: #141e55;
+    padding-left: 5px;
+}
+
+/* generally used form stylings */
+
+input[type='text'],
+input[type='number'],
+input[type='email'],
+input[type='tel'] {
+    border-radius: 3px;
+    border-bottom: 1px solid #687374;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    padding: 5px 10px;
+    margin: 10px 0;
+    background-color: white;
+}
+
+/* increased padding for select to have same appearance as input fields */
+select {
+    padding: 10px 10px;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+*:-moz-focusring {
+    outline: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+select:hover {
+    cursor: pointer;
+}
+
+// submit button styles
+
+.submit-buttom-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
+
+.submit-button {
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: 900;
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 2px;
+    color: #141e55;
+    background-color: #ffffff;
+    text-transform: uppercase;
+    border: none;
+    transition: padding 0.3s ease-out 0s;
+}
+
+.submit-button:hover {
+    padding-left: 36px;
+    padding-right: 0;
+    transition: padding 0.3s ease-out 0s;
+}
+.submit-button-left-border,
+.submit-button-bottom-border {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.submit-button-bottom-border {
+    width: 50%;
+    border-bottom: 1px solid #141e55;
+    height: 1px;
+    transition: width 0.3s ease-out 0s;
+}
+.submit-button:hover ~ .submit-button-bottom-border {
+    width: calc(100% - 1px);
+    transition: width 0.3s ease-out 0s;
+}
+.submit-button-left-border {
+    height: 66%;
+    border-left: 1px solid #141e55;
+    width: 1px;
+    transition: height 0.2s ease-out 0.1s;
+}
+.submit-button:hover ~ .submit-button-left-border {
+    height: 0;
+    transition: height 0.2s ease-out 0.1s;
+}
+
+input:not([type='submit']),
+select {
+    height: 40px;
+    border: 1px solid rgba(20, 30, 85, 0.3);
+}
+
+.formatted-text {
+    margin: 0;
+}
+
+label {
+    color: rgba(20, 30, 85, 0.7);
+}
+
+.text-field-label {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -10px;
+    opacity: 0;
+    color: rgba(20, 30, 85, 0.7);
+    transition: opacity 0.3s ease-in 0s;
+}
+
+.form-dropdown .text-field-label {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -25px;
+    opacity: 0;
+    color: rgba(20, 30, 85, 0.7);
+    transition: opacity 0.3s ease-in 0s;
+}
+
+.text-field {
+    position: relative;
+}
+
+.text-field input:focus .text-field-label {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0s;
+}
+
+.text-field textarea {
+    font-family: VerlagSSm, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 26px;
+    line-height: 1.625rem;
+    padding-left: 13px;
+    width: 100%;
+    background: transparent;
+    border: 1px solid rgba(20, 30, 85, 0.2);
+    border-top: none;
+    color: rgba(20, 30, 85, 0.8);
+    margin-top: 25px;
+    height: 250px;
+    overflow: auto;
+}
+
+.text-field textarea:focus .text-field-label {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0s;
+}
+
+.text-field input {
+    font-family: VerlagSSm, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 26px;
+    line-height: 1.625rem;
+    flex-basis: 100%;
+    padding-bottom: 8px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgba(20, 30, 85, 0.3);
+    -webkit-appearance: none;
+    border-radius: 0;
+    &.missing-required-field {
+        border-bottom: 1px solid red;
+    }
+    & ~ .error-message {
+        display: none;
+    }
+    &.missing-required-field ~ .error-message {
+        display: block;
+        color: red;
+    }
+}
+
+input[type='checkbox'].missing-required-field ~ .custom-checkbox-frame {
+    border: 1px solid red;
+}
+
+input[type='radio'].missing-required-field ~ .custom-checkbox-frame {
+    border: 1px solid red;
+}
+
+.error-message-radio.hidden {
+    display: block;
+    margin-top: 10px;
+    color: red;
+}
+
+@media (-ms-high-contrast: none) {
+    .text-field input {
+        padding-bottom: 14px;
+    }
+}
+
+.text-field input::-ms-input-placeholder {
+    font-family: VerlagSSm, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 26px;
+    line-height: 1.625rem;
+    color: rgba(20, 30, 85, 0.8);
+    opacity: 1;
+    -ms-transition: opacity 0.3s linear 0s;
+    transition: opacity 0.3s linear 0s;
+}
+
+input::placeholder {
+    color: rgba(20, 30, 85, 0.8);
+}
+
+.text-field input::placeholder,
+.text-field textarea::placeholder {
+    font-family: VerlagSSm, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 26px;
+    line-height: 1.625rem;
+    color: rgba(20, 30, 85, 0.8);
+    opacity: 1;
+    transition: opacity 0.3s linear 0s;
+}
+
+.text-field input:focus,
+.text-field textarea:focus,
+.text-field select:focus {
+    outline: none;
+}
+
+.text-field input:focus {
+    border-bottom: 1px solid #141e55;
+}
+
+.text-field input:focus::-ms-input-placeholder,
+.text-field textarea:focus::-ms-textarea-placeholder {
+    opacity: 0;
+    -ms-transition: opacity 0.3s linear 0s;
+    transition: opacity 0.3s linear 0s;
+}
+
+.text-field input:focus::placeholder,
+.text-field textarea:focus::placeholder {
+    opacity: 0;
+    transition: opacity 0.3s linear 0s;
+}
+
+.text-field input:focus ~ label,
+.text-field textarea:focus ~ label,
+.text-field select:focus ~ label {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0s;
+}
+
+//animation
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.submission-form {
+    animation-name: zoomIn;
+    animation-duration: 1.5s;
+}
+
+//form title
+
+.title-wrapper {
+    max-width: 362px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    color: #141e55;
+    text-align: start;
+
+    h4 {
+        font-family: VerlagSSm, sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        line-height: 1.45;
+        letter-spacing: 1px;
+        font-size: 28px;
+        text-transform: capitalize;
+    }
+
+    @media (min-width: unit(@styles[mobile_breakpoint],px)) {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 20px;
+        font-weight: 100;
+    }
+}
+
+// animation
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.title-wrapper {
+    animation-name: fadeInDown;
+    animation-duration: 2s;
+}
+
+// city2+zip
+
+.module-form-components__two-cols-sm {
+    display: flex;
+    align-items: flex-start;
+}
+
+.first-row-city {
+    width: 68%;
+    margin-right: 30px;
+}
+
+.second-row-zip {
+    width: 28%;
+}
+
+// dropdown text
+
+.dropdown-text {
+    text-align: left;
+    margin-bottom: 34px;
+}
+
+.dropdown-text p {
+    font-family: VerlagSSm, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 26px;
+    line-height: 1.625rem;
+    color: rgba(20, 30, 85, 0.8);
+    margin-top: 0;
+}
+
+//animation
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.dropdown-text {
+    animation-name: zoomIn;
+    animation-duration: 1.5s;
+}

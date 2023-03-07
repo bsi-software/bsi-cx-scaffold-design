@@ -1,0 +1,14 @@
+.full-width-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Assure that dropzone within layout column and contents of dropzone expand to full width of container */
+.full-width-layout > div,
+.full-width-layout > div > * {
+    width: 100%;
+}

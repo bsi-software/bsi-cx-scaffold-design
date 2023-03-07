@@ -1,0 +1,71 @@
+<footer class="footer-section" data-bsi-element="footer">
+    {% embed '../../layout/one-one/template.twig'
+        with {
+            simple_container: true,
+            container_class: 'footer-container'
+        }
+    %}
+        {% block container_first %}
+            <div class="navigation-wrapper">
+                <nav class="navigation"
+                    data-bsi-dropzone="navigation-top-container"
+                    data-bsi-dropzone-allowed-elements="link"
+                    data-bsi-dropzone-max-number-of-elements="3">
+                    {% include '../../elements/link/template.twig' with {
+                        text: 'About us',
+                        href: '[About us]'
+                    } %}
+                    {% include '../../elements/link/template.twig' with {
+                        text: 'Contact',
+                        href: '[Contact]'
+                    } %}
+                    {% include '../../elements/link/template.twig' with {
+                        text: 'Legal',
+                        href: '[Legal]'
+                    } %}
+                </nav>
+            </div>
+        {% endblock %}
+        {% block container_second %}
+            <div data-bsi-dropzone="social-wrapper-container"
+                data-bsi-dropzone-allowed-elements="socials"
+                data-bsi-dropzone-max-number-of-elements="1">
+                {% include '../../sections/socials/template.twig' %}
+            </div>
+        {% endblock %}
+    {% endembed %}
+    {% embed '../../layouts/one-one/template.twig'
+        with {
+            simple_container: true,
+            container_class: 'footer-container'
+        }
+    %}
+        {% block container_first %}
+            <div class="navigation-wrapper">
+                <nav class="navigation"
+                    data-bsi-dropzone="navigation-container"
+                    data-bsi-dropzone-allowed-elements="link text-formatted"
+                    data-bsi-dropzone-max-number-of-elements="4">
+                    {% include '../../elements/link/template.twig' with {
+                        text: 'Data Privacy Policy',
+                        href: '[Data Privacy Policy]'
+                    } %}
+                    {% include '../../elements/link/template.twig' with {
+                        text: 'Terms of use',
+                        href: '[Terms of use]'
+                    } %}
+                    {% include '../../elements/link/template.twig' with {
+                        text: 'News Alert',
+                        href: '[News Alert]'
+                    } %}
+                    {% include '../../elements/text-formatted/template.twig' with {
+                        text: '© {year} Julius Baer'
+                    } %}
+                </nav>
+            </div>
+        {% endblock %}
+        {% block container_second %}
+
+        {% endblock %}
+    {% endembed %}
+</footer>

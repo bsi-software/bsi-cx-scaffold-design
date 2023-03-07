@@ -1,0 +1,75 @@
+/* disable default checkbox display */
+
+input[type="checkbox"] {
+    display: none;
+}
+
+/* correctly align content */
+
+.custom-checkbox-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+/* accomodate spacing for custom checkbox in label */
+
+.custom-checkbox-container label {
+    width: calc(100% - 10px);
+    padding-left: 30px;
+    /* In BSI, the label cannot wrap around the input element, 
+    as it is traditionally done when using custom checkbox for optimal 
+    UX + styling. Hence, we have to position the checkbox label
+    above the .custom-checkbox-frame; otherwise the checkbox would
+    not be directly clickable */
+    /* to assure that checkbox is always clickable (place label above) */
+    z-index: 2;
+    margin-left: -15px;
+}
+
+.custom-checkbox-container label:hover {
+    cursor: pointer;
+}
+
+/* create custom checkbox frame */
+
+.custom-checkbox-container .custom-checkbox-frame {
+    background-color: white;
+    width: 28px;
+    height: 28px;
+    border: 1px solid #141e55;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* assure that checkbox is clickable (place below label) */
+    z-index: 1;
+
+    &.missing-required-field {
+        border: 1px solid red;
+    }
+}
+
+.custom-checkbox-container label:hover ~ .custom-checkbox-frame {
+    background-color: white;
+}
+
+/* create custom checkbox checked symbol */
+
+.custom-checkbox-frame::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #141e55;
+    display: none;
+    /* to assure that checkbox is clickable (place below label) also when checked */
+    z-index: 1;
+}
+
+.custom-checkbox-container input:checked ~ .custom-checkbox-frame::after {
+    display: block;
+}
+
+.custom-checkbox-container {
+    margin: 10px 0;
+}

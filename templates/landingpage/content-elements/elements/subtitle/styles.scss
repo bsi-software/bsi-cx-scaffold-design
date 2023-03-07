@@ -1,0 +1,32 @@
+.subtitle-container {
+    margin-bottom: 16px;
+    line-height: 1.5;
+    font-size: 20px;
+    font-weight: 200;
+    color: #141e55;
+    text-align: center;
+
+    @media (min-width: unit(@styles[mobile_breakpoint],px)) {
+        font-size: 24px;
+        font-weight: 300;
+    }
+}
+
+//animation
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.subtitle-container {
+    animation-name: fadeInDown;
+    animation-duration: 2s;
+}

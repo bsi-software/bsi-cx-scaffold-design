@@ -1,0 +1,97 @@
+.cropped-image-container {
+    display: flex;
+    width: 100%;
+    position: relative;
+    /* important needed to override BSI Element rule, so fro proper display within BSI editor */
+    overflow: hidden !important;
+}
+
+/* provide different layout possibilities, 3 vertical and 3 horizontal alignment combinations, for both content + absolute positioning (cropped) */
+.cropped-image-container.cropped-positioning-horizontal-centered {
+    justify-content: center;
+}
+
+.cropped-image-container.cropped-positioning-horizontal-start {
+    justify-content: flex-start;
+}
+
+.cropped-image-container.cropped-positioning-horizontal-end {
+    justify-content: flex-end;
+}
+
+.cropped-image-container.cropped-positioning-vertical-centered {
+    align-items: center;
+}
+
+.cropped-image-container.cropped-positioning-vertical-start {
+    align-items: flex-start;
+}
+
+.cropped-image-container.cropped-positioning-vertical-end {
+    align-items: flex-end;
+}
+
+/* Define if the image shall fill the entire height or the entire width of the container */
+.cropped-image-container > img {
+    position: absolute;
+}
+
+.cropped-image-container.cropped-positioning-max-height > img {
+    min-height: 100%;
+    width: auto;
+}
+
+.cropped-image-container.cropped-positioning-max-width > img {
+    min-width: 100%;
+    height: auto;
+}
+
+.cropped-image-container.cropped-image-width-fifth {
+    width: 20%;
+}
+
+.cropped-image-container.cropped-image-width-quarter {
+    width: 25%;
+}
+
+.cropped-image-container.cropped-image-width-half {
+    width: 50%;
+}
+
+.cropped-image-container.cropped-image-width-three-quarters {
+    width: 75%;
+}
+
+.cropped-image-container.cropped-image-width-full {
+    width: 100%;
+}
+
+.cropped-image-container.cropped-image-height-half {
+    height: 50%;
+}
+
+.cropped-image-container.cropped-image-height-full {
+    height: 100%;
+}
+
+.cropped-image-container.cropped-image-height-100 {
+    height: 100px;
+}
+
+.cropped-image-container.cropped-image-height-200 {
+    height: 200px;
+}
+
+.cropped-image-container.cropped-image-height-300 {
+    height: 300px;
+}
+
+.cropped-image-container.cropped-image-height-400 {
+    height: 400px;
+}
+
+
+
+
+
+

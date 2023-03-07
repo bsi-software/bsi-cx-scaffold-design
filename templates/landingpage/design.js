@@ -1,32 +1,112 @@
-require('./styles/styles.scss');
+require("./styles/styles.scss");
 
-const {cx, Locale} = require('@bsi-cx/design-build');
+const { cx, Locale } = require("@bsi-cx/design-build");
 
 module.exports = cx.design
-  .withTitle('Landingpage Scaffold')
-  .withAuthor('BSI Business Systems Integration AG')
-  .withDate('20.05.2022')
-  .withPreviewImage(require('./thumbnail.png'))
+  .withTitle("Landingpage German Prospects")
+  .withAuthor("BSI Business Systems Integration AG")
+  .withDate("03.07.2023")
+  .withPreviewImage(require("./thumbnail.png"))
   .withDefaultLocale(Locale.EN)
-  .withLocales(
-    Locale.EN,
-    Locale.DE)
+  .withLocales(Locale.EN, Locale.DE)
   .withContentElementGroups(
     cx.contentElementGroup
-      .withGroupId('content')
-      .withLabel('Content')
+      .withGroupId("elements")
+      .withLabel("Elements")
       .withContentElements(
-        require('./content-elements/content/title'),
-        require('./content-elements/content/text')),
+        require("../landingpage/content-elements/elements/button"),
+        require("../landingpage/content-elements/elements/divider"),
+        require("../landingpage/content-elements/elements/image-cropped"),
+        require("../landingpage/content-elements/layout/one-one-reverse"),
+        require("../landingpage/content-elements/elements/image-normal"),
+        require("../landingpage/content-elements/elements/language-switcher"),
+        require("../landingpage/content-elements/elements/link"),
+        require("../landingpage/content-elements/elements/spacer"),
+        require("../landingpage/content-elements/elements/subtitle"),
+        require("../landingpage/content-elements/elements/text-formatted"),
+        require("../landingpage/content-elements/elements/text-plain"),
+        require("../landingpage/content-elements/elements/title")
+      ),
     cx.contentElementGroup
-      .withGroupId('layout')
-      .withLabel('Layout')
+      .withGroupId("layouts")
+      .withLabel("Layouts")
       .withContentElements(
-        require('./content-elements/layout/columns')))
+        require("../landingpage/content-elements/layout/full-width"),
+        require("../landingpage/content-elements/layout/one-column"),
+        require("../landingpage/content-elements/layout/one-one"),
+        require("../landingpage/content-elements/layout/one-one-reverse"),
+        require("../landingpage/content-elements/layout/one-two"),
+        require("../landingpage/content-elements/layout/one-two-reverse"),
+        require("../landingpage/content-elements/layout/two-one"),
+        require("../landingpage/content-elements/layout/two-one-reverse")
+      ),
+    cx.contentElementGroup
+      .withGroupId("sections")
+      .withLabel("Sections")
+      .withContentElements(
+        require("../landingpage/content-elements/sections/top-bar"),
+        require("../landingpage/content-elements/sections/visual"),
+        require("../landingpage/content-elements/sections/form"),
+        require("../landingpage/content-elements/sections/form"),
+        require("../landingpage/content-elements/sections/socials")
+      ),
+    cx.contentElementGroup
+      .withGroupId("form")
+      .withLabel("Form")
+      .withContentElements(
+        require("../landingpage/content-elements/form/address-full"),
+        require("../landingpage/content-elements/form/checkbox"),
+        require("../landingpage/content-elements/form/checkbox-block"),
+        require("../landingpage/content-elements/form/city"),
+        require("../landingpage/content-elements/form/city-zip"),
+        require("../landingpage/content-elements/form/country"),
+        require("../landingpage/content-elements/form/dropdown"),
+        require("../landingpage/content-elements/form/dropdown-text"),
+        require("../landingpage/content-elements/form/email"),
+        require("../landingpage/content-elements/form/firm"),
+        require("../landingpage/content-elements/form/form-title"),
+        require("../landingpage/content-elements/form/input-field"),
+        require("../landingpage/content-elements/form/name-first"),
+        require("../landingpage/content-elements/form/name-full"),
+        require("../landingpage/content-elements/form/name-last"),
+        require("../landingpage/content-elements/form/radiobuttons"),
+        require("../landingpage/content-elements/form/rating"),
+        require("../landingpage/content-elements/form/street-house"),
+        require("../landingpage/content-elements/form/telefon"),
+        require("../landingpage/content-elements/form/textarea")
+      )
+  )
   .withDropzones(
     cx.dropzone
-      .withDropzone('a1683342-d4a7-4c26-924e-bce162c4399f')
+      .withDropzone("header-zone")
       .withAllowedElements(
-        require('./content-elements/content/title'),
-        require('./content-elements/content/text'),
-        require('./content-elements/layout/columns')));
+        require("../landingpage/content-elements/elements/spacer"),
+        require("../landingpage/content-elements/sections/top-bar"),
+        require("../landingpage/content-elements/sections/visual"),
+        require("../landingpage/content-elements/layout/one-column")
+      ),
+    cx.dropzone
+      .withDropzone("title-zone")
+      .withAllowedElements(
+        require("../landingpage/content-elements/elements/title")
+      ),
+    cx.dropzone
+      .withDropzone("body-zone")
+      .withAllowedElements(
+        require("../landingpage/content-elements/layout/one-one"),
+        require("../landingpage/content-elements/layout/one-one-reverse"),
+        require("../landingpage/content-elements/layout/one-two"),
+        require("../landingpage/content-elements/layout/one-two-reverse"),
+        require("../landingpage/content-elements/layout/two-one"),
+        require("../landingpage/content-elements/layout/two-one-reverse"),
+        require("../landingpage/content-elements/sections/form"),
+        require("../landingpage/content-elements/elements/spacer"),
+        require("../landingpage/content-elements/elements/image-cropped"),
+        require("../landingpage/content-elements/elements/image-normal"),
+        require("../landingpage/content-elements/elements/button"),
+        require("../landingpage/content-elements/elements/text-formatted"),
+        require("../landingpage/content-elements/elements/text-plain"),
+        require("../landingpage/content-elements/elements/subtitle"),
+        require("../landingpage/content-elements/sections/visual")
+      )
+  );

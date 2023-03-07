@@ -1,0 +1,54 @@
+<div data-bsi-element="form">
+    <form data-bsi-element-part="form" class="submission-form" id="sample-form">
+        <div data-bsi-form-validation="">
+            <p data-bsi-form-validation-item=""></p>
+        </div>
+        <div data-bsi-dropzone="form-container"
+            data-bsi-dropzone-allowed-elements="checkbox email dropdown country checkbox-block 
+            city city-zip form-title dropdown-text firm address-full telefon input-field name-first 
+            name-full name-last radiobuttons street-house text-plain text-formatted textarea">
+            {% include '../../form/form-title/template.twig' with {
+                title: 'Mailing address'
+            } %}
+            {% include '../../form/dropdown/template.twig' %}
+            {% include '../../form/dropdown-text/template.twig' with {
+                text: 'The report can only be ordered to the countries above.'
+            } %}
+            {% include '../../form/city-zip/template.twig' %}
+            {% include '../../form/radiobuttons/template.twig' %}
+            {% include '../../form/name-full/template.twig' %}
+            {% include '../../form/firm/template.twig' %}
+            {% include '../../form/street-house/template.twig' %}
+            {% include '../../form/address-full/template.twig' %}
+            {% include '../../form/email/template.twig' %}
+            {% include '../../form/telefon/template.twig' %}
+            {% include '../../form/textarea/template.twig' %}
+            {% include '../../form/checkbox/template.twig' with {
+                id: 'first',
+                text: 'Ich habe die [Nutzungsbedingungen] und die [Datenschutzerklärung] 
+                gelesen und erkläre mich damit einvestanden'
+            } %}
+
+            {% include '../../form/checkbox-block/template.twig' %}
+
+            {% include '../../elements/text-plain/template.twig' with {
+                text: 'Es gilt die jeweils aktuelle Version der Datenschutzerklärung. 
+                Bitte beachten Sie, dass wir uns hierzu das Recht einer jederzeitigen  
+                Aktualisierung ohne vorherige Mitteilung vorbehalten.'
+            } %}
+        </div>
+        <div class="form-submit-button-container">
+            <span id="required-missing-feedback">
+                {{ translation.provide_required }}
+            </span>
+            <div class="submit-buttom-container">
+                <input data-bsi-part="form-submit"
+                    class="submit-button"
+                    type="submit"
+                    value="Senden" />
+                <div class="submit-button-bottom-border"></div>
+                <div class="submit-button-left-border"></div>
+            </div>
+        </div>
+    </form>
+</div>

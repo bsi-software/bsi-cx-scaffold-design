@@ -1,0 +1,21 @@
+.formatted-text {
+    margin-bottom: 30px;
+}
+
+//animation
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.formatted-text {
+    animation-name: zoomIn;
+    animation-duration: 1.5s;
+}

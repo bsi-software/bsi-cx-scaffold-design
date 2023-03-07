@@ -1,0 +1,91 @@
+/* highlight required radiobutton sets with required star */
+.required-radiobutton-field::after {
+    content: "*";
+    color: #141e55;
+    padding-left: 5px;
+}
+/* disable default radiobutton display */
+
+input[type="radio"] {
+    display: none;
+}
+
+/* correctly align content */
+
+.custom-radiobutton-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* accomodate spacing for custom radiobutton in label */
+
+.custom-radiobutton-container label {
+    padding-left: 30px;
+    width: calc(100% - 30px);
+    /* In BSI, the label cannot wrap around the input element,
+as it is traditionally done when using custom radiobutton for optimal
+UX + styling. Hence, we have to position the radiobutton label
+above the .custom-radiobutton-frame; otherwise the radiobutton would
+not be directly clickable */
+    /* to assure that checkbox is always clickable (place label above) */
+    z-index: 2;
+    margin-left: -15px;
+}
+
+.custom-radiobutton-container label:hover {
+    cursor: pointer;
+}
+
+/* create custom radiobutton frame */
+
+.radiobutton-set-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.custom-radiobutton-container .custom-radiobutton-frame {
+    background-color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid #141e55;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    /* assure that radiobutton is clickable (place below label) */
+    z-index: 1;
+}
+
+.custom-radiobutton-container label:hover ~ .custom-radiobutton-frame {
+    background-color: white;
+}
+
+/* create custom radiobutton checked symbol */
+
+.custom-radiobutton-frame::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid #141e55;
+    background-color: #141e55;
+    display: none;
+    /* to assure that radiobutton is clickable (place below label) also when checked */
+    z-index: 1;
+}
+
+.custom-radiobutton-container input:checked ~ .custom-radiobutton-frame::after {
+    display: block;
+}
+
+.radiobutton-container-wrapper {
+    margin: 10px 0;
+}
+
+.radiobutton-container-wrapper > div > label {
+    margin-bottom: 5px;
+}

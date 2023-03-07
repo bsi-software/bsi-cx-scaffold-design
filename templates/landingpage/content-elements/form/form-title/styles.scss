@@ -1,0 +1,41 @@
+.title-wrapper {
+    max-width: 362px;
+    font-weight: 100;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.45;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    color: #141e55;
+    text-align: start;
+
+    @media (min-width: unit(@styles[mobile_breakpoint],px)) {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 41px;
+        font-weight: 100;
+    }
+}
+
+// animation
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.title-container {
+    animation-name: fadeInDown;
+    animation-duration: 2s;
+}

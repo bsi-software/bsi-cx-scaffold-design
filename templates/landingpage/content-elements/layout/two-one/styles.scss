@@ -1,0 +1,51 @@
+.two-one-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    /* container padding should be controlled inline, when using the element in twig, which will override this property */
+    padding: 0;
+    /* mobile first */
+    flex-direction: column;
+}
+
+/* mobile first, expand column container widths to full container width in mobile width */
+.two-one-layout > div {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* assure that column contents always expand to max column width */
+.two-one-layout > div > * {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+}
+
+@media (min-width: unit(@styles[mobile_breakpoint],px)) {
+    /* assure that column width is always half */
+    .two-one-layout > div:first-child {
+        width: 66%;
+    }
+    .two-one-layout > div:last-child {
+        width: 34%;
+    }
+    .two-one-layout {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: unit(@styles[mobile_breakpoint],px)) {
+    .two-one-layout > div {
+        /* In Desktop view, column padding is controlled via the padding parameters specified to the layout embeds */ 
+        /* in Mobile view, it's disabled by default, and should be applied to the single BSI elements, if desired */
+        padding: 0 !important;
+    }
+}

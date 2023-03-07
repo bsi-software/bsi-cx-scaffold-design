@@ -1,0 +1,79 @@
+.top-bar-container,
+.top-bar-container > div {
+    display: flex;
+    align-items: center;
+}
+
+.top-bar-container {
+    position: relative;
+    .logo {
+        width: 115px;
+        height: 24px;
+    }
+
+    .language-icon {
+        width: 20px;
+        height: 20px;
+        fill: #141e55;
+        margin-right: 10px;
+    }
+
+    .text {
+        color: #141e55;
+        font-weight: 500;
+        font-size: 16px;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+
+    .language {
+        position: absolute;
+        width: 100px;
+        left: 40px;
+        top: 0px;
+    }
+
+    .link {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.top-bar-left-aligned > div {
+    justify-content: flex-start;
+}
+
+.top-bar-centered > div {
+    justify-content: center;
+}
+
+.top-bar-right-aligned > div {
+    justify-content: flex-end;
+}
+
+.language a {
+    text-decoration: none;
+}
+
+.language-hidden .language {
+    display: none;
+}
+
+.language-shown .language {
+    display: flex;
+}
+
+@media (min-width: unit(@styles[mobile_breakpoint],px)) {
+    .top-bar-container {
+        .logo {
+            height: 32px;
+            width: 168px;
+        }
+        .language {
+            position: absolute;
+            width: 100px;
+            left: 40px;
+            top: 4px;
+        }
+    }
+}

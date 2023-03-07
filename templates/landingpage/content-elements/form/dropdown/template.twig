@@ -1,0 +1,24 @@
+{% set value_list = '' %}
+{% for key, value in translation.dropdown %}
+    {% set value_list = value_list ~ value ~ '|' ~ key ~ '\n' %}
+{% endfor %}
+<div data-bsi-element="dropdown" style="padding-bottom: 15px;">
+    <div data-bsi-element-part="form-select"
+        data-bsi-value-list="{{ value_list }}"
+        class="reverse-for-required text-field form-dropdown"
+        data-bsi-form-select-fixed-value-list="">
+        <select id="dropdown-select"
+            name="dropdown-select"
+            class="custom-select custom-form-field"
+            spellcheck="true"
+            required="">
+            {% for key, value in translation.dropdown %}
+                <option value="{{ key }}">
+                    {{ value }}
+                </option>
+                <div class="custom-select-bottom-border"></div>
+            {% endfor %}
+        </select>
+        <label class="text-field-label" for="dropdown-select">Country</label>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+.single-column-layout {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    max-width: unit(@styles[page_width], px);
+    margin: auto;
+    padding: 0 15px;
+}
+
+/* Assure that dropzone within layout column and contents of dropzone expand to full width of container */
+.single-column-layout > div,
+.single-column-layout > div > * {
+    width: 100%;
+}

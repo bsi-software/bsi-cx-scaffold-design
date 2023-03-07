@@ -1,0 +1,54 @@
+/* special selector needed to assure override */
+.two-column-layout > div .socials-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 20px;
+    /* SIZE SHOULD BE ADAPTED VIA THIS FONT SIZE */
+    font-size: 8px;
+
+    @media (min-width: unit(@styles[mobile_breakpoint],px)) {
+        justify-content: flex-end;
+    }
+}
+
+.social-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1em 1.5em 0;
+    margin: 0;
+}
+.socials-container a {
+    padding-left: 40px;
+    svg {
+        transition: transform 0.3s ease-in-out 0s;
+    }
+    &:hover svg {
+        transform: scale(1.5);
+    }
+}
+
+/* achieve similar sizes among all icons */
+#youtube-icon {
+    transform: scale(1.2);
+}
+
+#facebook-icon {
+    transform: scale(0.9);
+}
+
+/* colorize icons according to primary color */
+#youtube-arrow,
+#facebook-letter {
+    fill: white;
+}
+
+#youtube-area,
+#facebook-area,
+#twitter-area,
+#linkedin-area,
+.instagram-area {
+    fill: @styles[primary_color];
+}

@@ -29,5 +29,8 @@
   "homepage": "https://github.com/bsi-software/bsi-cx-scaffold-design#readme",
   "devDependencies": {
     "@bsi-cx/design-build": "github:bsi-software/bsi-cx-design-build#semver:^1.8.0"
+  },
+  "dependencies": {
+    "prettier-plugin-twig-melody": "^0.4.6"
   }
 }

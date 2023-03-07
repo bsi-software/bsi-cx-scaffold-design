@@ -1,6 +1,71 @@
 {% extends './_layout.twig' %}
 
-{% block main %}
-  {% include './content-elements/content/title/template.twig' %}
-  {% include './content-elements/content/text/template.twig' %}
-{% endblock %}
+   {% block header %}
+ {# {% embed '../../../../content-elements/layout/full-width/template.twig'
+        with {
+            dropzone_name: 'header-zone',
+            allowed_elements: 'one-column visual top-bar spacer',
+            amount_allowed_elements: 4
+        }
+    %}
+        {% block dropzone_content %}
+            {% include '../../../../content-elements/elements/spacer/template.twig' only %}
+            {% include '../../../../content-elements/sections/top-bar/template.twig' only %}
+            {% include '../../../../content-elements/elements/spacer/template.twig' only %}
+        {% endblock %} 
+     {% endembed %}  #}
+                {% endblock %}
+                 {% block body %} 
+ {# {% embed '../../../../content-elements/layout/full-width/template.twig'
+        with {
+            dropzone_name: 'title-zone',
+            allowed_elements: 'title'
+        }
+    %}
+        {% block dropzone_content %}
+            {% include '../../../../content-elements/elements/title/template.twig' with {
+                title: 'einverständniserklärung zur kontaktaufnahme'
+            } %}
+        {% endblock %}
+    {% endembed %}
+    {% embed '../../../../content-elements/layout/one-column/template.twig'
+        with {
+            dropzone_name: 'body-zone',
+            allowed_elements: 'one-one one-one-reverse one-two one-two-reverse two-one two-one-reverse form spacer image-normal image-cropped divider text-formatted text-plain button subtitle visual'
+        }
+    %}
+        {% block dropzone_content %}
+            {% include '../../../../content-elements/elements/subtitle/template.twig' %}
+            {% include '../../../../content-elements/sections/visual/template.twig' %}
+            {% include '../../../../content-elements/elements/text-formatted/template.twig' with {
+                text: 'Wir möchten Ihnen die Moglichkeit bieten, mehr über uns, 
+                die Bank Julius Bär Deutschland AG, zu erfahren.'
+            } %}
+            {% include '../../../../content-elements/elements/text-formatted/template.twig' with {
+                text: 'Um mit Ihnen in Kontakt treten zu dürfen, benötigen wir nach 
+                derzeitigem Datenschutzrecht Ihne Einwilligung zur Speicherung und Verarbeitung 
+                Ihnen persönlichen Daten sowie Ihre Zustimmung zur Kontaktaufnahme durch uns.'
+            } %}
+            {% include '../../../../content-elements/elements/text-formatted/template.twig' with {
+                text: 'Bitte ergänzen Sie die nachstehenden Angaben sowie 
+                Ihre bevorzugten Kontaktdetails, 
+                uber die wir Sie kontaktieren dürfen.'
+            } %}
+            {% include '../../../../content-elements/elements/spacer/template.twig' %}
+            {% include '../../../../content-elements/sections/form/template.twig' %}
+        {% endblock %}
+    {% endembed %}  #}
+ {% endblock %} 
+               
+                {% block footer %}
+{# {% embed '../../../../content-elements/layout/full-width/template.twig'
+        with {
+            simple_container: true,
+            container_class: 'footer-container'
+        }
+    %}
+        {% block simple_container_content %}
+            {% include '../../../../content-elements/sections/footer/template.twig' %}
+        {% endblock %}
+    {% endembed %} #}
+                {% endblock %}

@@ -1,0 +1,53 @@
+{# It should be possible to use layout components as BSI Elements, re-usable section containers or simple dropzones #}
+{# If the element is used as a layout element. In this case the markup must be constant #}
+{% if layout_element %}
+    <div data-bsi-element="one-column" data-bsi-hide-edit-button="true" class="single-column-layout">
+        <div data-bsi-dropzone="single-column-layout-container" data-bsi-dropzone-allowed-elements="one-one one-one-reverse two-one two-one-reverse one-two one-two-reverse image-normal image-cropped divider spacer text-formatted text-plain button">
+        </div>
+    </div>
+{% elseif simple_container %}
+    <div {% if container_class %} class="single-column-layout {{container_class}}" {% else %} class="single-column-layout" {% endif %}>
+        {% block simple_container_content %}
+
+        {% endblock %}
+    </div>
+{% else %}
+    {# If the element is used for a section #}
+    {# Differentiate among cases where the custom section holds BSI Elements (hence needs a dropzone) or has fix content #}
+    {% if custom_section %}
+        <div data-bsi-element="{{ custom_section }}"
+        {% if custom_class %}
+        class="single-column-layout {{ custom_class }}"
+        {% else %}
+        class="single-column-layout"
+        {% endif %}
+        >
+        {% if allowed_elements %}
+        <div data-bsi-dropzone={{ (custom_section ~ '-container')|raw }}
+            data-bsi-dropzone-allowed-elements="{{ allowed_elements }}"
+            {% if amount_allowed_elements %} data-bsi-dropzone-max-number-of-elements="{{ amount_allowed_elements }}" {% endif %}>
+                {% block custom_section_content %}
+
+                {% endblock %}
+            </div>
+        {% else %}
+            <div>
+                {% block custom_section_content_not_dropzone %}
+        
+                {% endblock %}
+            </div>
+        {% endif %}
+        </div>
+    {# If the layout element is used as a simple dropzone container #}
+    {% else %}
+        <div class="single-column-layout">
+            <div data-bsi-dropzone="{{ dropzone_name }}"
+            {% if allowed_elements %} data-bsi-dropzone-allowed-elements="{{ allowed_elements }}" {% endif %}
+            {% if amount_allowed_elements %} data-bsi-dropzone-max-number-of-elements="{{ amount_allowed_elements }}" {% endif %}>
+                {% block dropzone_content %}
+
+                {% endblock %}
+            </div>
+        </div>
+    {% endif %}
+{% endif %}

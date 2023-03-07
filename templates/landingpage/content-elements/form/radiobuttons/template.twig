@@ -1,0 +1,47 @@
+<div data-bsi-element="radiobuttons"
+    class="radiobutton-container-wrapper"
+    style="padding-bottom: 15px;">
+    <div id="option-radio-group"
+        data-bsi-element-part="form-radio"
+        data-bsi-value-list="Frau|1
+Herr|2
+*|3"
+        data-bsi-fixed-value-list="">
+        <label class="radiobutton-lable">Titel *</label>
+        <div data-bsi-radio-group="" class="radiobutton-set-container">
+            <div data-bsi-radio-item="" class="custom-radiobutton-container">
+                <input type="radio"
+                    name="option-radio-group"
+                    id="option-radio-group-1"
+                    class="radio-btn"
+                    value="Frau"
+                    spellcheck="true" />
+                <label for="option-radio-group-1">Frau</label>
+                <span class="custom-radiobutton-frame"></span>
+            </div>
+            <div data-bsi-radio-item="" class="custom-radiobutton-container">
+                <input type="radio"
+                    class="radio-btn"
+                    name="option-radio-group"
+                    id="option-radio-group-2"
+                    value="Herr"
+                    spellcheck="true" />
+                <label for="option-radio-group-2">Herr</label>
+                <span class="custom-radiobutton-frame"></span>
+            </div>
+            <div data-bsi-radio-item="" class="custom-radiobutton-container">
+                <input type="radio"
+                    class="radio-btn"
+                    name="option-radio-group"
+                    id="option-radio-group-3"
+                    value="*"
+                    spellcheck="true" />
+                <label for="option-radio-group-3">*</label>
+                <span class="custom-radiobutton-frame"></span>
+            </div>
+        </div>
+        <div class="error-message-radio hidden">
+            {{ translation.title_error }}
+        </div>
+    </div>
+</div>

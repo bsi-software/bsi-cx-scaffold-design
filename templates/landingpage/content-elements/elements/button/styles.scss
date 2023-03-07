@@ -1,0 +1,41 @@
+.button-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.button-container.layout-button-left {
+    justify-content: flex-start;
+}
+
+.button-container.layout-button-centered {
+    justify-content: center;
+}
+
+.button-container.layout-button-right {
+    justify-content: flex-end;
+}
+
+.button {
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: 900;
+    font-size: 11px;
+    font-size: 0.6875rem;
+    line-height: 16px;
+    line-height: 1rem;
+    letter-spacing: 2px;
+    letter-spacing: 0.125rem;
+    color: #141e55;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+    background-color: white;
+    color: @styles[primary_color];
+}

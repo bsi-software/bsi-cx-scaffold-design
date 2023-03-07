@@ -1,0 +1,16 @@
+{% set value_list = '' %}
+{% for key, value in translation.countries %}
+    {% set value_list = value_list ~ value ~ '|' ~ key ~ '\n' %}
+{% endfor %}
+<div data-bsi-element="country" style="padding-bottom: 15px;">
+    <div data-bsi-element-part="form-select" data-bsi-value-list="{{ value_list }}" class="reverse-for-required" data-bsi-form-select-fixed-value-list="">
+        <select id="country-select" name="country-select" class="custom-select" spellcheck="true" required="">
+            <option value="label" class="country-option">{{ translation.residence }} *</option>
+            {% for key, value in translation.countries %}
+                <option value="{{ key }}">{{ value }}</option>
+                <div class="custom-select-bottom-border"></div>
+            {% endfor %}
+        </select>
+        <label for="country-select">Domizil</label>
+    </div>
+</div>

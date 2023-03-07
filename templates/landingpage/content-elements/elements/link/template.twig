@@ -1,0 +1,10 @@
+<a data-bsi-element="link"
+    class="link"
+    href="{{ href }}"
+    data-bsi-element-part="link">
+    {% if text %}
+        {{ text|raw }}
+    {% else %}
+        Link Text
+    {% endif %}
+</a>

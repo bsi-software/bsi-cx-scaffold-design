@@ -1,0 +1,92 @@
+.image-container {
+    display: flex;
+    width: 100%;
+    /* important needed to override BSI Element rule, so fro proper display within BSI editor */
+    overflow: hidden !important;
+}
+
+/* provide different layout possibilities, 3 vertical and 3 horizontal alignment combinations, for both content + absolute positioning (cropped) */
+.image-container.content-positioning-horizontal-centered {
+    justify-content: center;
+}
+
+.image-container.content-positioning-horizontal-start {
+    justify-content: flex-start;
+}
+
+.image-container.content-positioning-horizontal-end {
+    justify-content: flex-end;
+}
+
+.image-container.content-positioning-vertical-centered {
+    align-items: center;
+}
+
+.image-container.content-positioning-vertical-start {
+    align-items: flex-start;
+}
+
+.image-container.content-positioning-vertical-end {
+    align-items: flex-end;
+}
+
+/* Define if the image shall fill the entire height or the entire width of the container */
+.image-container.content-positioning-max-height > img {
+    height: 100%;
+    width: auto;
+}
+
+.image-container.content-positioning-max-width > img {
+    width: 100%;
+    height: auto;
+}
+
+.image-container.content-image-width-fifth {
+    width: 20%;
+}
+
+.image-container.content-image-width-quarter {
+    width: 25%;
+}
+
+.image-container.content-image-width-half {
+    width: 50%;
+}
+
+.image-container.content-image-width-three-quarters {
+    width: 75%;
+}
+
+.image-container.content-image-width-full {
+    width: 100%;
+}
+
+.image-container.content-image-height-half {
+    height: 50%;
+}
+
+.image-container.content-image-height-full {
+    height: 100%;
+}
+
+.image-container.content-image-height-100 {
+    height: 100px;
+}
+
+.image-container.content-image-height-200 {
+    height: 200px;
+}
+
+.image-container.content-image-height-300 {
+    height: 300px;
+}
+
+.image-container.content-image-height-400 {
+    height: 400px;
+}
+
+
+
+
+
+
