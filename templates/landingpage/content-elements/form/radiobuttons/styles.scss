@@ -1,12 +1,12 @@
 /* highlight required radiobutton sets with required star */
 .required-radiobutton-field::after {
-    content: "*";
+    content: '*';
     color: #141e55;
     padding-left: 5px;
 }
 /* disable default radiobutton display */
 
-input[type="radio"] {
+input[type='radio'] {
     display: none;
 }
 
@@ -44,7 +44,7 @@ not be directly clickable */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 .custom-radiobutton-container .custom-radiobutton-frame {
     background-color: white;
@@ -67,7 +67,7 @@ not be directly clickable */
 /* create custom radiobutton checked symbol */
 
 .custom-radiobutton-frame::after {
-    content: "";
+    content: '';
     width: 10px;
     height: 10px;
     border-radius: 50%;

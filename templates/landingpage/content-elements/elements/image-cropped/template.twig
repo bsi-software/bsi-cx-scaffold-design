@@ -1,4 +1,10 @@
 <div data-bsi-element="image-cropped"
     class="cropped-image-container cropped-image-height-full cropped-image-width-full cropped-positioning-horizontal-centered cropped-positioning-vertical-centered cropped-positioning-max-width">
-    <img src="img/visual_sample.jpg" alt="" data-bsi-element-part="image"/>
+    <img src="{{
+        bsi_cx_asset(
+            '../../../../../resources/img/visual_sample.jpg'
+        )
+        }}"
+        alt=""
+        data-bsi-element-part="image" />
 </div>

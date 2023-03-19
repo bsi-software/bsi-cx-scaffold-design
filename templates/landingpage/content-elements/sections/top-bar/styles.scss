@@ -63,7 +63,7 @@
     display: flex;
 }
 
-@media (min-width: unit(@styles[mobile_breakpoint],px)) {
+@media (min-width: 700px) {
     .top-bar-container {
         .logo {
             height: 32px;

@@ -10,12 +10,12 @@
     position: relative;
     flex-direction: column;
     background-color: #141e55;
-    @media (min-width: unit(@styles[mobile_breakpoint],px)) {
+    @media (min-width: 700px) {
         flex-direction: row;
     }
     .footer-section .navigation-wrapper {
         justify-content: center;
-        @media (min-width: unit(@styles[mobile_breakpoint],px)) {
+        @media (min-width: 700px) {
             justify-content: flex-start;
         }
     }
@@ -25,7 +25,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        @media (min-width: unit(@styles[mobile_breakpoint],px)) {
+        @media (min-width: 700px) {
             justify-content: flex-start;
         }
         a {
@@ -45,8 +45,15 @@
                 color: hsla(0, 0%, 100%, 0.6);
             }
         }
-
         p {
+            margin: 0;
+            font-weight: 400;
+            font-size: 11px;
+            color: #ffffff;
+            line-height: 16px;
+            opacity: 0.6;
+        }
+        div {
             margin: 0;
             font-weight: 400;
             font-size: 11px;

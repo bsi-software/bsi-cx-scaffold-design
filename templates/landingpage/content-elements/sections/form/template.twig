@@ -1,12 +1,9 @@
-<div data-bsi-element="form">
+<div data-bsi-element="form-main">
     <form data-bsi-element-part="form" class="submission-form" id="sample-form">
         <div data-bsi-form-validation="">
             <p data-bsi-form-validation-item=""></p>
         </div>
-        <div data-bsi-dropzone="form-container"
-            data-bsi-dropzone-allowed-elements="checkbox email dropdown country checkbox-block 
-            city city-zip form-title dropdown-text firm address-full telefon input-field name-first 
-            name-full name-last radiobuttons street-house text-plain text-formatted textarea">
+        <div data-bsi-dropzone="form-container">
             {% include '../../form/form-title/template.twig' with {
                 title: 'Mailing address'
             } %}
@@ -22,6 +19,7 @@
             {% include '../../form/address-full/template.twig' %}
             {% include '../../form/email/template.twig' %}
             {% include '../../form/telefon/template.twig' %}
+            {% include '../../form/code/template.twig' %}
             {% include '../../form/textarea/template.twig' %}
             {% include '../../form/checkbox/template.twig' with {
                 id: 'first',
@@ -39,7 +37,7 @@
         </div>
         <div class="form-submit-button-container">
             <span id="required-missing-feedback">
-                {{ translation.provide_required }}
+                {{ properties.translation.provide_required }}
             </span>
             <div class="submit-buttom-container">
                 <input data-bsi-part="form-submit"

@@ -20,214 +20,371 @@
         }
     }
 
-    function setRadioBtnTrue() {
-        const radios = [...document.getElementsByClassName('radio-btn')];
-        // console.log(radios);
-        // return
-        for (let i = 0; i < radios.length; i++) {
-            radios[i].addEventListener('change', event => {
-                //console.log(event);
-                for (const radio of radios) {
-                    radio.checked = false;
-                    radio.required = false;
-                }
-                event.target.required = true;
-                const clickedRadio = radios.find(
-                    radio => radio === event.target
-                );
-                //console.log(clickedRadio)
-                clickedRadio.checked = true;
-                // radios.map(radio => {
-                //      radio.classList.remove('missing-required-field');
-                //  });
-            });
-        }
-    }
-    setRadioBtnTrue();
-
     setCheckboxTrue();
 })();
 
-(function() {
-    const submissionForms = document.getElementsByClassName('submission-form');
-    const amountOfForms = submissionForms.length;
+const submissionForms = document.querySelector('.submission-form');
+const radioWrapper = document.getElementById('option-radio-group');
+const radioError = radioWrapper.getElementsByClassName('error-message')[0];
+const emailWrapper = document.getElementById('email-wrapper');
+const email = document.getElementById('email');
+const emailError = emailWrapper.getElementsByClassName('error-message')[0];
+const cityWrapper = document.getElementById('city2-wrapper');
+const city = document.getElementById('city2');
+const zipWrapper = document.getElementById('zip-wrapper');
+const zip = document.getElementById('zip');
+const firstNameWrapper = document.getElementById('first-name-wrapper');
+const firstName = document.getElementById('first-name');
+const lastNameWrapper = document.getElementById('last-name-wrapper');
+const lastName = document.getElementById('last-name');
+const streetWrapper = document.getElementById('street-wrapper');
+const street = document.getElementById('street');
+const stadtWrapper = document.getElementById('city-wrapper');
+const stadt = document.getElementById('city');
+const countrySelectWrapper = document.getElementById('country-select-wrapper');
+const countrySelect = document.getElementById('country-select');
+const dropdownSelectWrapper = document.getElementById('dropdown-wrapper');
+const dropdownSelect = document.getElementById('dropdown-select');
+const checkboxWrapper = document.getElementById('checkbox-wrapper');
+const checkbox = document.getElementsByClassName('checkbox-input')[0];
+const checkboxes = document.querySelectorAll('.last-two-boxes');
+const codeWrapper = document.getElementById('code-wrapper');
+const code = document.getElementById('code');
+const codeError = codeWrapper.getElementsByClassName('error-message')[0];
 
-    if (amountOfForms > 0) {
-        function verifyFields(event) {
-            const form = event.target.closest('form');
+function verifyFields(event) {
+    event.preventDefault();
 
-            event.preventDefault();
+    const isEmailTrue = verifyEmail();
+    const isRadioBTNTrue = verifyRadioBtn();
+    const isCity2 = verifyCity2();
+    const isZip = verifyZip();
+    const isName = verifyName();
+    const isLastName = verifyLastName();
+    const isStreet = verifyStreet();
+    const isStadt = verifyStadt();
+    const isCountrySelect = verifyCountrySelect();
+    const isDropdownSelect = verifyDropdownSelect();
+    const isCheckbox = verifyCheckbox();
+    const isCheckboxBlock = verifyCheckboxBlock();
+    const isCode = verifyCode();
 
-            // Get all of the required form fields
-            // Query the form fields in the order in which they appear in the form, to facilitate the addition of an eventually
-            // wanted scroll animation
-            let requiredFields = form.querySelectorAll('[required=""]');
-
-            // Pick out all of the radiobuttons, as these must be handled differently
-            let radiobuttonNames = [];
-            let missingFields = [];
-            [...requiredFields].forEach(function(field) {
-                // Check if the currently iterated field is a radiobutton
-                if (
-                    field.tagName === 'INPUT' &&
-                    field.hasAttribute('type') &&
-                    field.getAttribute('type') === 'radio'
-                ) {
-                    // Push the current radiobuttons name into the raidobuttonNames to not do the following thing twice
-                    const currentName = field.getAttribute('name');
-                    // And in this case, check if any of the available options have been checked
-                    if (
-                        document.querySelector(
-                            'input[type="radio"][name="' +
-                                currentName +
-                                '"]:checked'
-                        )
-                    ) {
-                        let fieldsClass = field.classList;
-                        console.log(000000000000);
-                        if (fieldsClass.contains('missing-required-field')) {
-                            fieldsClass.remove('missing-required-field');
-                        }
-
-                        const radios = document.querySelectorAll('.radio-btn');
-                        console.log(radios);
-                        const checkedRadios = Array.from(radios).some(
-                            radio => radio.checked
-                        );
-                        console.log(checkedRadios);
-                        if (!checkedRadios) {
-                            Array.from(radios).map(radio => {
-                                const radioGroup = document.getElementById(
-                                    'option-radio-group'
-                                );
-                                radioGroup
-                                    .getElementsByClassName(
-                                        'error-message-radio'
-                                    )
-                                    .classList.remove('hidden');
-                            });
-                            return;
-                        } else {
-                            Array.from(radios).map(radio => {
-                                const radioGroup = document.getElementById(
-                                    'option-radio-group'
-                                );
-                                radioGroup
-                                    .getElementsByClassName(
-                                        'error-message-radio'
-                                    )
-                                    .classList.add('hidden');
-                            });
-
-                            console.log(
-                                document.getElementById(
-                                    'option-radio-group',
-                                    11111
-                                )
-                            );
-                        }
-                        return;
-                    }
-                } else if (
-                    field.tagName === 'INPUT' &&
-                    field.hasAttribute('type') &&
-                    field.getAttribute('type') === 'checkbox'
-                ) {
-                    // In this case, simply return the concerned checkbox
-                    const currentName = field.getAttribute('name');
-                    if (
-                        document.querySelector(
-                            'input[type="checkbox"][name="' +
-                                currentName +
-                                '"]:checked'
-                        )
-                    ) {
-                        // If not, simply add the first radiobutton element of the group into the missingFields array
-                        let fieldsClass = field.classList;
-                        if (fieldsClass.contains('missing-required-field')) {
-                            fieldsClass.remove('missing-required-field');
-                        }
-
-                        return;
-                    }
-                    //checkbox required field
-                    const checkboxes = document.querySelectorAll(
-                        '.last-two-boxes'
-                    );
-                    const checked = Array.from(checkboxes).some(
-                        checkbox => checkbox.checked
-                    );
-
-                    if (!checked) {
-                        Array.from(checkboxes).map(checkbox => {
-                            checkbox.classList.add('missing-required-field');
-                        });
-                        return;
-                    } else {
-                        Array.from(checkboxes).map(checkbox => {
-                            checkbox.classList.remove('missing-required-field');
-                        });
-                    }
-
-                    if (
-                        !document.querySelector(
-                            'input[type="checkbox"][name="' +
-                                currentName +
-                                '"]:checked'
-                        )
-                    ) {
-                        // If not, simply add the first radiobutton element of the group into the missingFields array
-                        missingFields.push(field);
-                        let fieldsClass = field.classList;
-                        if (!fieldsClass.contains('missing-required-field')) {
-                            fieldsClass.add('missing-required-field');
-                        }
-
-                        return;
-                    }
-                } else if (
-                    // Treat all of the following elements in the same way, as they should all gain a highlighted border
-                    // if they're missing
-                    (field.tagName === 'INPUT' &&
-                        field.hasAttribute('type') &&
-                        field.getAttribute('type') === 'text') ||
-                    field.getAttribute('type') === 'email' ||
-                    field.tagName === 'SELECT' ||
-                    field.tagName === 'TEXTAREA'
-                ) {
-                    // Add a class used to highlight field as missing
-                    let fieldsClass = field.classList;
-                    // If the current field value is empty
-                    if (field.value.trim() === '') {
-                        if (!fieldsClass.contains('missing-required-field')) {
-                            fieldsClass.add('missing-required-field');
-                        }
-                        // And in this case add the field into the field of missing fields
-                        missingFields.push(field);
-                        return;
-                    } else {
-                        if (fieldsClass.contains('missing-required-field')) {
-                            fieldsClass.remove('missing-required-field');
-                        }
-                    }
-                }
-            });
-
-            if (missingFields.length !== 0) {
-                document.getElementById('required-missing-feedback').className =
-                    'enable';
-            } else {
-                document.getElementById('required-missing-feedback').className =
-                    '';
-                //Form can now safely be submitted
-                form.submit();
-            }
-        }
-
-        document
-            .querySelector('.submission-form input[type="submit"]')
-            .addEventListener('click', function(event) {
-                verifyFields(event);
-            });
+    if (
+        isEmailTrue &&
+        isRadioBTNTrue &&
+        isCity2 &&
+        isZip &&
+        isName &&
+        isLastName &&
+        isStreet &&
+        isStadt &&
+        isCountrySelect &&
+        isDropdownSelect &&
+        isCheckbox &&
+        isCheckboxBlock &&
+        isCode
+    ) {
+        submissionForms.submit();
     }
-})();
+}
+function verifyRadioBtn() {
+    const radioButtons = document.querySelectorAll('[type="radio"]');
+    const isChecked = Array.from(radioButtons).some(
+        radioBtn => radioBtn.checked
+    );
+    if (!radioButtons) {
+        return;
+    }
+    if (!isChecked) {
+        radioError.classList.remove('isVisible');
+        return false;
+    } else {
+        radioError.classList.add('isVisible');
+        return true;
+    }
+}
+
+function verifyCode() {
+    if (!code) {
+        return;
+    }
+    if (code.required && code.value === '') {
+        codeError.classList.remove('isVisible');
+        code.classList.add('red-border');
+        return false;
+    } else {
+        codeError.classList.add('isVisible');
+        code.classList.remove('red-border');
+        return true;
+    }
+}
+
+function verifyEmail() {
+    if (!email) {
+        return;
+    }
+    if (email.required && email.value === '') {
+        emailError.classList.remove('isVisible');
+        email.classList.add('red-border');
+        return false;
+    } else {
+        emailError.classList.add('isVisible');
+        email.classList.remove('red-border');
+        return true;
+    }
+}
+
+function verifyCity2() {
+    if (!city) {
+        return;
+    }
+    if (city.required && city.value === '') {
+        city.classList.add('red-border');
+        return false;
+    } else {
+        city.classList.remove('red-border');
+        return true;
+    }
+}
+function verifyZip() {
+    if (!zip) {
+        return;
+    }
+    if (zip.required && zip.value === '') {
+        zip.classList.add('red-border');
+        return false;
+    } else {
+        zip.classList.remove('red-border');
+        return true;
+    }
+}
+
+function verifyName() {
+    if (!firstName) {
+        return;
+    }
+    if (firstName.required && firstName.value === '') {
+        firstName.classList.add('red-border');
+        return false;
+    } else {
+        firstName.classList.remove('red-border');
+        return true;
+    }
+}
+
+function verifyLastName() {
+    if (!lastName) {
+        return;
+    }
+    if (lastName.required && lastName.value === '') {
+        lastName.classList.add('red-border');
+        return false;
+    } else {
+        lastName.classList.remove('red-border');
+        return true;
+    }
+}
+
+function verifyStreet() {
+    if (!street) {
+        return;
+    }
+    if (street.required && street.value === '') {
+        street.classList.add('red-border');
+        return false;
+    } else {
+        street.classList.remove('red-border');
+        return true;
+    }
+}
+
+function verifyStadt() {
+    if (!stadt) {
+        return;
+    }
+    if (stadt.required && stadt.value === '') {
+        stadt.classList.add('red-border');
+        return false;
+    } else {
+        stadt.classList.remove('red-border');
+        return true;
+    }
+}
+
+function verifyCheckbox() {
+    if (!checkbox) {
+        return;
+    }
+    if (checkbox.required && !checkbox.checked) {
+        checkbox.classList.add('missing-required-field');
+        return false;
+    } else {
+        checkbox.classList.remove('missing-required-field');
+        return true;
+    }
+}
+
+function verifyCheckboxBlock() {
+    if (!checkboxes) {
+        return;
+    }
+    const checked = Array.from(checkboxes).some(checkbox => checkbox.checked);
+    if (!checked) {
+        Array.from(checkboxes).map(checkbox => {
+            checkbox.classList.add('missing-required-field');
+        });
+        return false;
+    } else {
+        Array.from(checkboxes).map(checkbox => {
+            checkbox.classList.remove('missing-required-field');
+        });
+        return true;
+    }
+}
+
+function verifyCountrySelect() {
+    if (!countrySelect) {
+        return;
+    }
+    if (countrySelect.required && countrySelect.value === '') {
+        countrySelect.classList.add('red-border-select');
+        return false;
+    } else {
+        countrySelect.classList.remove('red-border-select');
+        return true;
+    }
+}
+
+function verifyDropdownSelect() {
+    if (!dropdownSelect) {
+        return;
+    }
+    if (dropdownSelect.required && dropdownSelect.value === '') {
+        dropdownSelect.classList.add('red-border-select');
+        return false;
+    } else {
+        dropdownSelect.classList.remove('red-border-select');
+        return true;
+    }
+}
+
+email.addEventListener('input', event => {
+    const target = event.target;
+    const regExp = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$/;
+
+    if (target.value !== '' && regExp.test(target.value)) {
+        emailError.classList.add('isVisible');
+        email.classList.remove('red-border');
+    } else {
+        emailError.classList.remove('isVisible');
+        email.classList.add('red-border');
+    }
+});
+
+city.addEventListener('input', event => {
+    const target = event.target;
+    if (target.value !== '') {
+        city.classList.remove('red-border');
+    } else {
+        city.classList.add('red-border');
+    }
+});
+
+zip.addEventListener('input', event => {
+    const regExpZip = /^[0-9]{5}(?:-[0-9]{4})?$/;
+    const target = event.target;
+    if (target.value !== '' && regExpZip.test(target.value)) {
+        zip.classList.remove('red-border');
+    } else {
+        zip.classList.add('red-border');
+    }
+});
+
+firstName.addEventListener('input', event => {
+    const target = event.target;
+    if (target.value !== '') {
+        firstName.classList.remove('red-border');
+    } else {
+        firstName.classList.add('red-border');
+    }
+});
+
+lastName.addEventListener('input', event => {
+    const target = event.target;
+    if (target.value !== '') {
+        lastName.classList.remove('red-border');
+    } else {
+        lastName.classList.add('red-border');
+    }
+});
+
+street.addEventListener('input', event => {
+    const target = event.target;
+    if (target.value !== '') {
+        street.classList.remove('red-border');
+    } else {
+        street.classList.add('red-border');
+    }
+});
+
+code.addEventListener('input', event => {
+    const target = event.target;
+    const regExp = /^\d{9}$/;
+    if (target.value !== '' && regExp.test(target.value)) {
+        codeError.classList.add('isVisible');
+        code.classList.remove('red-border');
+    } else {
+        codeError.classList.remove('isVisible');
+        code.classList.add('red-border');
+    }
+});
+
+stadt.addEventListener('input', event => {
+    const target = event.target;
+    if (target.value !== '') {
+        stadt.classList.remove('red-border');
+    } else {
+        stadt.classList.add('red-border');
+    }
+});
+
+countrySelect.addEventListener('change', event => {
+    const targetValue = event.target.value;
+    console.log(targetValue);
+    if (targetValue) {
+        countrySelect.classList.remove('red-border-select');
+    } else {
+        countrySelect.classList.add('red-border-select');
+    }
+});
+
+dropdownSelect.addEventListener('change', event => {
+    const target = event.target.value;
+    if (target) {
+        dropdownSelect.classList.remove('red-border-select');
+    } else {
+        dropdownSelect.classList.add('red-border-select');
+    }
+});
+
+checkbox.addEventListener('change', event => {
+    const isCheckboxChecked = checkbox.checked;
+
+    if (isCheckboxChecked) {
+        checkbox.classList.remove('missing-required-field');
+    } else {
+        checkbox.classList.add('missing-required-field');
+    }
+});
+
+document.querySelectorAll('[type="radio"]').forEach(radioBtn => {
+    radioBtn.addEventListener('change', event => {
+        radioError.classList.add('isVisible');
+    });
+});
+
+document
+    .querySelector('.submission-form input[type="submit"]')
+    .addEventListener('click', function(event) {
+        verifyFields(event);
+    });

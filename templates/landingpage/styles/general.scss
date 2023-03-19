@@ -1,0 +1,1860 @@
+@font-face {
+    font-family: 'VerlagSSm';
+    src: url('../../../resources/fonts/VerlagSSm-Book.woff2') format('woff2');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'VerlagSSm';
+    src: url('../../../resources/fonts/VerlagSSm-Light.woff2') format('woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'VerlagSSm';
+    src: url('../../../resources//fonts/VerlagSSm-ExtraLight.woff2')
+        format('woff2');
+    font-weight: 100;
+}
+
+body {
+    position: relative;
+    font-family: 'VerlagSSm', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: rgba(20, 30, 85, 0.8);
+    font-size: 16px;
+    line-height: 1.5;
+    height: 100%;
+}
+
+* {
+    font-family: 'VerlagSSm', Arial, sans-serif;
+    color: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    box-sizing: border-box;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.bold-plain-text {
+    font-weight: bold;
+}
+
+.divider {
+    border-top: 3px solid #141e55;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 0;
+    overflow: visible;
+}
+.spacer {
+    background-color: white;
+    color: white;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.spacer.spacer-30 {
+    height: 30px;
+}
+
+.spacer.spacer-20 {
+    height: 20px;
+}
+
+.spacer.spacer-10 {
+    height: 10px;
+}
+.image-container {
+    display: flex;
+    width: 100%;
+    /* important needed to override BSI Element rule, so fro proper display within BSI editor */
+    overflow: hidden !important;
+}
+
+/* provide different layout possibilities, 3 vertical and 3 horizontal alignment combinations, for both content + absolute positioning (cropped) */
+.image-container.content-positioning-horizontal-centered {
+    justify-content: center;
+}
+
+.image-container.content-positioning-horizontal-start {
+    justify-content: flex-start;
+}
+
+.image-container.content-positioning-horizontal-end {
+    justify-content: flex-end;
+}
+
+.image-container.content-positioning-vertical-centered {
+    align-items: center;
+}
+
+.image-container.content-positioning-vertical-start {
+    align-items: flex-start;
+}
+
+.image-container.content-positioning-vertical-end {
+    align-items: flex-end;
+}
+
+/* Define if the image shall fill the entire height or the entire width of the container */
+.image-container.content-positioning-max-height > img {
+    height: 100%;
+    width: auto;
+}
+
+.image-container.content-positioning-max-width > img {
+    width: 100%;
+    height: auto;
+}
+
+.image-container.content-image-width-fifth {
+    width: 20%;
+}
+
+.image-container.content-image-width-quarter {
+    width: 25%;
+}
+
+.image-container.content-image-width-half {
+    width: 50%;
+}
+
+.image-container.content-image-width-three-quarters {
+    width: 75%;
+}
+
+.image-container.content-image-width-full {
+    width: 100%;
+}
+
+.image-container.content-image-height-half {
+    height: 50%;
+}
+
+.image-container.content-image-height-full {
+    height: 100%;
+}
+
+.image-container.content-image-height-100 {
+    height: 100px;
+}
+
+.image-container.content-image-height-200 {
+    height: 200px;
+}
+
+.image-container.content-image-height-300 {
+    height: 300px;
+}
+
+.image-container.content-image-height-400 {
+    height: 400px;
+}
+
+.cropped-image-container {
+    display: flex;
+    width: 100%;
+    position: relative;
+    /* important needed to override BSI Element rule, so fro proper display within BSI editor */
+    overflow: hidden !important;
+}
+
+/* provide different layout possibilities, 3 vertical and 3 horizontal alignment combinations, for both content + absolute positioning (cropped) */
+.cropped-image-container.cropped-positioning-horizontal-centered {
+    justify-content: center;
+}
+
+.cropped-image-container.cropped-positioning-horizontal-start {
+    justify-content: flex-start;
+}
+
+.cropped-image-container.cropped-positioning-horizontal-end {
+    justify-content: flex-end;
+}
+
+.cropped-image-container.cropped-positioning-vertical-centered {
+    align-items: center;
+}
+
+.cropped-image-container.cropped-positioning-vertical-start {
+    align-items: flex-start;
+}
+
+.cropped-image-container.cropped-positioning-vertical-end {
+    align-items: flex-end;
+}
+
+/* Define if the image shall fill the entire height or the entire width of the container */
+.cropped-image-container > img {
+    position: absolute;
+}
+
+.cropped-image-container.cropped-positioning-max-height > img {
+    min-height: 100%;
+    width: auto;
+}
+
+.cropped-image-container.cropped-positioning-max-width > img {
+    min-width: 100%;
+    height: auto;
+}
+
+.cropped-image-container.cropped-image-width-fifth {
+    width: 20%;
+}
+
+.cropped-image-container.cropped-image-width-quarter {
+    width: 25%;
+}
+
+.cropped-image-container.cropped-image-width-half {
+    width: 50%;
+}
+
+.cropped-image-container.cropped-image-width-three-quarters {
+    width: 75%;
+}
+
+.cropped-image-container.cropped-image-width-full {
+    width: 100%;
+}
+
+.cropped-image-container.cropped-image-height-half {
+    height: 50%;
+}
+
+.cropped-image-container.cropped-image-height-full {
+    height: 100%;
+}
+
+.cropped-image-container.cropped-image-height-100 {
+    height: 100px;
+}
+
+.cropped-image-container.cropped-image-height-200 {
+    height: 200px;
+}
+
+.cropped-image-container.cropped-image-height-300 {
+    height: 300px;
+}
+
+.cropped-image-container.cropped-image-height-400 {
+    height: 400px;
+}
+
+.button-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.button-container.layout-button-left {
+    justify-content: flex-start;
+}
+
+.button-container.layout-button-centered {
+    justify-content: center;
+}
+
+.button-container.layout-button-right {
+    justify-content: flex-end;
+}
+
+.button {
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: 900;
+    font-size: 11px;
+    font-size: 0.6875rem;
+    line-height: 16px;
+    line-height: 1rem;
+    letter-spacing: 2px;
+    letter-spacing: 0.125rem;
+    color: #141e55;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+    background-color: white;
+    color: #141e55;
+}
+.title-container {
+    max-width: 362px;
+    font-weight: 100;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.45;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #141e55;
+    text-align: center;
+
+    @media (min-width: 700px) {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 41px;
+        font-weight: 100;
+    }
+    p {
+        margin-bottom: 0;
+    }
+}
+
+// animation
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.title-container {
+    animation-name: fadeInDown;
+    animation-duration: 2s;
+}
+.subtitle-container {
+    margin-bottom: 16px;
+    line-height: 1.5;
+    font-size: 20px;
+    font-weight: 200;
+    color: #141e55;
+    text-align: center;
+
+    @media (min-width: 700px) {
+        font-size: 24px;
+        font-weight: 300;
+    }
+}
+
+//animation
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.subtitle-container {
+    animation-name: fadeInDown;
+    animation-duration: 2s;
+}
+.bold-plain-text {
+    font-weight: bold;
+}
+.formatted-text {
+    margin-bottom: 30px;
+}
+
+//animation
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.formatted-text {
+    animation-name: zoomIn;
+    animation-duration: 1.5s;
+}
+
+.full-width-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Assure that dropzone within layout column and contents of dropzone expand to full width of container */
+.full-width-layout > div,
+.full-width-layout > div > * {
+    width: 100%;
+}
+.single-column-layout {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+/* Assure that dropzone within layout column and contents of dropzone expand to full width of container */
+.single-column-layout > div,
+.single-column-layout > div > * {
+    width: 100%;
+}
+.two-column-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    /* container padding should be controlled inline, when using the element in twig, which will override this property */
+    padding: 0;
+    /* mobile first */
+    flex-direction: column;
+}
+
+/* mobile first, expand half container width to full container width in mobile width */
+.two-column-layout > div {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* assure that column contents always expand to max column width */
+.two-column-layout > div > * {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+}
+
+@media (min-width: 700px) {
+    /* assure that column width is always half */
+    .two-column-layout > div {
+        width: 50%;
+    }
+    .two-column-layout {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 700px) {
+    .two-column-layout > div {
+        /* In Desktop view, column padding is controlled via the padding parameters specified to the layout embeds */
+        /* in Mobile view, it's disabled by default, and should be applied to the single BSI elements, if desired */
+        padding: 0 !important;
+    }
+}
+.two-column-layout-reverse {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    /* container padding should be controlled inline, when using the element in twig, which will override this property */
+    padding: 0;
+    /* mobile first */
+    flex-direction: column-reverse;
+}
+
+/* mobile first, expand half container width to full container width in mobile width */
+.two-column-layout-reverse > div {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* assure that column contents always expand to max column width */
+.two-column-layout-reverse > div > * {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+}
+
+@media (min-width: 700px) {
+    /* assure that column width is always half */
+    .two-column-layout-reverse > div {
+        width: 50%;
+    }
+    .two-column-layout-reverse {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 700px) {
+    .two-column-layout-reverse > div {
+        /* In Desktop view, column padding is controlled via the padding parameters specified to the layout embeds */
+        /* in Mobile view, it's disabled by default, and should be applied to the single BSI elements, if desired */
+        padding: 0 !important;
+    }
+}
+.one-two-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    /* container padding should be controlled inline, when using the element in twig, which will override this property */
+    padding: 0;
+    /* mobile first */
+    flex-direction: column;
+}
+
+/* mobile first, expand column container widths to full container width in mobile width */
+.one-two-layout > div {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* assure that column contents always expand to max column width */
+.one-two-layout > div > * {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+}
+
+@media (min-width: 700px) {
+    /* assure that column width is always half */
+    .one-two-layout > div:first-child {
+        width: 34%;
+    }
+    .one-two-layout > div:last-child {
+        width: 66%;
+    }
+    .one-two-layout {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 700px) {
+    .one-two-layout > div {
+        /* In Desktop view, column padding is controlled via the padding parameters specified to the layout embeds */
+        /* in Mobile view, it's disabled by default, and should be applied to the single BSI elements, if desired */
+        padding: 0 !important;
+    }
+}
+
+.one-two-layout-reverse {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    /* container padding should be controlled inline, when using the element in twig, which will override this property */
+    padding: 0;
+    /* mobile first */
+    flex-direction: column-reverse;
+}
+
+/* mobile first, expand column container widths to full container width in mobile width */
+.one-two-layout-reverse > div {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* assure that column contents always expand to max column width */
+.one-two-layout-reverse > div > * {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+}
+
+@media (min-width: 700px) {
+    /* assure that column width is always half */
+    .one-two-layout-reverse > div:first-child {
+        width: 34%;
+    }
+    .one-two-layout-reverse > div:last-child {
+        width: 66%;
+    }
+    .one-two-layout-reverse {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 700px) {
+    .one-two-layout-reverse > div {
+        /* In Desktop view, column padding is controlled via the padding parameters specified to the layout embeds */
+        /* in Mobile view, it's disabled by default, and should be applied to the single BSI elements, if desired */
+        padding: 0 !important;
+    }
+}
+.two-one-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    /* container padding should be controlled inline, when using the element in twig, which will override this property */
+    padding: 0;
+    /* mobile first */
+    flex-direction: column;
+}
+
+/* mobile first, expand column container widths to full container width in mobile width */
+.two-one-layout > div {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* assure that column contents always expand to max column width */
+.two-one-layout > div > * {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+}
+
+@media (min-width: 700px) {
+    /* assure that column width is always half */
+    .two-one-layout > div:first-child {
+        width: 66%;
+    }
+    .two-one-layout > div:last-child {
+        width: 34%;
+    }
+    .two-one-layout {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 700px) {
+    .two-one-layout > div {
+        /* In Desktop view, column padding is controlled via the padding parameters specified to the layout embeds */
+        /* in Mobile view, it's disabled by default, and should be applied to the single BSI elements, if desired */
+        padding: 0 !important;
+    }
+}
+.two-one-reverse-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    /* container padding should be controlled inline, when using the element in twig, which will override this property */
+    padding: 0;
+    /* mobile first */
+    flex-direction: column-reverse;
+}
+
+/* mobile first, expand column container widths to full container width in mobile width */
+.two-one-reverse-layout > div {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* assure that column contents always expand to max column width */
+.two-one-reverse-layout > div > * {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+}
+
+@media (min-width: 700px) {
+    /* assure that column width is always half */
+    .two-one-reverse-layout > div:first-child {
+        width: 66%;
+    }
+    .two-one-reverse-layout > div:last-child {
+        width: 34%;
+    }
+    .two-one-reverse-layout {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 700px) {
+    .two-one-reverse-layout > div {
+        /* In Desktop view, column padding is controlled via the padding parameters specified to the layout embeds */
+        /* in Mobile view, it's disabled by default, and should be applied to the single BSI elements, if desired */
+        padding: 0 !important;
+    }
+}
+
+/* disable default checkbox display */
+
+input[type='checkbox'] {
+    display: none;
+}
+
+/* correctly align content */
+
+.custom-checkbox-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+/* accomodate spacing for custom checkbox in label */
+
+.custom-checkbox-container label {
+    width: calc(100% - 10px);
+    padding-left: 30px;
+    /* In BSI, the label cannot wrap around the input element, 
+    as it is traditionally done when using custom checkbox for optimal 
+    UX + styling. Hence, we have to position the checkbox label
+    above the .custom-checkbox-frame; otherwise the checkbox would
+    not be directly clickable */
+    /* to assure that checkbox is always clickable (place label above) */
+    z-index: 2;
+    margin-left: -15px;
+}
+
+.custom-checkbox-container label:hover {
+    cursor: pointer;
+}
+
+/* create custom checkbox frame */
+
+.custom-checkbox-container .custom-checkbox-frame {
+    background-color: white;
+    width: 28px;
+    height: 28px;
+    border: 1px solid #141e55;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* assure that checkbox is clickable (place below label) */
+    z-index: 1;
+
+    &.missing-required-field {
+        border: 1px solid red;
+    }
+}
+
+.custom-checkbox-container label:hover ~ .custom-checkbox-frame {
+    background-color: white;
+}
+
+/* create custom checkbox checked symbol */
+
+.custom-checkbox-frame::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #141e55;
+    display: none;
+    /* to assure that checkbox is clickable (place below label) also when checked */
+    z-index: 1;
+}
+
+.custom-checkbox-container input:checked ~ .custom-checkbox-frame::after {
+    display: block;
+}
+
+.custom-checkbox-container {
+    margin: 10px 0;
+}
+/* highlight required radiobutton sets with required star */
+.required-radiobutton-field::after {
+    content: '*';
+    color: #141e55;
+    padding-left: 5px;
+}
+/* disable default radiobutton display */
+
+input[type='radio'] {
+    display: none;
+}
+
+/* correctly align content */
+
+.custom-radiobutton-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* accomodate spacing for custom radiobutton in label */
+
+.custom-radiobutton-container label {
+    padding-left: 30px;
+    width: calc(100% - 30px);
+    /* In BSI, the label cannot wrap around the input element,
+as it is traditionally done when using custom radiobutton for optimal
+UX + styling. Hence, we have to position the radiobutton label
+above the .custom-radiobutton-frame; otherwise the radiobutton would
+not be directly clickable */
+    /* to assure that checkbox is always clickable (place label above) */
+    z-index: 2;
+    margin-left: -15px;
+}
+
+.custom-radiobutton-container label:hover {
+    cursor: pointer;
+}
+
+/* create custom radiobutton frame */
+
+.radiobutton-set-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.custom-radiobutton-container .custom-radiobutton-frame {
+    background-color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid #141e55;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    /* assure that radiobutton is clickable (place below label) */
+    z-index: 1;
+}
+
+.custom-radiobutton-container label:hover ~ .custom-radiobutton-frame {
+    background-color: white;
+}
+
+/* create custom radiobutton checked symbol */
+
+.custom-radiobutton-frame::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid #141e55;
+    background-color: #141e55;
+    display: none;
+    /* to assure that radiobutton is clickable (place below label) also when checked */
+    z-index: 1;
+}
+
+.custom-radiobutton-container input:checked ~ .custom-radiobutton-frame::after {
+    display: block;
+}
+
+.radiobutton-container-wrapper {
+    margin: 10px 0;
+}
+
+.radiobutton-container-wrapper > div > label {
+    margin-bottom: 5px;
+}
+.rating-set-container {
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+    height: 40px;
+}
+
+.rating-set-container > .custom-radiobutton-container {
+    flex-grow: 1;
+    position: relative;
+}
+
+.rating-set-container .custom-radiobutton-container label {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* highlight required radiobutton sets with required star */
+.required-radiobutton-field::after {
+    content: '*';
+    color: #141e55;
+    padding-left: 5px;
+}
+/* disable default radiobutton display */
+
+input[type='radio'] {
+    display: none;
+}
+
+/* correctly align content */
+
+.custom-radiobutton-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 30px;
+}
+
+/* accomodate spacing for custom radiobutton in label */
+
+.custom-radiobutton-container label {
+    padding-left: 30px;
+    /* In BSI, the label cannot wrap around the input element,
+as it is traditionally done when using custom radiobutton for optimal
+UX + styling. Hence, we have to position the radiobutton label
+above the .custom-radiobutton-frame; otherwise the radiobutton would
+not be directly clickable */
+    /* to assure that checkbox is always clickable (place label above) */
+    z-index: 2;
+    margin-left: -15px;
+}
+
+.custom-radiobutton-container label:hover {
+    cursor: pointer;
+}
+
+/* create custom radiobutton frame */
+
+.custom-radiobutton-container .custom-radiobutton-frame-rating {
+    background-color: white;
+    width: 15px;
+    height: 15px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    /* assure that radiobutton is clickable (place below label) */
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.rating-set-container
+    .custom-radiobutton-container:first-of-type
+    .custom-radiobutton-frame-rating {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.rating-set-container
+    .custom-radiobutton-container:last-of-type
+    .custom-radiobutton-frame-rating {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.custom-radiobutton-container label:hover ~ .custom-radiobutton-frame-rating {
+    background-color: #eee;
+}
+
+.custom-radiobutton-container input:checked ~ .custom-radiobutton-frame-rating {
+    background-color: #13aff0;
+}
+
+.rating-labels {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.rating-labels .label-left {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.rating-labels .label-right {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+.rating-set-container {
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+    height: 40px;
+}
+
+.rating-set-container > .custom-radiobutton-container {
+    flex-grow: 1;
+    position: relative;
+}
+
+.rating-set-container .custom-radiobutton-container label {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* highlight required radiobutton sets with required star */
+.required-radiobutton-field::after {
+    content: '*';
+    color: #141e55;
+    padding-left: 5px;
+}
+/* disable default radiobutton display */
+
+input[type='radio'] {
+    display: none;
+}
+
+/* correctly align content */
+
+.custom-radiobutton-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 30px;
+}
+
+/* accomodate spacing for custom radiobutton in label */
+
+.custom-radiobutton-container label {
+    padding-left: 30px;
+    /* In BSI, the label cannot wrap around the input element,
+as it is traditionally done when using custom radiobutton for optimal
+UX + styling. Hence, we have to position the radiobutton label
+above the .custom-radiobutton-frame; otherwise the radiobutton would
+not be directly clickable */
+    /* to assure that checkbox is always clickable (place label above) */
+    z-index: 2;
+    margin-left: -15px;
+}
+
+.custom-radiobutton-container label:hover {
+    cursor: pointer;
+}
+
+/* create custom radiobutton frame */
+
+.custom-radiobutton-container .custom-radiobutton-frame-rating {
+    background-color: white;
+    width: 15px;
+    height: 15px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    /* assure that radiobutton is clickable (place below label) */
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.rating-set-container
+    .custom-radiobutton-container:first-of-type
+    .custom-radiobutton-frame-rating {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.rating-set-container
+    .custom-radiobutton-container:last-of-type
+    .custom-radiobutton-frame-rating {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.custom-radiobutton-container label:hover ~ .custom-radiobutton-frame-rating {
+    background-color: #eee;
+}
+
+.custom-radiobutton-container input:checked ~ .custom-radiobutton-frame-rating {
+    background-color: #13aff0;
+}
+
+.rating-labels {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.rating-labels .label-left {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.rating-labels .label-right {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+.title-wrapper {
+    max-width: 362px;
+    font-weight: 100;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.45;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    color: #141e55;
+    text-align: start;
+
+    @media (min-width: 700px) {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 41px;
+        font-weight: 100;
+    }
+}
+
+// animation
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.title-container {
+    animation-name: fadeInDown;
+    animation-duration: 2s;
+}
+.dropdown-text {
+    text-align: left;
+    margin-bottom: 34px;
+}
+
+.dropdown-text p {
+    font-family: VerlagSSm, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 26px;
+    line-height: 1.625rem;
+    color: rgba(20, 30, 85, 0.8);
+    margin-top: 0;
+}
+
+//animation
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.dropdown-text {
+    animation-name: zoomIn;
+    animation-duration: 1.5s;
+}
+
+.text-between {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+form .missing-required-field {
+    border-color: red;
+}
+
+#required-missing-feedback {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    color: red;
+    overflow: hidden;
+    height: 0;
+}
+
+#required-missing-feedback.enable {
+    height: auto;
+}
+
+.reverse-for-required {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+/* spacing needed due to reversing */
+.reverse-for-required > label {
+    margin-top: 3px;
+    padding-left: 10px;
+}
+
+input[type='text']:required ~ label::after,
+input[type='number']:required ~ label::after,
+input[type='email']:required ~ label::after,
+input[type='tel']:required ~ label::after,
+select:required ~ label::after {
+    content: '*';
+    color: #141e55;
+    padding-left: 5px;
+}
+
+/* generally used form stylings */
+
+input[type='text'],
+input[type='number'],
+input[type='email'],
+input[type='tel'] {
+    border-radius: 3px;
+    border-bottom: 1px solid #687374;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    padding: 5px 10px;
+    margin: 10px 0;
+    background-color: white;
+}
+
+/* increased padding for select to have same appearance as input fields */
+select {
+    padding: 10px 10px;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+*:-moz-focusring {
+    outline: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+select:hover {
+    cursor: pointer;
+}
+
+// submit button styles
+
+.submit-buttom-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
+
+.submit-button {
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: 900;
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 2px;
+    color: #141e55;
+    background-color: #ffffff;
+    text-transform: uppercase;
+    border: none;
+    transition: padding 0.3s ease-out 0s;
+}
+
+.submit-button:hover {
+    padding-left: 36px;
+    padding-right: 0;
+    transition: padding 0.3s ease-out 0s;
+}
+.submit-button-left-border,
+.submit-button-bottom-border {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.submit-button-bottom-border {
+    width: 50%;
+    border-bottom: 1px solid #141e55;
+    height: 1px;
+    transition: width 0.3s ease-out 0s;
+}
+.submit-button:hover ~ .submit-button-bottom-border {
+    width: calc(100% - 1px);
+    transition: width 0.3s ease-out 0s;
+}
+.submit-button-left-border {
+    height: 66%;
+    border-left: 1px solid #141e55;
+    width: 1px;
+    transition: height 0.2s ease-out 0.1s;
+}
+.submit-button:hover ~ .submit-button-left-border {
+    height: 0;
+    transition: height 0.2s ease-out 0.1s;
+}
+
+input:not([type='submit']),
+select {
+    height: 40px;
+    border: 1px solid rgba(20, 30, 85, 0.3);
+}
+
+.formatted-text {
+    margin: 0;
+}
+
+label {
+    color: rgba(20, 30, 85, 0.7);
+}
+
+.text-field-label {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -10px;
+    opacity: 0;
+    color: rgba(20, 30, 85, 0.7);
+    transition: opacity 0.3s ease-in 0s;
+}
+
+.form-dropdown .text-field-label {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -25px;
+    opacity: 0;
+    color: rgba(20, 30, 85, 0.7);
+    transition: opacity 0.3s ease-in 0s;
+}
+
+.text-field {
+    position: relative;
+}
+
+.text-field input:focus .text-field-label {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0s;
+}
+
+.text-field textarea {
+    font-family: VerlagSSm, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 26px;
+    line-height: 1.625rem;
+    padding-left: 13px;
+    width: 100%;
+    background: transparent;
+    border: 1px solid rgba(20, 30, 85, 0.2);
+    border-top: none;
+    color: rgba(20, 30, 85, 0.8);
+    margin-top: 25px;
+    height: 250px;
+    overflow: auto;
+}
+
+.text-field textarea:focus .text-field-label {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0s;
+}
+
+.text-field input {
+    font-family: VerlagSSm, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 26px;
+    line-height: 1.625rem;
+    flex-basis: 100%;
+    padding-bottom: 8px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgba(20, 30, 85, 0.3);
+    -webkit-appearance: none;
+    border-radius: 0;
+    &.red-border {
+        border-bottom: 1px solid red;
+    }
+    // & ~ .error-message {
+    //     display: none;
+    // }
+    &.missing-required-field ~ .error-message {
+        display: block;
+        color: red;
+        font-size: 12px;
+    }
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+}
+
+.error-message.isVisible {
+    display: none;
+}
+
+input[type='checkbox'].missing-required-field ~ .custom-checkbox-frame {
+    border: 1px solid red;
+}
+
+input[type='radio'].missing-required-field ~ .custom-checkbox-frame {
+    border: 1px solid red;
+}
+
+@media (-ms-high-contrast: none) {
+    .text-field input {
+        padding-bottom: 14px;
+    }
+}
+
+.text-field input::-ms-input-placeholder {
+    font-family: VerlagSSm, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 26px;
+    line-height: 1.625rem;
+    color: rgba(20, 30, 85, 0.8);
+    opacity: 1;
+    -ms-transition: opacity 0.3s linear 0s;
+    transition: opacity 0.3s linear 0s;
+}
+
+input::placeholder {
+    color: rgba(20, 30, 85, 0.8);
+}
+
+.text-field input::placeholder,
+.text-field textarea::placeholder {
+    font-family: VerlagSSm, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 26px;
+    line-height: 1.625rem;
+    color: rgba(20, 30, 85, 0.8);
+    opacity: 1;
+    transition: opacity 0.3s linear 0s;
+}
+
+.text-field input:focus,
+.text-field textarea:focus,
+.text-field select:focus {
+    outline: none;
+}
+
+.text-field input:focus {
+    border-bottom: 1px solid #141e55;
+}
+
+.text-field input:focus::-ms-input-placeholder,
+.text-field textarea:focus::-ms-textarea-placeholder {
+    opacity: 0;
+    -ms-transition: opacity 0.3s linear 0s;
+    transition: opacity 0.3s linear 0s;
+}
+
+.text-field input:focus::placeholder,
+.text-field textarea:focus::placeholder {
+    opacity: 0;
+    transition: opacity 0.3s linear 0s;
+}
+
+.text-field input:focus ~ label,
+.text-field textarea:focus ~ label,
+.text-field select:focus ~ label {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0s;
+}
+
+//animation
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.submission-form {
+    animation-name: zoomIn;
+    animation-duration: 1.5s;
+}
+
+//form title
+
+.title-wrapper {
+    max-width: 362px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    color: #141e55;
+    text-align: start;
+
+    h4 {
+        font-family: VerlagSSm, sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        line-height: 1.45;
+        letter-spacing: 1px;
+        font-size: 28px;
+        text-transform: capitalize;
+    }
+
+    @media (min-width: 700px) {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 20px;
+        font-weight: 100;
+    }
+}
+
+// animation
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.title-wrapper {
+    animation-name: fadeInDown;
+    animation-duration: 2s;
+}
+
+// city2+zip
+
+.module-form-components__two-cols-sm {
+    display: flex;
+    align-items: flex-start;
+}
+
+.first-row-city {
+    width: 68%;
+    margin-right: 30px;
+}
+
+.second-row-zip {
+    width: 28%;
+}
+
+// dropdown text
+
+.dropdown-text {
+    text-align: left;
+    margin-bottom: 34px;
+}
+
+.dropdown-text p {
+    font-family: VerlagSSm, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 26px;
+    line-height: 1.625rem;
+    color: rgba(20, 30, 85, 0.8);
+    margin-top: 0;
+}
+
+//animation
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.dropdown-text {
+    animation-name: zoomIn;
+    animation-duration: 1.5s;
+}
+.visual {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+//animation
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.visual {
+    animation-name: zoomIn;
+    animation-duration: 1.5s;
+}
+/* special selector needed to assure override */
+.two-column-layout > div .socials-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 20px;
+    /* SIZE SHOULD BE ADAPTED VIA THIS FONT SIZE */
+    font-size: 8px;
+
+    @media (min-width: 700px) {
+        justify-content: flex-end;
+    }
+}
+
+.social-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1em 1.5em 0;
+    margin: 0;
+}
+.socials-container a {
+    padding-left: 40px;
+    svg {
+        transition: transform 0.3s ease-in-out 0s;
+    }
+    &:hover svg {
+        transform: scale(1.5);
+    }
+}
+
+/* achieve similar sizes among all icons */
+#youtube-icon {
+    transform: scale(1.2);
+}
+
+#facebook-icon {
+    transform: scale(0.9);
+}
+
+/* colorize icons according to primary color */
+#youtube-arrow,
+#facebook-letter {
+    fill: white;
+}
+
+#youtube-area,
+#facebook-area,
+#twitter-area,
+#linkedin-area,
+.instagram-area {
+    fill: white;
+}
+.top-bar-container,
+.top-bar-container > div {
+    display: flex;
+    align-items: center;
+}
+
+.top-bar-container {
+    position: relative;
+    .logo {
+        width: 115px;
+        height: 24px;
+    }
+
+    .language-icon {
+        width: 20px;
+        height: 20px;
+        fill: #141e55;
+        margin-right: 10px;
+    }
+
+    .text {
+        color: #141e55;
+        font-weight: 500;
+        font-size: 16px;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+
+    .language {
+        position: absolute;
+        width: 100px;
+        left: 40px;
+        top: 0px;
+    }
+
+    .link {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.top-bar-left-aligned > div {
+    justify-content: flex-start;
+}
+
+.top-bar-centered > div {
+    justify-content: center;
+}
+
+.top-bar-right-aligned > div {
+    justify-content: flex-end;
+}
+
+.language a {
+    text-decoration: none;
+}
+
+.language-hidden .language {
+    display: none;
+}
+
+.language-shown .language {
+    display: flex;
+}
+
+@media (min-width: 700px) {
+    .top-bar-container {
+        .logo {
+            height: 32px;
+            width: 168px;
+        }
+        .language {
+            position: absolute;
+            width: 100px;
+            left: 40px;
+            top: 4px;
+        }
+    }
+}
+.footer-section {
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+.footer-container {
+    position: relative;
+    flex-direction: column;
+    background-color: #141e55;
+    @media (min-width: 700px) {
+        flex-direction: row;
+    }
+    .footer-section .navigation-wrapper {
+        justify-content: center;
+        @media (min-width: 700px) {
+            justify-content: flex-start;
+        }
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        @media (min-width: 700px) {
+            justify-content: flex-start;
+        }
+        a {
+            margin-right: 30px;
+            margin-bottom: 30px;
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 11px;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: color 0.3s ease-in-out 0s;
+            &:last-child {
+                margin-right: 0;
+            }
+            &:hover {
+                color: hsla(0, 0%, 100%, 0.6);
+            }
+        }
+
+        p {
+            margin: 0;
+            font-weight: 400;
+            font-size: 11px;
+            color: #ffffff;
+            line-height: 16px;
+            opacity: 0.6;
+        }
+    }
+}

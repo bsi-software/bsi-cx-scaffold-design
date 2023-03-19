@@ -1,11 +1,6 @@
 <footer class="footer-section" data-bsi-element="footer">
-    {% embed '../../layout/one-one/template.twig'
-        with {
-            simple_container: true,
-            container_class: 'footer-container'
-        }
-    %}
-        {% block container_first %}
+    <div class="two-column-layout footer-container">
+        <div>
             <div class="navigation-wrapper">
                 <nav class="navigation"
                     data-bsi-dropzone="navigation-top-container"
@@ -25,22 +20,17 @@
                     } %}
                 </nav>
             </div>
-        {% endblock %}
-        {% block container_second %}
+        </div>
+        <div>
             <div data-bsi-dropzone="social-wrapper-container"
                 data-bsi-dropzone-allowed-elements="socials"
                 data-bsi-dropzone-max-number-of-elements="1">
                 {% include '../../sections/socials/template.twig' %}
             </div>
-        {% endblock %}
-    {% endembed %}
-    {% embed '../../layouts/one-one/template.twig'
-        with {
-            simple_container: true,
-            container_class: 'footer-container'
-        }
-    %}
-        {% block container_first %}
+        </div>
+    </div>
+    <div class="two-column-layout footer-container">
+        <div>
             <div class="navigation-wrapper">
                 <nav class="navigation"
                     data-bsi-dropzone="navigation-container"
@@ -63,9 +53,7 @@
                     } %}
                 </nav>
             </div>
-        {% endblock %}
-        {% block container_second %}
-
-        {% endblock %}
-    {% endembed %}
+        </div>
+        <div></div>
+    </div>
 </footer>

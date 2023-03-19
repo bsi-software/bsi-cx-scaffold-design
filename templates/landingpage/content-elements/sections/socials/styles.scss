@@ -8,7 +8,7 @@
     /* SIZE SHOULD BE ADAPTED VIA THIS FONT SIZE */
     font-size: 8px;
 
-    @media (min-width: unit(@styles[mobile_breakpoint],px)) {
+    @media (min-width: 700px) {
         justify-content: flex-end;
     }
 }
@@ -50,5 +50,5 @@
 #twitter-area,
 #linkedin-area,
 .instagram-area {
-    fill: @styles[primary_color];
+    fill: white;
 }

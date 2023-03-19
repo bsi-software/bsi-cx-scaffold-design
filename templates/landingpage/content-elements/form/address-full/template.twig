@@ -1,18 +1,14 @@
-{% embed '../../layout/one-one/template.twig'
-    with {
-        custom_section: 'address-full',
-        allowed_elements_one: 'city',
-        amount_allowed_elements_one: 1,
-        section_column_one_padding: '0 15px 0 0',
-        allowed_elements_two: 'country',
-        amount_allowed_elements_two: 1,
-        section_column_two_padding: '0 0 0 15px'
-    }
-%}
-    {% block custom_section_content_one %}
-        {% include '../city/template.twig' %}
-    {% endblock %}
-    {% block custom_section_content_two %}
-        {% include '../country/template.twig' %}
-    {% endblock %}
-{% endembed %}
+<div data-bsi-element="address-full" class="two-column-layout">
+    <div data-bsi-dropzone="address-full-container-one"
+        style="padding: 0 15px 0 0;">
+        {% block custom_section_content_one %}
+            {% include '../city/template.twig' %}
+        {% endblock %}
+    </div>
+    <div data-bsi-dropzone="address-full-container-two"
+        style="padding: 0 0 0 15px;">
+        {% block custom_section_content_two %}
+            {% include '../country/template.twig' %}
+        {% endblock %}
+    </div>
+</div>

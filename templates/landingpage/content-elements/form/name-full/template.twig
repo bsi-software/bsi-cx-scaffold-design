@@ -1,18 +1,14 @@
-{% embed '../../layout/one-one/template.twig'
-    with {
-        custom_section: 'name-full',
-        allowed_elements_one: 'name-first',
-        amount_allowed_elements_one: 1,
-        section_column_one_padding: '0 15px 0 0',
-        allowed_elements_two: 'name-last',
-        amount_allowed_elements_two: 1,
-        section_column_two_padding: '0 0 0 15px'
-    }
-%}
-    {% block custom_section_content_one %}
-        {% include '../name-first/template.twig' %}
-    {% endblock %}
-    {% block custom_section_content_two %}
-        {% include '../name-last/template.twig' %}
-    {% endblock %}
-{% endembed %}
+<div data-bsi-element="name-full" class="two-column-layout">
+    <div data-bsi-dropzone="name-first-container-one"
+        style="padding: 0 15px 0 0;">
+        {% block custom_section_content_one_name1 %}
+            {% include '../name-first/template.twig' %}
+        {% endblock %}
+    </div>
+    <div data-bsi-dropzone="name-last-container-two"
+        style="padding: 0 0 0 15px;">
+        {% block custom_section_content_two_name2 %}
+            {% include '../name-last/template.twig' %}
+        {% endblock %}
+    </div>
+</div>

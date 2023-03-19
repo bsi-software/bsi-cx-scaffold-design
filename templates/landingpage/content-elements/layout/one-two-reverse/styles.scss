@@ -29,7 +29,7 @@
     padding: 0;
 }
 
-@media (min-width: unit(@styles[mobile_breakpoint],px)) {
+@media (min-width: 700px) {
     /* assure that column width is always half */
     .one-two-layout-reverse > div:first-child {
         width: 34%;
@@ -42,9 +42,9 @@
     }
 }
 
-@media (max-width: unit(@styles[mobile_breakpoint],px)) {
+@media (max-width: 700px) {
     .one-two-layout-reverse > div {
-        /* In Desktop view, column padding is controlled via the padding parameters specified to the layout embeds */ 
+        /* In Desktop view, column padding is controlled via the padding parameters specified to the layout embeds */
         /* in Mobile view, it's disabled by default, and should be applied to the single BSI elements, if desired */
         padding: 0 !important;
     }

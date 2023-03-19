@@ -1,6 +1,3 @@
 {# provide possibility of variable height, but in this case, do not save as BSI element, as BSI element markup cannot be variable #}
-{% if spacer_height %}
-    <div style="height: {{ spacer_height }};" class="spacer"></div>
-{% else %}
-    <div data-bsi-element="spacer" class="spacer spacer-30"></div>
-{% endif %}
+
+<div data-bsi-element="spacer" class="spacer spacer-30"></div>

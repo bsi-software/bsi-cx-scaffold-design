@@ -133,10 +133,17 @@ select:hover {
     transition: height 0.2s ease-out 0.1s;
 }
 
-input:not([type='submit']),
+input:not([type='submit']) {
+    height: 40px;
+    border: 1px solid rgba(20, 30, 85, 0.3);
+}
+
 select {
     height: 40px;
     border: 1px solid rgba(20, 30, 85, 0.3);
+    &.red-border-select {
+        border: 1px solid red;
+    }
 }
 
 .formatted-text {
@@ -215,16 +222,26 @@ label {
     border-bottom: 1px solid rgba(20, 30, 85, 0.3);
     -webkit-appearance: none;
     border-radius: 0;
-    &.missing-required-field {
+    &.red-border {
         border-bottom: 1px solid red;
     }
-    & ~ .error-message {
-        display: none;
-    }
+    // & ~ .error-message {
+    //     display: none;
+    // }
     &.missing-required-field ~ .error-message {
         display: block;
         color: red;
+        font-size: 12px;
     }
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+}
+
+.error-message.isVisible {
+    display: none;
 }
 
 input[type='checkbox'].missing-required-field ~ .custom-checkbox-frame {
@@ -233,12 +250,6 @@ input[type='checkbox'].missing-required-field ~ .custom-checkbox-frame {
 
 input[type='radio'].missing-required-field ~ .custom-checkbox-frame {
     border: 1px solid red;
-}
-
-.error-message-radio.hidden {
-    display: block;
-    margin-top: 10px;
-    color: red;
 }
 
 @media (-ms-high-contrast: none) {
@@ -348,7 +359,7 @@ input::placeholder {
         text-transform: capitalize;
     }
 
-    @media (min-width: unit(@styles[mobile_breakpoint],px)) {
+    @media (min-width: 700px) {
         max-width: 800px;
         margin-left: auto;
         margin-right: auto;

@@ -1,9 +1,55 @@
-body {
-  margin: 0;
-  padding: 0.5rem;
-}
+@import '../styles/general.scss';
 
-main {
-  display: flex;
-  flex-direction: column;
-}
+//elements
+@import '../content-elements/elements/button/styles.scss';
+@import '../content-elements/elements/divider/styles.scss';
+@import '../content-elements/elements/image-cropped/styles.scss';
+@import '../content-elements/elements/image-normal/styles.scss';
+@import '../content-elements/elements/language-switcher/styles.scss';
+@import '../content-elements/elements/link/styles.scss';
+@import '../content-elements/elements/spacer/styles.scss';
+@import '../content-elements/elements/subtitle/styles.scss';
+@import '../content-elements/elements/text-formatted/styles.scss';
+@import '../content-elements/elements/text-plain/styles.scss';
+@import '../content-elements/elements/title/styles.scss';
+
+//form
+
+@import '../content-elements/form/address-full/styles.scss';
+@import '../content-elements/form/checkbox-block/styles.scss';
+@import '../content-elements/form/checkbox/styles.scss';
+@import '../content-elements/form/city-zip/styles.scss';
+@import '../content-elements/form/city/styles.scss';
+@import '../content-elements/form/country/styles.scss';
+@import '../content-elements/form/dropdown-text/styles.scss';
+@import '../content-elements/form/dropdown/styles.scss';
+@import '../content-elements/form/email/styles.scss';
+@import '../content-elements/form/firm/styles.scss';
+@import '../content-elements/form/form-title/styles.scss';
+@import '../content-elements/form/input-field/styles.scss';
+@import '../content-elements/form/name-first/styles.scss';
+@import '../content-elements/form/name-full/styles.scss';
+@import '../content-elements/form/name-last/styles.scss';
+@import '../content-elements/form/radiobuttons/styles.scss';
+@import '../content-elements/form/rating/styles.scss';
+@import '../content-elements/form/street-house/styles.scss';
+@import '../content-elements/form/telefon/styles.scss';
+@import '../content-elements/form/textarea/styles.scss';
+
+// sections
+@import '../content-elements/sections/footer/styles.scss';
+@import '../content-elements/sections/form/styles.scss';
+@import '../content-elements/sections/socials/styles.scss';
+@import '../content-elements/sections/top-bar/styles.scss';
+@import '../content-elements/sections/visual/styles.scss';
+
+//Layouts
+
+@import '../content-elements/layout/full-width/styles.scss';
+@import '../content-elements/layout/one-column/styles.scss';
+@import '../content-elements/layout/one-one-reverse/styles.scss';
+@import '../content-elements/layout/one-one/styles.scss';
+@import '../content-elements/layout/one-two-reverse/styles.scss';
+@import '../content-elements/layout/one-two/styles.scss';
+@import '../content-elements/layout/two-one-reverse/styles.scss';
+@import '../content-elements/layout/two-one/styles.scss';

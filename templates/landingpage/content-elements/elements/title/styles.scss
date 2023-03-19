@@ -12,7 +12,7 @@
     color: #141e55;
     text-align: center;
 
-    @media (min-width: unit(@styles[mobile_breakpoint],px)) {
+    @media (min-width: 700px) {
         max-width: 800px;
         margin-left: auto;
         margin-right: auto;

@@ -1,87 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>{{ properties.title }}</title>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="{{ bsi_cx_css_href() }}"/>
-</head>
-<body>
-
-  {% block header %}
- {% embed '../../../../content-elements/layout/full-width/template.twig'
-        with {
-            dropzone_name: 'header-zone',
-            allowed_elements: 'one-column visual top-bar spacer',
-            amount_allowed_elements: 4
-        }
-    %}
-        {% block dropzone_content %}
-            {% include '../../../../content-elements/elements/spacer/template.twig' only %}
-            {% include '../../../../content-elements/sections/top-bar/template.twig' only %}
-            {% include '../../../../content-elements/elements/spacer/template.twig' only %}
-        {% endblock %} 
-     {% endembed %} 
+<html lang="en"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <head>
+        <meta name="robots" content="noindex" />
+        <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+        <meta charset="utf-8" />
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <title>
+            {{ properties.title }}
+        </title>
+        <link rel="apple-touch-icon"
+            sizes="57x57"
+            href="{{ bsi_cx_asset('../../resources/img/Icons/JB_57.png') }}" />
+        <link rel="apple-touch-icon"
+            sizes="72x72"
+            href="{{ bsi_cx_asset('../../resources/img/Icons/JB_72.png') }}" />
+        <link rel="apple-touch-icon"
+            sizes="76x76"
+            href="{{ bsi_cx_asset('../../resources/img/Icons/JB_76.png') }}" />
+        <link rel="apple-touch-icon"
+            sizes="114x114"
+            href="{{ bsi_cx_asset('../../resources/img/Icons/JB_114.png') }}" />
+        <link rel="apple-touch-icon"
+            sizes="120x120"
+            href="{{ bsi_cx_asset('../../resources/img/Icons/JB_120.png') }}" />
+        <link rel="apple-touch-icon"
+            sizes="144x144"
+            href="{{ bsi_cx_asset('../../resources/img/Icons/JB_144.png') }}" />
+        <link rel="apple-touch-icon"
+            sizes="152x152"
+            href="{{ bsi_cx_asset('../../resources/img/Icons/JB_152.png') }}" />
+        <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="{{ bsi_cx_asset('../../resources/img/Icons/JB_180.png') }}" />
+        <link rel="icon"
+            type="image/png"
+            sizes="192x192"
+            href="{{ bsi_cx_asset('../../resources/img/Icons/JB_192.png') }}" />
+        <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="{{ bsi_cx_asset('../../resources/img/Icons/JB_32.png') }}" />
+        <link rel="icon"
+            type="image/png"
+            sizes="96x96"
+            href="{{ bsi_cx_asset('../../resources/img/Icons/JB_96.png') }}" />
+        <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="{{ bsi_cx_asset('../../resources/img/Icons/JB_16.png') }}" />
+        <link rel="stylesheet" href="{{ bsi_cx_css_href() }}" />
+    </head>
+    <body>
+        <main class="main" id="main">
+            <section>
+                {% block header %}
+                    <div class="full-width-layout">
+                        <div data-bsi-dropzone="header-zone">
+                            {% include '../../content-elements/elements/spacer/template.twig' %}
+                            {% include '../../content-elements/sections/top-bar/template.twig' only %}
+                            {% include '../../content-elements/elements/spacer/template.twig' only %}
+                        </div>
+                    </div>
                 {% endblock %}
                 {% block body %}
- {% embed '../../../../content-elements/layout/full-width/template.twig'
-        with {
-            dropzone_name: 'title-zone',
-            allowed_elements: 'title'
-        }
-    %}
-        {% block dropzone_content %}
-            {% include '../../../../content-elements/elements/title/template.twig' with {
-                title: 'einverständniserklärung zur kontaktaufnahme'
-            } %}
-        {% endblock %}
-    {% endembed %}
-    {% embed '../../../../content-elements/layout/one-column/template.twig'
-        with {
-            dropzone_name: 'body-zone',
-            allowed_elements: 'one-one one-one-reverse one-two one-two-reverse two-one two-one-reverse form spacer image-normal image-cropped divider text-formatted text-plain button subtitle visual'
-        }
-    %}
-        {% block dropzone_content %}
-            {% include '../../../../content-elements/elements/subtitle/template.twig' %}
-            {% include '../../../../content-elements/sections/visual/template.twig' %}
-            {% include '../../../../content-elements/elements/text-formatted/template.twig' with {
-                text: 'Wir möchten Ihnen die Moglichkeit bieten, mehr über uns, 
+                    <div class="full-width-layout">
+                        <div data-bsi-dropzone="title-zone">
+                            {% include '../../content-elements/elements/title/template.twig' with {
+                                title: 'einverständniserklärung zur kontaktaufnahme'
+                            } %}
+                        </div>
+                    </div>
+                    <div class="single-column-layout">
+                        <div data-bsi-dropzone="body-zone">
+                            {% include '../../content-elements/elements/subtitle/template.twig' %}
+                            {% include '../../content-elements/sections/visual/template.twig' %}
+                            {% include '../../content-elements/elements/text-formatted/template.twig' with {
+                                text: 'Wir möchten Ihnen die Moglichkeit bieten, mehr über uns, 
                 die Bank Julius Bär Deutschland AG, zu erfahren.'
-            } %}
-            {% include '../../../../content-elements/elements/text-formatted/template.twig' with {
-                text: 'Um mit Ihnen in Kontakt treten zu dürfen, benötigen wir nach 
+                            } %}
+                            {% include '../../content-elements/elements/text-formatted/template.twig' with {
+                                text: 'Um mit Ihnen in Kontakt treten zu dürfen, benötigen wir nach 
                 derzeitigem Datenschutzrecht Ihne Einwilligung zur Speicherung und Verarbeitung 
                 Ihnen persönlichen Daten sowie Ihre Zustimmung zur Kontaktaufnahme durch uns.'
-            } %}
-            {% include '../../../../content-elements/elements/text-formatted/template.twig' with {
-                text: 'Bitte ergänzen Sie die nachstehenden Angaben sowie 
+                            } %}
+                            {% include '../../content-elements/elements/text-formatted/template.twig' with {
+                                text: 'Bitte ergänzen Sie die nachstehenden Angaben sowie 
                 Ihre bevorzugten Kontaktdetails, 
                 uber die wir Sie kontaktieren dürfen.'
-            } %}
-            {% include '../../../../content-elements/elements/spacer/template.twig' %}
-            {% include '../../../../content-elements/sections/form/template.twig' %}
-        {% endblock %}
-    {% endembed %} 
- {% endblock %}
-               
-                {% block footer %}
-{% embed '../../../../content-elements/layout/full-width/template.twig'
-        with {
-            simple_container: true,
-            container_class: 'footer-container'
-        }
-    %}
-        {% block simple_container_content %}
-            {% include '../../../../content-elements/sections/footer/template.twig' %}
-        {% endblock %}
-    {% endembed %}
+                            } %}
+                            {% include '../../content-elements/elements/spacer/template.twig' %}
+                            {% include '../../content-elements/sections/form/template.twig' %}
+                        </div>
+                    </div>
                 {% endblock %}
 
+                {% block footer %}
+                    <div class="full-width-layout footer-container">
+                        {% include '../../content-elements/sections/footer/template.twig' %}
+                    </div>
+                {% endblock %}
+            </section>
+        </main>
 
-<script src="{{ bsi_cx_js_module_runtime_href() }}" defer="defer"></script>
-<script src="{{ bsi_cx_js_module_href('main') }}" defer="defer"></script>
-{{ bsi_cx_js_module_missing_chunks_import() }}
+        <script src="{{ bsi_cx_js_module_runtime_href() }}"
+            defer="defer"></script>
+        <script src="{{ bsi_cx_js_module_href('main') }}"
+            defer="defer"></script>
 
-</body>
+        {{ bsi_cx_js_module_missing_chunks_import() }}
+    </body>
 </html>
