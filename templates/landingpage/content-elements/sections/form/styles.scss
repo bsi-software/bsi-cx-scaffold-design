@@ -223,6 +223,7 @@ label {
     -webkit-appearance: none;
     border-radius: 0;
     &.red-border {
+        position: relative;
         border-bottom: 1px solid red;
     }
     // & ~ .error-message {
@@ -236,8 +237,22 @@ label {
 }
 
 .error-message {
+    position: absolute;
     color: red;
     font-size: 12px;
+    bottom: -10px;
+    left: 0;
+}
+
+.error-message-title {
+    position: absolute;
+    color: red;
+    font-size: 12px;
+    bottom: -25px;
+}
+
+.error-message-title.isVisible {
+    display: none;
 }
 
 .error-message.isVisible {

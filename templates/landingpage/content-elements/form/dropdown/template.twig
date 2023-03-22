@@ -9,12 +9,13 @@
         class="reverse-for-required text-field form-dropdown"
         data-bsi-form-select-fixed-value-list="">
         <select id="dropdown-select"
+            data-translation="{{ properties.translation.residence }}"
             name="dropdown-select"
             class="custom-select custom-form-field"
             spellcheck="true"
             required="">
             {% for key, value in properties.translation.dropdown %}
-                <option enable value="{{ key }}">
+                <option value="{{ key }}">
                     {{ value }}
                 </option>
             {% endfor %}

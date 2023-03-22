@@ -7,10 +7,23 @@ module.exports = {
     translation: {
         email_error: 'Ihre Email Adresse ist nicht korrekt',
         code_error:
-            'Das Code-Feld sollte aus Zahlen bestehen und genau XXXXXXXXX Stellen enthalten',
+            'Das Feld ist obligatorisch und sollte aus Zahlen bestehen und genau 9 Stellen enthalten',
         title_error: 'Title Feld ist obligatorisch',
         provide_required: 'Bitte füllen Sie alle Pflichtfelder aus',
+        placeholder: 'Code*, Beispiel 457859683',
         residence: 'Land auswählen',
+        labels: {
+            radio_label: 'Titel',
+            first_name: 'Vorname',
+            last_name: 'Nachname',
+            company: 'Firma',
+            street_house: 'Strasse, Hausnummer',
+            city: 'Stadt',
+            email: 'E-Mail',
+            tel: 'Telefon',
+            city_2: 'Stadt',
+            zip: 'Postleitzahl',
+        },
         countries: {
             AF: 'Afghanistan',
             EG: 'Ägypten',

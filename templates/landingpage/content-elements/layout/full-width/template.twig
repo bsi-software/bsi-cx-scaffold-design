@@ -1,43 +1,9 @@
 {# It should be possible to use layout components as BSI Elements, re-usable section containers or simple dropzones #}
 {# If the element is used as a layout element. In this case the markup must be constant #}
-{% if layout_element %}
-    <div data-bsi-element="full-width" data-bsi-hide-edit-button="true" class="full-width-layout">
-        <div data-bsi-dropzone="full-width-layout-container" data-bsi-dropzone-allowed-elements="one-column">
-        </div>
-    </div>
-{% elseif simple_container %}
-    <div {% if container_class %} class="full-width-layout {{container_class}}" {% else %} class="full-width-layout" {% endif %}>
-        {% block simple_container_content %}
-        
-        {% endblock %}
-    </div>
-{% else %}
-    {# If the element is used for a section #}
-    {% if custom_section %} 
-        <div data-bsi-element="{{ custom_section }}"
-        {% if custom_class %}
-        class="full-width-layout {{ custom_class }}"
-        {% else %}
-        class="full-width-layout"
-        {% endif %}>
-            <div data-bsi-dropzone="{{ (custom_section ~ '-container')|raw }}"
-            {% if allowed_elements %} data-bsi-dropzone-allowed-elements="{{ allowed_elements }}" {% endif %}
-            {% if amount_allowed_elements %} data-bsi-dropzone-max-number-of-elements="{{ amount_allowed_elements }}" {% endif %}>
-                {% block custom_section_content %}
 
-                {% endblock %}
-            </div>
-        </div>
-    {# If the layout element is used as a simple dropzone container #}
-    {% else %}
-        <div class="full-width-layout">
-            <div data-bsi-dropzone="{{ dropzone_name }}"
-            {% if allowed_elements %} data-bsi-dropzone-allowed-elements="{{ allowed_elements }}" {% endif %}
-            {% if amount_allowed_elements %} data-bsi-dropzone-max-number-of-elements="{{ amount_allowed_elements }}" {% endif %}>
-                {% block dropzone_content %}
-
-                {% endblock %}
-            </div>
-        </div>
-    {% endif %}
-{% endif %}
+<div data-bsi-element="full-width"
+    data-bsi-hide-edit-button="true"
+    class="full-width-layout">
+    <div data-bsi-dropzone="full-width-layout-container"
+        data-bsi-dropzone-allowed-elements="one-column"></div>
+</div>

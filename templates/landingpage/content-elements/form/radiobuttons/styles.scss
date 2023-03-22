@@ -39,6 +39,9 @@ not be directly clickable */
 }
 
 /* create custom radiobutton frame */
+#option-radio-group {
+    position: relative;
+}
 
 .radiobutton-set-container {
     display: flex;

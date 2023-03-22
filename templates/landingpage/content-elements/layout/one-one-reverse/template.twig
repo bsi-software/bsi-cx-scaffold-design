@@ -1,72 +1,12 @@
 {# this template is exactly the same as two-column-layout-normal, with the only difference of adding "reverse-on-mobile" #}
 {# It should be possible to use layout components as BSI Elements, re-usable section containers or simple dropzones #}
 {# If the element is used as a layout element. In this case the markup must be constant #}
-{% if layout_element %}
-    <div data-bsi-element="one-one-reverse" data-bsi-hide-edit-button="true" class="two-column-layout-reverse">
-        <div data-bsi-dropzone="two-column-layout-reversed-container-one" data-bsi-dropzone-allowed-elements="image-cropped image-normal spacer divider text-formatted text-plain button">
-        </div>
-        <div data-bsi-dropzone="two-column-layout-reversed-container-two" data-bsi-dropzone-allowed-elements="image-cropped image-normal spacer divider text-formatted text-plain button">
-        </div>
-    </div>
-{% elseif simple_container %}
-    <div {% if container_class %} class="two-column-layout-reverse {{container_class}}" {% else %} class="two-column-layout-reverse" {% endif %}>
-        <div>
-            {% block container_first %}
-            
-            {% endblock %}
-        </div>
-        <div>
-            {% block container_second %}
-            
-            {% endblock %}
-        </div>
-    </div>
-{% else %}
-    {# If the element is used for a section #}
-    {% if custom_section %}
-        <div data-bsi-element="{{ custom_section }}" style="padding: {{ section_padding }};"
-        {% if custom_class %}
-        class="two-column-layout-reverse {{ custom_class }}"
-        {% else %}
-        class="two-column-layout-reverse"
-        {% endif %}
-        >
-            <div data-bsi-dropzone="{{ (custom_section ~ '-container-one')|raw }}"
-            {% if allowed_elements_one %} data-bsi-dropzone-allowed-elements="{{ allowed_elements_one }}" {% endif %}
-            {% if amount_allowed_elements_one %} data-bsi-dropzone-max-number-of-elements="{{ amount_allowed_elements_one }}" {% endif %}
-            style="padding: {{ section_column_one_padding }};">
-                {% block custom_section_content_one %}
 
-                {% endblock %}
-            </div>
-            <div data-bsi-dropzone="{{ (custom_section ~ '-container-two')|raw }}"
-            {% if allowed_elements_two %} data-bsi-dropzone-allowed-elements="{{ allowed_elements_two }}" {% endif %}
-            {% if amount_allowed_elements_two %} data-bsi-dropzone-max-number-of-elements="{{ amount_allowed_elements_two }}" {% endif %}
-            style="padding: {{ section_column_two_padding }};">
-                {% block custom_section_content_two %}
-
-                {% endblock %}
-            </div>
-        </div>
-    {# If the layout element is used as a simple dropzone container #}
-    {% else %}
-        <div class="two-column-layout-reverse" style="padding: {{ dropzone_padding }};">
-            <div data-bsi-dropzone="{{ dropzone_name_one }}"
-            {% if allowed_elements_one %} data-bsi-dropzone-allowed-elements="{{ allowed_elements_one }}" {% endif %}
-            {% if amount_allowed_elements_one %} data-bsi-dropzone-max-number-of-elements="{{ amount_allowed_elements_one }}" {% endif %}
-            style="padding: {{ dropzone_column_one_padding }};">
-                {% block dropzone_column_one %}
-
-                {% endblock %}
-            </div>
-            <div data-bsi-dropzone="{{ dropzone_name_two }}"
-            {% if allowed_elements_two %} data-bsi-dropzone-allowed-elements="{{ allowed_elements_two }}" {% endif %}
-            {% if amount_allowed_elements_two %} data-bsi-dropzone-max-number-of-elements="{{ amount_allowed_elements_two }}" {% endif %}
-            style="padding: {{ dropzone_column_two_padding }};">
-                {% block dropzone_column_two %}
-
-                {% endblock %}
-            </div>
-        </div>
-    {% endif %}
-{% endif %}
+<div data-bsi-element="one-one-reverse"
+    data-bsi-hide-edit-button="true"
+    class="two-column-layout-reverse">
+    <div data-bsi-dropzone="two-column-layout-reversed-container-one"
+        data-bsi-dropzone-allowed-elements="image-cropped image-normal spacer divider text-formatted text-plain button"></div>
+    <div data-bsi-dropzone="two-column-layout-reversed-container-two"
+        data-bsi-dropzone-allowed-elements="image-cropped image-normal spacer divider text-formatted text-plain button"></div>
+</div>

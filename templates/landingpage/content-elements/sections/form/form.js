@@ -25,7 +25,10 @@
 
 const submissionForms = document.querySelector('.submission-form');
 const radioWrapper = document.getElementById('option-radio-group');
-const radioError = radioWrapper.getElementsByClassName('error-message')[0];
+const radioButtons = document.querySelectorAll('[type="radio"]');
+const radioError = radioWrapper.getElementsByClassName(
+    'error-message-title'
+)[0];
 const emailWrapper = document.getElementById('email-wrapper');
 const email = document.getElementById('email');
 const emailError = emailWrapper.getElementsByClassName('error-message')[0];
@@ -93,7 +96,7 @@ function verifyRadioBtn() {
         radioBtn => radioBtn.checked
     );
     if (!radioButtons) {
-        return;
+        return true;
     }
     if (!isChecked) {
         radioError.classList.remove('isVisible');
@@ -106,7 +109,7 @@ function verifyRadioBtn() {
 
 function verifyCode() {
     if (!code) {
-        return;
+        return true;
     }
     if (code.required && code.value === '') {
         codeError.classList.remove('isVisible');
@@ -121,7 +124,7 @@ function verifyCode() {
 
 function verifyEmail() {
     if (!email) {
-        return;
+        return true;
     }
     if (email.required && email.value === '') {
         emailError.classList.remove('isVisible');
@@ -136,7 +139,7 @@ function verifyEmail() {
 
 function verifyCity2() {
     if (!city) {
-        return;
+        return true;
     }
     if (city.required && city.value === '') {
         city.classList.add('red-border');
@@ -148,7 +151,7 @@ function verifyCity2() {
 }
 function verifyZip() {
     if (!zip) {
-        return;
+        return true;
     }
     if (zip.required && zip.value === '') {
         zip.classList.add('red-border');
@@ -161,7 +164,7 @@ function verifyZip() {
 
 function verifyName() {
     if (!firstName) {
-        return;
+        return true;
     }
     if (firstName.required && firstName.value === '') {
         firstName.classList.add('red-border');
@@ -174,7 +177,7 @@ function verifyName() {
 
 function verifyLastName() {
     if (!lastName) {
-        return;
+        return true;
     }
     if (lastName.required && lastName.value === '') {
         lastName.classList.add('red-border');
@@ -187,7 +190,7 @@ function verifyLastName() {
 
 function verifyStreet() {
     if (!street) {
-        return;
+        return true;
     }
     if (street.required && street.value === '') {
         street.classList.add('red-border');
@@ -200,7 +203,7 @@ function verifyStreet() {
 
 function verifyStadt() {
     if (!stadt) {
-        return;
+        return true;
     }
     if (stadt.required && stadt.value === '') {
         stadt.classList.add('red-border');
@@ -213,7 +216,7 @@ function verifyStadt() {
 
 function verifyCheckbox() {
     if (!checkbox) {
-        return;
+        return true;
     }
     if (checkbox.required && !checkbox.checked) {
         checkbox.classList.add('missing-required-field');
@@ -226,7 +229,7 @@ function verifyCheckbox() {
 
 function verifyCheckboxBlock() {
     if (!checkboxes) {
-        return;
+        return true;
     }
     const checked = Array.from(checkboxes).some(checkbox => checkbox.checked);
     if (!checked) {
@@ -244,7 +247,7 @@ function verifyCheckboxBlock() {
 
 function verifyCountrySelect() {
     if (!countrySelect) {
-        return;
+        return true;
     }
     if (countrySelect.required && countrySelect.value === '') {
         countrySelect.classList.add('red-border-select');
@@ -257,7 +260,7 @@ function verifyCountrySelect() {
 
 function verifyDropdownSelect() {
     if (!dropdownSelect) {
-        return;
+        return true;
     }
     if (dropdownSelect.required && dropdownSelect.value === '') {
         dropdownSelect.classList.add('red-border-select');
@@ -268,7 +271,7 @@ function verifyDropdownSelect() {
     }
 }
 
-email.addEventListener('input', event => {
+email?.addEventListener('input', event => {
     const target = event.target;
     const regExp = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$/;
 
@@ -281,7 +284,7 @@ email.addEventListener('input', event => {
     }
 });
 
-city.addEventListener('input', event => {
+city?.addEventListener('input', event => {
     const target = event.target;
     if (target.value !== '') {
         city.classList.remove('red-border');
@@ -290,7 +293,7 @@ city.addEventListener('input', event => {
     }
 });
 
-zip.addEventListener('input', event => {
+zip?.addEventListener('input', event => {
     const regExpZip = /^[0-9]{5}(?:-[0-9]{4})?$/;
     const target = event.target;
     if (target.value !== '' && regExpZip.test(target.value)) {
@@ -300,7 +303,7 @@ zip.addEventListener('input', event => {
     }
 });
 
-firstName.addEventListener('input', event => {
+firstName?.addEventListener('input', event => {
     const target = event.target;
     if (target.value !== '') {
         firstName.classList.remove('red-border');
@@ -309,7 +312,7 @@ firstName.addEventListener('input', event => {
     }
 });
 
-lastName.addEventListener('input', event => {
+lastName?.addEventListener('input', event => {
     const target = event.target;
     if (target.value !== '') {
         lastName.classList.remove('red-border');
@@ -318,7 +321,7 @@ lastName.addEventListener('input', event => {
     }
 });
 
-street.addEventListener('input', event => {
+street?.addEventListener('input', event => {
     const target = event.target;
     if (target.value !== '') {
         street.classList.remove('red-border');
@@ -327,7 +330,7 @@ street.addEventListener('input', event => {
     }
 });
 
-code.addEventListener('input', event => {
+code?.addEventListener('input', event => {
     const target = event.target;
     const regExp = /^\d{9}$/;
     if (target.value !== '' && regExp.test(target.value)) {
@@ -339,7 +342,7 @@ code.addEventListener('input', event => {
     }
 });
 
-stadt.addEventListener('input', event => {
+stadt?.addEventListener('input', event => {
     const target = event.target;
     if (target.value !== '') {
         stadt.classList.remove('red-border');
@@ -348,7 +351,7 @@ stadt.addEventListener('input', event => {
     }
 });
 
-countrySelect.addEventListener('change', event => {
+countrySelect?.addEventListener('change', event => {
     const targetValue = event.target.value;
     console.log(targetValue);
     if (targetValue) {
@@ -358,7 +361,7 @@ countrySelect.addEventListener('change', event => {
     }
 });
 
-dropdownSelect.addEventListener('change', event => {
+dropdownSelect?.addEventListener('change', event => {
     const target = event.target.value;
     if (target) {
         dropdownSelect.classList.remove('red-border-select');
@@ -367,7 +370,7 @@ dropdownSelect.addEventListener('change', event => {
     }
 });
 
-checkbox.addEventListener('change', event => {
+checkbox?.addEventListener('change', event => {
     const isCheckboxChecked = checkbox.checked;
 
     if (isCheckboxChecked) {
@@ -377,7 +380,7 @@ checkbox.addEventListener('change', event => {
     }
 });
 
-document.querySelectorAll('[type="radio"]').forEach(radioBtn => {
+radioButtons?.forEach(radioBtn => {
     radioBtn.addEventListener('change', event => {
         radioError.classList.add('isVisible');
     });

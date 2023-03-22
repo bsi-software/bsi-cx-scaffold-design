@@ -7,10 +7,9 @@
 Herr|2
 *|3"
         data-bsi-fixed-value-list="">
-        <label class="radiobutton-lable">Titel *</label>
-        <div class="error-message isVisible">
-            {{ properties.translation.title_error }}
-        </div>
+        <label class="radiobutton-lable">
+            {{ properties.translation.labels.radio_label }}
+        </label>
         <div data-bsi-radio-group="" class="radiobutton-set-container">
             <div data-bsi-radio-item="" class="custom-radiobutton-container">
                 <input type="radio"
@@ -42,6 +41,9 @@ Herr|2
                 <label for="option-radio-group-3">*</label>
                 <span class="custom-radiobutton-frame"></span>
             </div>
+        </div>
+        <div class="error-message-title isVisible">
+            {{ properties.translation.title_error }}
         </div>
     </div>
 </div>
