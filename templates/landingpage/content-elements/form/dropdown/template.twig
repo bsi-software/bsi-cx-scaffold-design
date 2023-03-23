@@ -9,7 +9,7 @@
         class="reverse-for-required text-field form-dropdown"
         data-bsi-form-select-fixed-value-list="">
         <select id="dropdown-select"
-            data-translation="{{ properties.translation.residence }}"
+            data-translation="{{ properties.translation.country }}"
             name="dropdown-select"
             class="custom-select custom-form-field"
             spellcheck="true"
@@ -20,6 +20,8 @@
                 </option>
             {% endfor %}
         </select>
-        <label for="dropdown-select">Country</label>
+        <label for="dropdown-select">
+            {{ properties.translation.labels.country_label }}
+        </label>
     </div>
 </div>

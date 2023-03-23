@@ -10,9 +10,14 @@ module.exports = {
         title_error: 'Title field is required',
         provide_required: 'Please, fill in all required fields of the form',
         placeholder: 'Code* example 457859683',
-        residence: 'Choose the country',
+        country: 'Countries',
+        residence: 'Domicile',
+        dropdown_text: 'The report can only be ordered to the countries above.',
         labels: {
+            country_label: 'Country',
             radio_label: 'Title',
+            w: 'Ms',
+            m: 'Mr',
             first_name: 'First name',
             last_name: 'Last name',
             company: 'Company',
@@ -22,6 +27,7 @@ module.exports = {
             tel: 'Phone number',
             city_2: 'City',
             zip: 'Zip',
+            comment: 'Comment',
         },
         countries: {
             AF: 'Afghanistan',

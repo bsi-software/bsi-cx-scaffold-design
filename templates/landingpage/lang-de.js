@@ -11,9 +11,15 @@ module.exports = {
         title_error: 'Title Feld ist obligatorisch',
         provide_required: 'Bitte füllen Sie alle Pflichtfelder aus',
         placeholder: 'Code*, Beispiel 457859683',
-        residence: 'Land auswählen',
+        country: 'Land',
+        residence: 'Domizil',
+        dropdown_text:
+            ' Der Bericht kann nur an die oben genannten Länder bestellt werden.',
         labels: {
+            country_label: 'Land',
             radio_label: 'Titel',
+            w: 'Frau',
+            m: 'Herr',
             first_name: 'Vorname',
             last_name: 'Nachname',
             company: 'Firma',
@@ -23,6 +29,7 @@ module.exports = {
             tel: 'Telefon',
             city_2: 'Stadt',
             zip: 'Postleitzahl',
+            comment: 'Kommentar',
         },
         countries: {
             AF: 'Afghanistan',
