@@ -35,10 +35,10 @@
                 Aktualisierung ohne vorherige Mitteilung vorbehalten.'
             } %}
         </div>
-        <div class="form-submit-button-container">
-            <span id="required-missing-feedback">
+        <div class="form-submit-button-container" id="error-wrapper">
+            <p class="error-message-form isVisible">
                 {{ properties.translation.provide_required }}
-            </span>
+            </p>
             <div class="submit-buttom-container">
                 <input data-bsi-part="form-submit"
                     class="submit-button"

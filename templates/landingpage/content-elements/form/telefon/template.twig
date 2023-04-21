@@ -7,9 +7,13 @@
             name="telefon"
             type="tel"
             class="custom-form-field"
-            placeholder="Telefon"
-            spellcheck="true" />
-        <label class="hidden" for="telefon">
+            placeholder="{{ properties.translation.labels.tel }}"
+            spellcheck="true"
+            required="" />
+        <div class="error-message isVisible">
+            {{ properties.translation.phone_error }}
+        </div>
+        <label class="text-field-label" for="telefon">
             {{ properties.translation.labels.tel }}
         </label>
     </div>

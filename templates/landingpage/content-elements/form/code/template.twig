@@ -6,11 +6,14 @@
         <input id="code"
             name="code"
             class="custom-form-field"
-            type="text"
-            placeholder="{{ properties.translation.placeholder }}"
+            type="number"
+            maxlength="9"
+            placeholder="{{ properties.translation.labels.code }}"
             spellcheck="true"
             required="" />
-        <label class="text-field-label" for="street">Code</label>
+        <label class="text-field-label" for="street">
+            {{ properties.translation.labels.code }}
+        </label>
         <div class="error-message isVisible">
             {{ properties.translation.code_error }}
         </div>

@@ -243,6 +243,19 @@ label {
     bottom: -10px;
     left: 0;
 }
+#error-wrapper {
+    position: relative;
+}
+
+.error-message-form {
+    position: absolute;
+    color: red;
+    font-size: 12px;
+    left: 25%;
+}
+.error-message-form.isVisible {
+    display: none;
+}
 
 .error-message-title {
     position: absolute;

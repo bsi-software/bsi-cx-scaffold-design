@@ -7,6 +7,7 @@ module.exports = {
     translation: {
         email_error: 'Your e-mail address is not correct',
         code_error: 'Code field is required and should be XXXXXXXXX - numbers',
+        phone_error: 'Your phone number is not correct',
         title_error: 'Title field is required',
         provide_required: 'Please, fill in all required fields of the form',
         placeholder: 'Code* example 457859683',
@@ -28,6 +29,7 @@ module.exports = {
             city_2: 'City',
             zip: 'Zip',
             comment: 'Comment',
+            code: 'Code',
         },
         countries: {
             AF: 'Afghanistan',

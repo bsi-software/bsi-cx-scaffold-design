@@ -8,6 +8,7 @@ module.exports = {
         email_error: 'Ihre Email Adresse ist nicht korrekt',
         code_error:
             'Das Feld ist obligatorisch und sollte aus Zahlen bestehen und genau 9 Stellen enthalten',
+        phone_error: 'Ihre Telefonnummer ist nicht korrekt',
         title_error: 'Title Feld ist obligatorisch',
         provide_required: 'Bitte füllen Sie alle Pflichtfelder aus',
         placeholder: 'Code*, Beispiel 457859683',
@@ -30,6 +31,7 @@ module.exports = {
             city_2: 'Stadt',
             zip: 'Postleitzahl',
             comment: 'Kommentar',
+            code: 'Code',
         },
         countries: {
             AF: 'Afghanistan',
