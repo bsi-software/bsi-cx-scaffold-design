@@ -398,22 +398,46 @@ street?.addEventListener('input', event => {
     }
 });
 
-code?.addEventListener('keydown', event => {
-    var regex = new RegExp('^[0-9+]+$');
+// code?.addEventListener('keydown', event => {
+//     var regex = new RegExp('^[0-9+]+$');
 
-    var key = String.fromCharCode(
-        !event.charCode ? event.which : event.charCode
-    );
+//     var key = String.fromCharCode(
+//         !event.charCode ? event.which : event.charCode
+//     );
 
-    if (
-        event.code == 'ArrowLeft' ||
-        event.code == 'ArrowRight' ||
-        event.code == 'Backspace'
-    ) {
-        return false;
-    } else if (!regex.test(key) || event.ctrlKey || code.value.length > 9) {
-        event.preventDefault();
+//     if (
+//         event.code == 'ArrowLeft' ||
+//         event.code == 'ArrowRight' ||
+//         event.code == 'Backspace' ||
+//         event.code == 'Delete' ||
+//         event.code == 'NumpadAdd' ||
+//         event.code == 'NumpadDecimal' ||
+//         event.code == 'Numpad1' ||
+//         event.code == 'Numpad2' ||
+//         event.code == 'Numpad3' ||
+//         event.code == 'Numpad4' ||
+//         event.code == 'Numpad5' ||
+//         event.code == 'Numpad6' ||
+//         event.code == 'Numpad7' ||
+//         event.code == 'Numpad8' ||
+//         event.code == 'Numpad9' ||
+//         event.code == 'Numpad0'
+//     ) {
+//         return false;
+//     } else if (!regex.test(key) || event.ctrlKey || code.value.length > 9) {
+//         event.preventDefault();
 
+//         return false;
+//     }
+// });
+
+code?.addEventListener('input', event => {
+    const regexCode = new RegExp('^[0-9+]+$');
+    if (!regexCode.test(code.value) || code.value.length > 9) {
+        code.value = code.value.slice(
+            0,
+            code.value.length - event?.data?.length
+        );
         return false;
     }
 });
